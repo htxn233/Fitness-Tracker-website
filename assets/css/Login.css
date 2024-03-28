@@ -6,10 +6,8 @@
 }
 
 body {
-    background: #000000; /* Black color */
-    background: -webkit-linear-gradient(to right, #d92525, #373232); /* Gradient for webkit browsers */
-    background: linear-gradient(to right, #cb2a2a, #423d3d); /* Standard gradient */
-    display: flex;
+	background-image: url("assets\img\bg\bg1.jpg");
+	display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
