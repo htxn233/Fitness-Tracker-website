@@ -6,7 +6,7 @@
 }
 
 body {
-	background-size: cover;
+	background-color: black;
 	display: flex;
     justify-content: center;
     align-items: center;
@@ -158,8 +158,8 @@ input {
 
 .overlay {
 	background: #ff5b5b;
-	background: -webkit-linear-gradient(to right, #563c38, #c51616);
-	background: linear-gradient(to right, #674b46, #d52929);
+	background: -webkit-linear-gradient(to right, #674b46, #d52929);
+	background: linear-gradient(to right, #5e1306, #d52929);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -222,3 +222,59 @@ input {
 	height: 40px;
 	width: 40px;
 }
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.left-pane,
+.center-pane,
+.right-pane {
+    position: absolute;
+    width: 33.33%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+	filter: grayscale(10%) blur(1.5px);
+}
+
+.left-pane {
+    left: 0;
+}
+
+.center-pane {
+    left: 33.33%;
+}
+
+.right-pane {
+    left: 66.66%;
+}
+
+.lightning {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #FF4B2B, transparent);
+    animation: lightning 2s infinite linear;
+}
+
+@keyframes lightning {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
