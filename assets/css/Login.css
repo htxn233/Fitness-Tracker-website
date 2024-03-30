@@ -6,7 +6,7 @@
 }
 
 body {
-	background-image: url("assets\img\bg\bg1.jpg");
+	background-size: cover;
 	display: flex;
     justify-content: center;
     align-items: center;
