@@ -2696,7 +2696,6 @@ hr {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 842, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
   .footer-padding {
     padding-top: 80px;
     padding-bottom: 50px;
@@ -2704,7 +2703,6 @@ hr {
 }
 
 @media (max-width: 575px) {
-  /* line 842, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
   .footer-padding {
     padding-top: 80px;
     padding-bottom: 0px;
@@ -2712,20 +2710,17 @@ hr {
 }
 
 @media (max-width: 575px) {
-  /* line 867, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
   .section-tittle {
     margin-bottom: 50px;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 867, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
   .section-tittle {
     margin-bottom: 50px;
   }
 }
 
-/* line 874, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
 .section-tittle span {
   font-family: "Oswald", sans-serif;
   font-size: 24px;
@@ -2739,13 +2734,11 @@ hr {
 }
 
 @media (max-width: 575px) {
-  /* line 874, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
   .section-tittle span {
     font-size: 14px;
   }
 }
 
-/* line 887, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
 .section-tittle span::before {
   position: absolute;
   content: "";
@@ -2758,9 +2751,8 @@ hr {
   transform: translateY(-50%);
 }
 
-/* line 899, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
 .section-tittle h2 {
-  font-size: 140px;
+  font-size: 120px;
   display: block;
   color: #2c234d;
   font-weight: 700;
@@ -2768,17 +2760,22 @@ hr {
   color: #fff;
   -webkit-text-stroke: 1px #f6f7f8;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 100px;
 }
 
+h2.wow {
+  font-size: 100px;
+  margin: 50px 0 60px 0;
+}
+
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  /* line 899, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
   .section-tittle h2 {
     font-size: 50px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 899, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
   .section-tittle h2 {
     font-size: 50px;
   }
@@ -4035,12 +4032,12 @@ hr {
 .about-area2 .support-wrapper .right-content2 .right-img img {
   width: 100%;
   animation: rotateImage 8s;
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
 }
 
 @keyframes rotateImage {
   100% {
-    transform: rotate(-450deg);
+    transform: rotate(450deg);
   }
 }
 
