@@ -70,7 +70,8 @@
 	</div>
 	<!-- Firebase SDKs -->
 
-
+		
+	<script src="./assets/js/Login.js" ></script>
 	<script>
 		const leftPane = document.querySelector('.left-pane');
 		const centerPane = document.querySelector('.center-pane');
