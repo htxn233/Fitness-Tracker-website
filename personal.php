@@ -7,13 +7,14 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/Logo1.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo1.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">`
+    <link rel="stylesheet" href="assets/css/flaticon.css">
     <link rel="stylesheet" href="assets/css/gijgo.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/animated-headline.css">
@@ -23,6 +24,7 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/personal.css">
 </head>
 <body class="black-bg">
     <!-- ? Preloader Start -->
@@ -45,13 +47,13 @@
                     <div class="menu-wrapper d-flex align-items-center justify-content-between">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            <a href="personal.html"><img src="assets/img/logo/logo.png" alt=""></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu f-right d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="personal.html">Home</a></li>
                                     <li><a href="courses.html">Courses</a></li>
                                     <li><a href="about.html">About</a></li>
                                 </ul>
@@ -59,7 +61,7 @@
                         </div>          
                         <!-- Header-btn -->
                         <div class="header-btns d-none d-lg-block f-right">
-                            <a href="loginform.php" class="btn">Login</a>
+                           <a href="loginform.php" class="btn">Sign out</a>
                        </div>
                        <!-- Mobile Menu -->
                        <div class="col-12">
@@ -72,95 +74,78 @@
     <!-- Header End -->
 </header>
 <main>
-    <!--? Hero Start -->
-    <div class="slider-area2">
-        <div class="slider-height2 d-flex align-items-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="hero-cap hero-cap2 pt-70">
-                            <h2>About Us</h2>
+    <!--? slider Area Start-->
+    <div class="slider-area position-relative">
+        <div class="slider-active">
+            <!-- Single Slider -->
+            <div class="single-slider slider-height d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-9 col-md-10">
+                            <div class="hero__caption">
+                                <span data-animation="fadeInLeft" data-delay="0.1s">Welcome back</span>
+                                <h1 data-animation="fadeInLeft" data-delay="1s">Ready for new challenge?</h1>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </div>          
             </div>
         </div>
     </div>
-    <!-- Hero End -->
-    <!--? About Area-2 Start -->
-    <section class="about-area2 fix pb-padding pt-50 pb-80">
-        <div class="support-wrapper align-items-center">
-            <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" >
-                <!-- img -->
-                <div class="right-img">
-                    <img src="assets/img/logo/logo2.png" alt="">
-                </div>
-            </div>
-            <div class="left-content2">
-                <!-- section tittle -->
-                <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                    <div class="front-text">
-                        <p class="mb-40">
-                            Welcome to Canopy - where your fitness journey takes flight!
-                            Just as a canopy in nature provides shelter, protection, and growth for the vibrant ecosystem beneath it, our Canopy website is dedicated to nurturing and supporting your personal fitness and health goals.<br><br>
-                            At Canopy, we believe that a strong and healthy body serves as the foundation for a fulfilling life. Our website offers a user-friendly interface, enabling you to track your progress, set achievable goals, and monitor your fitness milestones.
-                            Start finding the right course for yourself!
-                        </p>
-                        <a href="courses.html" class="border-btn">Find a course</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About Area End -->
-    <!--? Blog Area Start -->
-    <section class="home-blog-area pt-10 pb-50">
+    <!-- slider Area End-->
+    <section class="current-course-area">
         <div class="container">
-            <!-- Section Tittle -->
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-md-9 col-sm-10">
-                    <div class="section-tittle text-center mb-100 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                        <h2>From Blog</h2>
-                    </div>
-                </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+              <div class="section-tittle text-center mb-55 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                <h2 class="wow fadeIn" data-wow-duration="6s" data-wow-delay=".8s">Your course</h2>
+              </div>
             </div>
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6">
-                    <div class="home-blog-single mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                        <div class="blog-img-cap">
-                            <div class="blog-img">
-                                <img src="assets/img/gallery/blog1.png" alt="">
-                            </div>
-                            <div class="blog-cap">
-                                <span>Gym & Fitness</span>
-                                <h3><a href="discover_details.html">Your Antibiotic One Day To 10 Day Options</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6">
-                    <div class="home-blog-single mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="blog-img-cap">
-                            <div class="blog-img">
-                                <img src="assets/img/gallery/blog2.png" alt="">
-                            </div>
-                            <div class="blog-cap">
-                                <span>Gym & Fitness</span>
-                                <h3><a href="discover_details.html">Your Antibiotic One Day To 10 Day Options</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <div class="display-date">
+            <span id="day">day</span>,
+            <span id="daynum">00</span>
+            <span id="month">month</span>
+            <span id="year">0000</span>
+            <span class="display-time"></span>
+          </div>
+      
+          <div class="course-list">
+            <?php
+                // Kết nối đến cơ sở dữ liệu và truy vấn dữ liệu
+                include "connect.php"; 
+                $query = "SELECT * FROM courses";
+                $result = mysqli_query($conn, $query);
+        
+                // Kiểm tra và hiển thị dữ liệu
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo '<div class="course-item">';
+                        echo '<h3>' . $row['Cname'] . '</h3>';
+                        echo '<p>ID: ' . $row['Cid'] . '</p>';
+                        echo '<p>Time: ' . $row['Ctime'] . '</p>';
+                        echo '<p>Description: ' . $row['Cdes'] . '</p>';
+                        echo '<p>Exercise: ' . $row['Cexercise'] . '</p>';
+                        echo '</div>';
+                    }
+                } else {
+                    echo 'You are not apply to any courses. Please click here to find a course.';
+                }
+    
+                // Đóng kết nối cơ sở dữ liệu
+                mysqli_close($conn);
+            ?>
         </div>
-    </section>
-    <!-- Blog Area End -->
+        <a href="courses.html" class="border-btn hero-btn" data-animation="fadeInLeft" data-delay="0.8s">My Courses</a>
+        </div>
+      </section>
+    
     <!-- ? services-area -->
     <section class="services-area">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
-                    <div class="single-services mb-40 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                    <div class="single-services mb-40">
                         <div class="features-icon">
                             <img src="assets/img/icon/icon1.svg" alt="">
                         </div>
@@ -178,7 +163,7 @@
                         <div class="features-caption">
                             <h3>Phone</h3>
                             <p>(90) 277 278 2566</p>
-                            <p>(78) 267 256 2578</p>
+                            <p>  (78) 267 256 2578</p>
                         </div>
                     </div>
                 </div>
@@ -209,7 +194,7 @@
                         <div class="single-footer-caption mb-50 text-center">
                             <!-- logo -->
                             <div class="footer-logo wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                <a href="personal.html"><img src="assets/img/logo/logo.png" alt=""></a>
                             </div>
                             <!-- Menu -->
                             <!-- Header Start -->
@@ -220,7 +205,7 @@
                                         <div class="main-menu main-menu2 text-center">
                                             <nav>
                                                 <ul>
-                                                    <li><a href="index.html">Home</a></li>
+                                                    <li><a href="personal.html">Home</a></li>
                                                     <li><a href="courses.html">Courses</a></li>
                                                     <li><a href="about.html">About</a></li>
                                                 </ul>
@@ -245,8 +230,7 @@
                 <div class="row d-flex align-items-center">
                     <div class="col-lg-12">
                         <div class="footer-copy-right text-center">
-                            <p> Copyright &copy;<script>document.write(new Date().getFullYear());</script></p>
-                            <p>This template belongs to Colorlib</p>
+                            <p> Copyright &copy;<script>document.write(new Date().getFullYear());</script> | This template belongs to Colorlib</p>
                         </div>
                     </div>
                 </div>
@@ -254,13 +238,14 @@
         </div>
     </div>
       <!-- Footer End-->
-  </footer>
+</footer>
   <!-- Scroll Up -->
-  <div id="back-top" >
+<div id="back-top" >
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
 </div>
 
 <!-- JS here -->
+<script src="./assets/js/personal.js"></script>
 
 <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 <!-- Jquery, Popper, Bootstrap -->
