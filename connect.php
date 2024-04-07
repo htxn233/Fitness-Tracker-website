@@ -2,7 +2,7 @@
 $host = "localhost";
 $dbusername = "root";
 $dbpassword = "";
-$dbname = "user_login";
+$dbname = "canopy";
 
 // create connect to database
 $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);

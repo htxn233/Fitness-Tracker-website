@@ -277,4 +277,15 @@ input {
     }
 }
 
+.gender-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px 0;
+}
+
+.gender-container label {
+	margin: 0 10px;
+}
+
 
