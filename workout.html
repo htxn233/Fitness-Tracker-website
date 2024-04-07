@@ -19,9 +19,11 @@
  <link rel="stylesheet" href="assets/css/slick.css">
  <link rel="stylesheet" href="assets/css/nice-select.css">
  <link rel="stylesheet" href="assets/css/style.css">
+ <link rel="stylesheet" href="assets/css/news.css">
+
 </head>
 
-<body>
+<body style="background-color: black;">
  <!--? Preloader Start -->
  <div id="preloader-active">
   <div class="preloader d-flex align-items-center justify-content-center">
@@ -48,16 +50,12 @@
           <div class="main-menu f-right d-none d-lg-block">
             <nav>
               <ul id="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="personal.php">Home</a></li>
                 <li><a href="courses.html">Courses</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="discover.html">Blog</a>
+                <li><a href="discover.html">Discover</a>
                   <ul class="submenu">
-                    <li><a href="discover.html">Blog</a></li>
-                    <li><a href="discover_details.html">Blog Details</a></li>
-                    <li><a href="elements.html">Elements</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="fittube.html">Fittube</a></li>
                   </ul>
                 </li>
                 <li><a href="contact.html">Contact</a></li>
@@ -66,7 +64,7 @@
           </div>          
           <!-- Header-btn -->
           <div class="header-btns d-none d-lg-block f-right">
-            <a href="Login.html" class="btn">Login</a>
+            <a href="loginform.php" class="btn">sign out</a>
          </div>
          <!-- Mobile Menu -->
          <div class="col-12">
@@ -86,7 +84,7 @@
         <div class="row">
           <div class="col-xl-12">
             <div class="hero-cap hero-cap2 pt-70">
-              <h2>Blog Details</h2>
+              <h2>News</h2>
             </div>
           </div>
         </div>
@@ -388,7 +386,7 @@ class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end al
   <div class="media post_item">
    <img src="assets/img/post/post_1.png" alt="post">
    <div class="media-body">
-    <a href="discover_details.html">
+    <a href="blog_details.html">
      <h3 style="color: #2d2d2d;">From life was you fish...</h3>
    </a>
    <p>January 12, 2019</p>
@@ -397,7 +395,7 @@ class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end al
 <div class="media post_item">
  <img src="assets/img/post/post_2.png" alt="post">
  <div class="media-body">
-  <a href="discover_details.html">
+  <a href="blog_details.html">
    <h3 style="color: #2d2d2d;">The Amazing Hubble</h3>
  </a>
  <p>02 Hours ago</p>
@@ -406,7 +404,7 @@ class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end al
 <div class="media post_item">
  <img src="assets/img/post/post_3.png" alt="post">
  <div class="media-body">
-  <a href="discover_details.html">
+  <a href="blog_details.html">
    <h3 style="color: #2d2d2d;">Astronomy Or Astrology</h3>
  </a>
  <p>03 Hours ago</p>
@@ -415,7 +413,7 @@ class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end al
 <div class="media post_item">
  <img src="assets/img/post/post_4.png" alt="post">
  <div class="media-body">
-  <a href="discover_details.html">
+  <a href="blog_details.html">
    <h3 style="color: #2d2d2d;">Asteroids telescope</h3>
  </a>
  <p>01 Hours ago</p>
@@ -514,7 +512,7 @@ class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end al
       </div>
       <div class="features-caption">
         <h3>Location</h3>
-        <p>You’ll look at graphs and charts in Task One, how to approach </p>
+        <p> 20/22/23 Dragon Hill, Nguyen Huu Tho St., Phuoc Kien Ward, Nha Be District.</p>
       </div>
     </div>
   </div>
@@ -537,8 +535,8 @@ class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end al
   </div>
   <div class="features-caption">
     <h3>Email</h3>
-    <p>jacson767@gmail.com</p>
-    <p>contact56@zacsion.com</p>
+    <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=canopyFit@gmail.com" target="_blank">canopyfit@gmail.com</a></p>
+    <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=canopycarepro@gmail.com" target="_blank">canopycarepro@gmail.com</a></p>
   </div>
 </div>
 </div>
@@ -557,7 +555,7 @@ class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end al
             <div class="single-footer-caption mb-50 text-center">
               <!-- logo -->
               <div class="footer-logo wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
               </div>
               <!-- Menu -->
               <!-- Header Start -->
@@ -583,9 +581,9 @@ class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end al
               <!-- Header End -->
               <!-- social -->
               <div class="footer-social mt-30 wow fadeInUp" data-wow-duration="3s" data-wow-delay=".8s">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="https://twitter.com/CanopyFit"><i class="fab fa-twitter"></i></a>
+                <a href="https://short.com.vn/Zg3f"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/canopyfit/"><i class="fab fa-instagram"></i></a>
               </div>
             </div>
           </div>

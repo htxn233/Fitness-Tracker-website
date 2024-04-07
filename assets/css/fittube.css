@@ -1,0 +1,22 @@
+
+.center-video {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.autoplay iframe {
+    display: flex;
+    width: 100%;
+    /* Ensure the video is as wide as its parent element */
+    aspect-ratio: 16 / 9;
+    /* Maintain the aspect ratio of 16:9 for the video */
+    justify-content: space-between;
+    /* Align the videos horizontally */
+    align-items: center;
+    /* Align the videos vertically */
+    padding: 0 20px;
+    /* Spacing between videos */
+}
+
+

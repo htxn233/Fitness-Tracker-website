@@ -55,6 +55,7 @@
                                 <ul id="navigation">
                                     <li><a href="personal.html">Home</a></li>
                                     <li><a href="courses.html">Courses</a></li>
+                                    <li><a href="discover.html">Discover</a></li>
                                     <li><a href="about.html">About</a></li>
                                 </ul>
                             </nav>

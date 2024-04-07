@@ -24,17 +24,18 @@
 	</div>
 	<div class="container" id="container">
 		<div class="form-container sign-up-container">
-			<form method = "POST" action="regis.php">
+			<form method="POST" action="regis.php">
 				<h1>Create Account</h1>
 				<div class="social-container">
-					<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-					<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-					<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+					<a href="https://twitter.com/CanopyFit"><i class="fab fa-twitter"></i></a>
+					<a href="https://short.com.vn/Zg3f"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://www.instagram.com/canopyfit/"><i class="fab fa-instagram"></i></a>
 				</div>
 				<span>or use your email for registration</span>
-				<input name ="name" type="text" placeholder="Name" />
-				<input name ="email" type="email" placeholder="Email" />
-				<input name ="password" type="password" placeholder="Password" />
+				<input name="name" type="text" placeholder="Name" />
+				<input name="email" type="email" placeholder="Email" />
+				<input name="password" type="password" placeholder="Password" />
+				<input name="phone" type="text" placeholder="Phone Number" /><br>
 				<button onclick="validation()" class="signup-button">Sign Up</button>
 			</form>
 		</div>
@@ -42,9 +43,9 @@
 			<form method= "POST" action="login.php">
 				<h1>Sign in</h1>
 				<div class="social-container">
-					<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-					<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-					<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+					<a href="https://twitter.com/CanopyFit"><i class="fab fa-twitter"></i></a>
+					<a href="https://short.com.vn/Zg3f"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://www.instagram.com/canopyfit/"><i class="fab fa-instagram"></i></a>
 				</div>
 				<span>or use your account</span>
 				<input name ="email" type="email" placeholder="Email" />
@@ -68,8 +69,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- Firebase SDKs -->
-
 		
 	<script src="./assets/js/Login.js" ></script>
 	<script>
