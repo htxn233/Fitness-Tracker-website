@@ -68,7 +68,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- Firebase SDKs -->
 
 		
 	<script src="./assets/js/Login.js" ></script>

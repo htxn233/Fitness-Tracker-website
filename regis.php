@@ -1,7 +1,7 @@
 <?php
     include("connect.php");
 
-    if(isset($_POST['signup-button'])){
+    if(!isset($_POST['signup-button'])){
         $name = mysqli_real_escape_string($conn, $_POST['name']);
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         $password = mysqli_real_escape_string($conn, $_POST['password']);
@@ -15,7 +15,7 @@
         } else{
             $insertQuery = "INSERT INTO user (name, email, password) VALUES ('$name', '$email', '$password')";
             if(mysqli_query($conn, $insertQuery)){
-                header("Location: index.html");
+                header("Location: loginform.php?message=registered");               
                 exit();
             } else{
                 $error = mysqli_error($conn);
