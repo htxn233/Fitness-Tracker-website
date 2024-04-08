@@ -1,6 +1,6 @@
 <?php
     // Kết nối đến cơ sở dữ liệu
-    $conn = new mysqli("localhost", "username", "password", "database_name");
+    $conn = new mysqli("localhost", "username", "password", "courses");
 
     // Kiểm tra kết nối
     if ($conn->connect_error) {
@@ -8,7 +8,7 @@
     }
 
     // Truy vấn dữ liệu từ cơ sở dữ liệu
-    $sql = "SELECT * FROM courses WHERE course_name = 'Weight loss'";
+    $sql = "SELECT * FROM courses WHERE courses = 'Weight loss'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {

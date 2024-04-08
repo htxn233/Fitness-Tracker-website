@@ -53,9 +53,10 @@
                         <div class="main-menu f-right d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a href="personal.html">Home</a></li>
+                                    <li><a href="personal.php">Personal</a></li>
                                     <li><a href="courses.html">Courses</a></li>
                                     <li><a href="about.html">About</a></li>
+                                    <li><a href="profile.php">Profile</a></li>
                                 </ul>
                             </nav>
                         </div>          
@@ -109,7 +110,6 @@
             <span id="year">0000</span>
             <span class="display-time"></span>
           </div>
-      
           <div class="course-list">
             <?php
                 // Kết nối đến cơ sở dữ liệu và truy vấn dữ liệu
@@ -121,11 +121,10 @@
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo '<div class="course-item">';
-                        echo '<h3>' . $row['Cname'] . '</h3>';
-                        echo '<p>ID: ' . $row['Cid'] . '</p>';
+                        echo '<h3 style="color: yellow">' . $row['Cname'] . '</h3>';
                         echo '<p>Time: ' . $row['Ctime'] . '</p>';
-                        echo '<p>Description: ' . $row['Cdes'] . '</p>';
                         echo '<p>Exercise: ' . $row['Cexercise'] . '</p>';
+                        echo '<p>Description: ' . $row['Cdes'] . '</p>';
                         echo '</div>';
                     }
                 } else {

@@ -33,30 +33,30 @@ body {
   border: 2px solid #f04e3c;
   padding: 10px 20px;
   border-radius: 5px;
-  width: fit-content; /* Thay đổi width thành fit-content để chỉ chiều dài phù hợp với nội dung */
+  width: fit-content; 
   margin: 10px; 
 }
 
 .course-list {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .course-item {
-    width: calc(30% - 10px); 
-    padding: 10px;
-    border: 2px solid #f04e3c;
-    border-radius: 5px;
-    background-color: #f7f7f7;
-  }
-  
-  .course-item h3 {
-    font-size: 1.6rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .course-item p {
-    font-size: 1.4rem;
-    color: #666;
-  }
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-item {
+  width: calc(30% - 10px); 
+  padding: 10px;
+  border: 2px solid #f04e3c;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+.course-item h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.course-item p {
+  font-size: 1.4rem;
+  color: #666;
+}
