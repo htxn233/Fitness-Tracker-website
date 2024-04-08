@@ -3484,25 +3484,23 @@ h2.wow {
   z-index: 1;
 }
 
-/* line 17, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_traning-cat.scss */
 .traning-categories .single-topic .topic-img {
   border-radius: 12px;
 }
 
 @media (max-width: 575px) {
-  /* line 17, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_traning-cat.scss */
   .traning-categories .single-topic .topic-img {
     margin-top: 67px;
     margin-bottom: 61px;
   }
 }
 
-/* line 22, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_traning-cat.scss */
 .traning-categories .single-topic .topic-img img {
   width: 100%;
+  height: 100%; 
+  object-fit: cover; 
 }
 
-/* line 29, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_traning-cat.scss */
 .traning-categories .single-topic .topic-content-box {
   position: absolute;
   top: 50%;
@@ -3649,7 +3647,7 @@ h2.wow {
   -moz-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   padding: 36px 24px 25px 24px;
 }
 
@@ -3660,164 +3658,6 @@ h2.wow {
 .border-btn2 {
   width: 100%;
   text-align: center;
-}
-
-.video-area {
-  height: 660px;
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  /* line 1, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_video-area.scss */
-  .video-area {
-    height: 400px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 1, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_video-area.scss */
-  .video-area {
-    height: 400px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 1, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_video-area.scss */
-  .video-area {
-    height: 400px;
-  }
-}
-
-@media (max-width: 575px) {
-  /* line 1, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_video-area.scss */
-  .video-area {
-    height: 300px;
-  }
-}
-
-/* line 18, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_video-area.scss */
-.video-icon {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* line 30, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_video-area.scss */
-.video-icon a {
-  background: #fff;
-  color: #FF0000;
-  width: 110px;
-  height: 110px;
-  display: inline-block;
-  text-align: center;
-  line-height: 110px;
-  border-radius: 50%;
-}
-
-/* line 39, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_video-area.scss */
-.video-icon a::after {
-  position: absolute;
-  border: 70px solid inherit !important;
-  content: "";
-  border-radius: 50%;
-  left: -9px;
-  top: -12px;
-  right: 0;
-  z-index: 0;
-  background: #0000;
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 39, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_video-area.scss */
-  .video-icon a::after {
-    border: 50px solid rgba(241, 65, 5, 0.1);
-    left: -19px;
-    top: -19px;
-    right: 0;
-  }
-}
-
-@media (max-width: 575px) {
-  /* line 39, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_video-area.scss */
-  .video-icon a::after {
-    border: 50px solid rgba(241, 65, 5, 0.1);
-    left: -19px;
-    top: -19px;
-    right: 0;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 30, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_video-area.scss */
-  .video-icon a {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-  }
-}
-
-@media (max-width: 575px) {
-  /* line 30, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_video-area.scss */
-  .video-icon a {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-  }
-}
-
-/* line 72, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_video-area.scss */
-.video-icon a i {
-  font-size: 31px;
-  line-height: 1;
-  position: relative;
-  right: -4px;
-  top: 8px;
-}
-
-/* line 82, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_video-area.scss */
-.video-icon a.btn-icon {
-  position: relative;
-  /* Animations */
-  /* End Animated */
-}
-
-/* line 84, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_video-area.scss */
-.video-icon a.btn-icon::before {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  bottom: -2px;
-  right: -2px;
-  border-radius: inherit;
-  border: 1px solid #FF0000;
-  -webkit-animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
-  animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
-}
-
-@-webkit-keyframes btnIconRipple {
-  0% {
-    border-width: 4px;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    border-width: 1px;
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
-  }
-  80% {
-    border-width: 1px;
-    -webkit-transform: scale(1.9);
-    transform: scale(1.9);
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 .about-area2 .support-wrapper {
