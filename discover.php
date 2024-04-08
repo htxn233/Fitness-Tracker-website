@@ -29,6 +29,7 @@
         margin-bottom: 10px;
     }
 </style>
+
 <body style="background-color: black;">
     <!--? Preloader Start -->
     <div id="preloader-active">
@@ -58,9 +59,8 @@
                                 <ul id="navigation">
                                     <li><a href="personal.php">Home</a></li>
                                     <li><a href="courses.html">Courses</a></li>
-                                    <li><a href="discover.html">Discover</a>
+                                    <li><a href="discover.php">Discover</a>
                                         <ul class="submenu">
-                                            <li><a href="news.html">News</a></li>
                                             <li><a href="fittube.html">FitTube</a></li>
                                         </ul>
                                     </li>
@@ -90,7 +90,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap hero-cap2 pt-70">
-                                <h2>News</h2>
+                                <h2>Discover</h2>
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,9 @@
                         <div class="blog_left_sidebar">
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="https://www.verywellfit.com/thmb/2kz8Qxgj7nbEJEXL2270koWeki0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/VWFit-drinking-coffee-every-day-7972809-a2598496ea60451daf0feda816a8ff1e.jpg" alt="">
+                                    <img class="card-img rounded-0"
+                                        src="https://www.verywellfit.com/thmb/2kz8Qxgj7nbEJEXL2270koWeki0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/VWFit-drinking-coffee-every-day-7972809-a2598496ea60451daf0feda816a8ff1e.jpg"
+                                        alt="">
                                     <a href="nutrion.html" class="blog_item_date">
                                         <h3>10</h3>
                                         <p>Oct</p>
@@ -114,7 +116,8 @@
                                 </div>
                                 <div class="news_details">
                                     <a class="d-inline-block" href="nutrion.html">
-                                        <h2 class="blog-head" style="color: White;">What Happens To Your Body When You Drink Coffee Every Day?</h2>
+                                        <h2 class="blog-head" style="color: White;">What Happens To Your Body When You
+                                            Drink Coffee Every Day?</h2>
                                     </a>
                                     <p style="color: #DCF2F1;">By Shoshana Pritzker RD, CDN, CSSD, CISSN||
                                         Medically reviewed by Barbie Cervoni MS, RD, CDCES, CDN</p>
@@ -126,7 +129,9 @@
                             </article>
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="https://onerehab.com/wp-content/uploads/2020/11/physical-therapy.jpg" alt="">
+                                    <img class="card-img rounded-0"
+                                        src="https://onerehab.com/wp-content/uploads/2020/11/physical-therapy.jpg"
+                                        alt="">
                                     <a href="#" class="blog_item_date">
                                         <h3>20</h3>
                                         <p>Oct</p>
@@ -134,18 +139,21 @@
                                 </div>
                                 <div class="news_details">
                                     <a class="d-inline-block" href="workout.html">
-                                        <h2 class="blog-head" style="color: white;">5 best yoga poses athletes should practice to help prevent injuries</h2>
+                                        <h2 class="blog-head" style="color: white;">5 best yoga poses athletes should
+                                            practice to help prevent injuries</h2>
                                     </a>
                                     <p style="color: #DCF2F1;">By SJ McShane</p>
                                     <ul class="blog-info-link">
-                                        <li><a href="workout.html"><i class="fa fa-user"></i> Workout tips, Yoga</a></li>
+                                        <li><a href="workout.html"><i class="fa fa-user"></i> Workout tips</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
                                     </ul>
                                 </div>
                             </article>
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="https://www.healthtransformation.net/wp-content/uploads/2015/12/Human-Body-and-Mind-3D-Illustration.jpg" alt="">
+                                    <img class="card-img rounded-0"
+                                        src="https://www.healthtransformation.net/wp-content/uploads/2015/12/Human-Body-and-Mind-3D-Illustration.jpg"
+                                        alt="">
                                     <a href="#" class="blog_item_date">
                                         <h3>29</h3>
                                         <p>Nov</p>
@@ -153,18 +161,22 @@
                                 </div>
                                 <div class="news_details">
                                     <a class="d-inline-block" href="mindbody.html">
-                                        <h2 class="blog-head" style="color: white;">Emotional Trauma and the Mind-Body Connection</h2>
+                                        <h2 class="blog-head" style="color: white;">Emotional Trauma and the Mind-Body
+                                            Connection</h2>
                                     </a>
                                     <p style="color: #DCF2F1;">By Smitha Bhandari, MD</p>
                                     <ul class="blog-info-link">
-                                        <li><a href="mindbody.html"><i class="fa fa-user"></i> Mind-Body Connection, Yoga</a></li>
+                                        <li><a href="mindbody.html"><i class="fa fa-user"></i> Mind-Body Connection</a>
+                                        </li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
                                     </ul>
                                 </div>
                             </article>
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="https://cdn.climbing.com/wp-content/uploads/2024/04/GettyImages-1035650954-scaled.jpg?crop=535:301&width=1070&enable=upscale" alt="">
+                                    <img class="card-img rounded-0"
+                                        src="https://cdn.climbing.com/wp-content/uploads/2024/04/GettyImages-1035650954-scaled.jpg?crop=535:301&width=1070&enable=upscale"
+                                        alt="">
                                     <a href="#" class="blog_item_date">
                                         <h3>3</h3>
                                         <p>Apr</p>
@@ -172,18 +184,22 @@
                                 </div>
                                 <div class="news_details">
                                     <a class="d-inline-block" href="sport.html">
-                                        <h2 class="blog-head" style="color: white">Stop Using “Redpoint Mode” As An Excuse to Skip the Line</h2>
+                                        <h2 class="blog-head" style="color: white">Stop Using “Redpoint Mode” As An
+                                            Excuse to Skip the Line</h2>
                                     </a>
                                     <p style="color: #DCF2F1;">By Brian Stevens</p>
                                     <ul class="blog-info-link">
-                                        <li><a href="sport.html"><i class="fa fa-user"></i> Sports and activities</a></li>
+                                        <li><a href="sport.html"><i class="fa fa-user"></i> Sports and activities</a>
+                                        </li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
                                     </ul>
                                 </div>
                             </article>
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="https://i0.wp.com/post.greatist.com/wp-content/uploads/sites/2/2020/09/GRT-207302-Mondays-with-Minaa-4-Simple-to-Make-or-Break-Your-Work-Boundaries_Header.png?w=1155&h=1528" alt="">
+                                    <img class="card-img rounded-0"
+                                        src="https://i0.wp.com/post.greatist.com/wp-content/uploads/sites/2/2020/09/GRT-207302-Mondays-with-Minaa-4-Simple-to-Make-or-Break-Your-Work-Boundaries_Header.png?w=1155&h=1528"
+                                        alt="">
                                     <a href="#" class="blog_item_date">
                                         <h3>5</h3>
                                         <p>Apr</p>
@@ -191,11 +207,14 @@
                                 </div>
                                 <div class="news_details">
                                     <a class="d-inline-block" href="f_movation.html">
-                                        <h2 class="blog-head" style="color: white;">50 Shades of Self-Care: How to Give Yourself TLC for Every Occasion</h2>
+                                        <h2 class="blog-head" style="color: white;">50 Shades of Self-Care: How to Give
+                                            Yourself TLC for Every Occasion</h2>
                                     </a>
-                                    <p style="color:#DCF2F1">By Medically reviewed by Bethany Juby, PsyD — By Alysa Hullettt</p>
+                                    <p style="color:#DCF2F1">By Medically reviewed by Bethany Juby, PsyD — By Alysa
+                                        Hullettt</p>
                                     <ul class="blog-info-link">
-                                        <li><a href="f_movation.html"><i class="fa fa-user"></i> Fitness motivation</a></li>
+                                        <li><a href="f_movation.html"><i class="fa fa-user"></i> Fitness motivation</a>
+                                        </li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
                                     </ul>
                                 </div>
@@ -225,26 +244,27 @@
                     <div class="col-lg-4">
                         <div class="blog_right_sidebar">
                             <aside class="single_sidebar_widget search_widget">
-                                <form action="#">
+                                <form method="POST" action="search.php" onsubmit="return validateForm()">
                                     <div class="form-group">
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder='Search Keyword'
-                                            onfocus="this.placeholder = ''"
-                                            onblur="this.placeholder = 'Search Keyword'">
+                                            <input name="keyword" type="text" class="form-control"
+                                                placeholder='Search Keyword' onfocus="this.placeholder = ''"
+                                                onblur="this.placeholder = 'Search Keyword'">
                                             <div class="input-group-append">
-                                                <button class="btns" type="button"><i class="ti-search"></i></button>
+                                                <button name="submit-search" class="btns" type="submit"><i class="ti-search"></i></button>
                                             </div>
                                         </div>
                                     </div>
-                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                                    <button name="submit-search" class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
                                     type="submit">Search</button>
                                 </form>
                             </aside>
+
                             <aside class="single_sidebar_widget post_category_widget">
                                 <div class="filter-option">
                                     <label for="category-filter"></label>
                                     <select id="category-filter">
-                                        <option href= "discover.html" value="">All Categories</option>
+                                        <option href="discover.html" value="">All Categories</option>
                                         <option value="category2">Strength Training</option>
                                         <option href="mindbody.html" value="category2">Yoga and Flexibility</option>
                                         <option href="nutrion.html" value="category2">Nutrition and Diet</option>
@@ -309,9 +329,6 @@
                                     </li>
                                     <li>
                                         <a href="mindbody.html">Mind-Body Connection</a>
-                                    </li>
-                                    <li>
-                                        <a href="mindbody.html">Yoga</a>
                                     </li>
                                 </ul>
                             </aside>
@@ -403,8 +420,10 @@
                             </div>
                             <div class="features-caption">
                                 <h3>Email</h3>
-                                <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=canopyFit@gmail.com" target="_blank">canopyfit@gmail.com</a></p>
-                                <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=canopycarepro@gmail.com" target="_blank">canopycarepro@gmail.com</a></p>
+                                <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=canopyFit@gmail.com"
+                                        target="_blank">canopyfit@gmail.com</a></p>
+                                <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=canopycarepro@gmail.com"
+                                        target="_blank">canopycarepro@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -514,8 +533,8 @@
     <!-- Jquery Plugins, main Jquery -->
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
-    <script async src="https://cse.google.com/cse.js?cx=d2ca78b5c76d94692"></script>
-   
+
+
 
 </body>
 
