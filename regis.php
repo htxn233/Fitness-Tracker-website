@@ -1,7 +1,7 @@
 <?php
     include("connect.php");
 
-    if(!!isset($_POST['signup-button'])){
+    if(isset($_POST['signup-button'])){
         $name = mysqli_real_escape_string($conn, $_POST['name']);
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         $password = mysqli_real_escape_string($conn, $_POST['password']);

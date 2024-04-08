@@ -15,8 +15,6 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 	// Get values from input fields
 	var email = document.getElementById('email').value;
 	var password = document.getElementById('password').value;
-	// Here you can perform authentication using email and password
-	// If authentication is successful, redirect user to main page with their data
 	window.location.href = "index.html?email=" + email + "&password=" + password;
 });
 

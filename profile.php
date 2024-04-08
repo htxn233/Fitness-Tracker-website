@@ -1,6 +1,16 @@
 <?php
 session_start();
 
+
+include ("connect.php");
+
+if(isset($_POST['signin-button'])){
+    $email = mysqli_real_escape_string($conn, $_POST['email']); //user nhap
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
+}
+
+$_SESSION['user'] = $email;
+
 if(!isset($_SESSION['user'])) {
     $errorMessage = "You are not logged in.";
 }
@@ -96,9 +106,7 @@ if(!isset($_SESSION['user'])) {
         </div>
     </div>
     <!-- Hero End -->
-    <!--? Profile Area Start -->
     <?php if(isset($errorMessage)): ?>
-        <!-- Hiển thị thông báo lỗi -->
         <h1><?php echo $errorMessage; ?></h1>
         <a href="loginform.php">Login</a>
     <?php else: ?>

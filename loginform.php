@@ -36,11 +36,11 @@
 				<input name="email" type="email" placeholder="Email" />
 				<input name="password" type="password" placeholder="Password" />
 				<input name="phone" type="text" placeholder="Phone Number" /><br>
-				<button onclick="validation()" class="signup-button">Sign Up</button>
+				<button type="submit" name="signup-button" class="signup-button">Sign Up</button>
 			</form>
 		</div>
 		<div class="form-container sign-in-container">
-			<form method= "POST" action="login.php">
+			<form method="POST" action="login.php">
 				<h1>Sign in</h1>
 				<div class="social-container">
 					<a href="https://twitter.com/CanopyFit"><i class="fab fa-twitter"></i></a>
@@ -51,7 +51,7 @@
 				<input name ="email" type="email" placeholder="Email" />
 				<input name ="password" type="password" placeholder="Password" />
 				<a href="#">Forgot your password?</a>
-				<button onclick="validation()" class="signin-button">Sign In</button>
+				<button type="submit" name="signin-button" class="signin-button">Sign In</button>
 			</form>
 		</div>
 		<div class="overlay-container">

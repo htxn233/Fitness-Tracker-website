@@ -1,12 +1,11 @@
 <?php
     include ("connect.php");
 
-    if(!isset($_POST['signin-button'])){
+    if(isset($_POST['signin-button'])){
         $email = mysqli_real_escape_string($conn, $_POST['email']); //user nhap
         $password = mysqli_real_escape_string($conn, $_POST['password']);
-    
-   
-    // Kiểm tra thông tin đăng nhập
+        
+        // Kiểm tra thông tin đăng nhập
         $query = "SELECT * FROM users WHERE USemail = '$email' AND USpassword = '$password'";
         $USemail = "SELECT USemail FROM users Where USemail = '$email' AND USpassword = '$password'"; //cua he thong
         $USpw = "SELECT USpassword FROM users Where USemail = '$email' AND USpassword = '$password'";
