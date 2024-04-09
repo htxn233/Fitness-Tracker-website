@@ -1,6 +1,6 @@
-<?php 
-	session_start();
-	ob_start();
+<?php
+session_start();
+ob_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +10,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="assets/css/Login.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	</body>
 </head>
 
 <body>
@@ -37,10 +41,10 @@
 				<input name="password" type="password" placeholder="Password" />
 				<input name="phone" type="text" placeholder="Phone Number" /><br>
 				<button onclick="validation()" class="signup-button">Sign Up</button>
-			</form>
+			</form> #
 		</div>
 		<div class="form-container sign-in-container">
-			<form method= "POST" action="login.php">
+			<form method="POST" action="login.php">
 				<h1>Sign in</h1>
 				<div class="social-container">
 					<a href="https://twitter.com/CanopyFit"><i class="fab fa-twitter"></i></a>
@@ -48,8 +52,12 @@
 					<a href="https://www.instagram.com/canopyfit/"><i class="fab fa-instagram"></i></a>
 				</div>
 				<span>or use your account</span>
-				<input name ="email" type="email" placeholder="Email" />
-				<input name ="password" type="password" placeholder="Password" />
+				<input name="email" type="email" placeholder="Email" />
+				<input name="password" type="password" placeholder="Password" />
+					<!-- Alert Bootstrap -->
+				<div class="alert alert-danger border border-danger" role="alert">
+					Invalid username or password
+				</div>
 				<a href="#">Forgot your password?</a>
 				<button onclick="validation()" class="signin-button">Sign In</button>
 			</form>
@@ -70,8 +78,8 @@
 		</div>
 	</div>
 
-		
-	<script src="./assets/js/Login.js" ></script>
+
+	<script src="./assets/js/Login.js"></script>
 	<script>
 		const leftPane = document.querySelector('.left-pane');
 		const centerPane = document.querySelector('.center-pane');
