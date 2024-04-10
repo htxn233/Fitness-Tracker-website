@@ -1,22 +1,4 @@
-<?php
-include("connect.php");
 
-// Xử lý yêu cầu khi form được gửi đi
-if ($_SERVER["catelogy"] == "POST") { // catelogy cua name
-    $catelogy = mysqli_real_escape_string($conn, $_POST['catelogy']);
-    $sql = "SELECT * FROM courses WHERE Ccatelogy = '$catelogy'";
-    $result = mysqli_query($conn, $sql);
-
-    if (mysqli_num_rows($result)> 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo "Name: " . $row["Cname"]. " - Time: " . $row["Ctime"]. " - Description: " . $row["Cdes"].  " - Catelogy: " .$row["Ccatelogy"] ."<br>"; //check dau
-        }
-    } else {
-        echo "This catelogy is developing. Please select other catelogy to find a course.";
-    }
-}
-$conn->close();
-?>
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -112,14 +94,14 @@ $conn->close();
     <!-- Hero End -->
     <!--? Team -->
     <section class="team-area fix section-padding30">
-        <div class="container" style="position: relative;">
+        <div class="container">
             <div class="row">
                 <div class="wrapper">
                     <div class="search_box">
                         <div class="dropdown">
                             <div class="default_option">Select</div>  
                             <ul>
-                                <li><button type="submit" name="catelogy" value="Weight loss">Weight loss</button></li>
+                               <li><button type="submit" name="catelogy" value="Weight loss">Weight loss</button></li>
                                 <li><button type="submit" name="catelogy" value="Body building">Body building</button></li>
                                 <li><button type="submit" name="catelogy" value="Muscle gain">Muscle gain</button></li>
                                 <li><button type="submit" name="catelogy" value="Relaxing">Relaxing</button></li>
@@ -132,23 +114,6 @@ $conn->close();
                     </div>
                 </div>
             </div>
-            <?php
-            $sql = "SELECT * FROM courses WHERE Ccategory = 'weight loss'";
-            $result = $conn->query($sql);
-
-            // Kiểm tra kết quả và hiển thị dữ liệu
-            if ($result->num_rows > 0) {
-                // Duyệt qua các hàng kết quả
-                while($row = $result->fetch_assoc()) {
-                    echo "Course ID: " . $row["Cid"]. " - Course Name: " . $row["Cname"]. "<br>";
-                }
-            } else {
-                echo "Không có kết quả nào";
-            }
-
-            // Đóng kết nối
-            $conn->close();
-            ?>
         </div>
     </section>
     <!-- Services End -->

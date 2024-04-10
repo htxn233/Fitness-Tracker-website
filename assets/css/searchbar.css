@@ -1,44 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-<<<<<<< HEAD
-.table {
-    display: table;
-    width: 100%;
-}
-
-.table-row {
-    display: table-row;
-}
-
-<<<<<<< HEAD
-.searchbar {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%; /* Điều chỉnh chiều rộng tùy thích */
-}
-
-=======
-.table-cell {
-    display: table-cell;
-    vertical-align: middle;
-    padding: 5px;
-}
-
-.table-cell
-
-
->>>>>>> a42682664b782caff3e69bf96cd8d863e4fb87e9
-input,
-button,
-option {
-  color: #fff;
-  font-family: Nunito;
-  padding: 0;
-=======
 *{
->>>>>>> cbee3c96ca78f9db725d56e86db3a5d925b1f848
   margin: 0;
   padding: 0;
   box-sizing: border-box;

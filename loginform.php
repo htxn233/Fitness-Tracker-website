@@ -40,13 +40,8 @@ ob_start();
 				<input name="email" type="email" placeholder="Email" />
 				<input name="password" type="password" placeholder="Password" />
 				<input name="phone" type="text" placeholder="Phone Number" /><br>
-<<<<<<< HEAD
-				<button onclick="validation()" class="signup-button">Sign Up</button>
-			</form> #
-=======
 				<button type="submit" name="signup-button" class="signup-button">Sign Up</button>
-			</form>
->>>>>>> f0fe4b4ccb6dfe77c5492a5aa97164f026e9970e
+			</form> 
 		</div>
 		<div class="form-container sign-in-container">
 			<form method="POST" action="login.php">
@@ -59,10 +54,6 @@ ob_start();
 				<span>or use your account</span>
 				<input name="email" type="email" placeholder="Email" />
 				<input name="password" type="password" placeholder="Password" />
-					<!-- Alert Bootstrap -->
-				<div class="alert alert-danger border border-danger" role="alert">
-					Invalid username or password
-				</div>
 				<a href="#">Forgot your password?</a>
 				<button type="submit" name="signin-button" class="signin-button">Sign In</button>
 			</form>

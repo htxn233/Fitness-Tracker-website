@@ -4,6 +4,8 @@ ob_start();
 
 ?>
 
+
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -111,111 +113,49 @@ ob_start();
                         <div class="front-text">
                             <div class="front-text">
                                 <?php
-                                
-                                // Kiểm tra xem biến $_SESSION['user_id'] đã được khởi tạo chưa
-                                if (isset($_SESSION['user_id'])) {
-                                    $user_id = $_SESSION['user_id']; // Gán giá trị từ session vào biến $user_id
-                                }
-
-                                // Kiểm tra xem biến $user_id đã được xác định chưa
-                                if (isset($user_id)) {
-                                    include ("connect.php");
-
-                                    // Truy vấn dữ liệu từ bảng profile và users trong cơ sở dữ liệu cho USid cụ thể
-                                    $sql = "SELECT profile.Pid, users.USname, users.USemail, users.USphone
-                                    FROM profile 
-                                    INNER JOIN users ON profile.USid = users.USid
-                                    WHERE profile.USid = $user_id";
-
-                                    $result = $conn->query($sql);
-
-                                    // Kiểm tra xem có dữ liệu trả về hay không
-                                    if ($result->num_rows > 0) {
-                                        // Duyệt qua từng hàng dữ liệu
-                                        while ($row = $result->fetch_assoc()) {
-                                            // Hiển thị thông tin từ mỗi hàng dữ liệu
-                                            echo "<h2>" . $row["USname"] . "</h2>";
-                                            echo "<button class='border-btn mt-4' style='color: red'>Email: " . $row["USemail"] . "</button>";
-                                            echo "<br>";
-                                            echo "<button class='border-btn mt-4' style='color: red'>Phone: " . $row["USphone"] . "</button>";
-                                            echo "<br>";
+                                    include("connect.php");
+                                    $email = mysqli_real_escape_string($conn, $_POST['email']); //user nhap
+                                    $sql = "SELECT USid FROM users WHERE USemail = '$email'";
+                                    $result = mysqli_query($conn, $sql);
+                                    
+                                    if (!$result) {
+                                        die("Query failed: " . $conn->error);
+                                    }
+                                    
+                                    if (mysqli_num_rows($result) > 0) {
+                                        $row = mysqli_fetch_assoc($result);
+                                        $userId = $row["USid"];
+                                        
+                                        $sql2 = "SELECT C.Cname, C.Ctime, C.Ccate 
+                                                FROM courses C
+                                                WHERE C.Cid IN (
+                                                    SELECT P.Cid
+                                                    FROM progress P
+                                                    WHERE P.USid = '$userId' AND P.status = 'Completed'
+                                                )";
+                                        
+                                        $result2 = mysqli_query($conn, $sql2);
+                                        
+                                        if (!$result2) {
+                                            die("Query failed: " . $conn->error);
                                         }
+                                        
+                                        if (mysqli_num_rows($result2) > 0) {
+                                            while ($row = mysqli_fetch_assoc($result2)) {
+                                                echo "<div class='front-text'>";
+                                                echo "<h2 style='color: lightcoral; text-align: left;'>" . $row["Cname"] . "</h2>";
+                                                echo "<h3 style='color: white;'><img class='mr-3 mt-3 mb-3' src='assets/img/icon/check.svg' alt=''> " . $row["Ccate"] . "</h3>";
+                                                echo "</div>";
+                                            }
+                                        } else {
+                                            echo "No completed courses found.";
+                                        }
+                                    } else {
+                                        echo "User not found.";
                                     }
-                                    $conn->close();
-                                } 
+                                    
+                                    mysqli_close($conn);
                                 ?>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <br>
-                <div>
-                    <div class="section-tittle text-center mt-50 mb-20 wow fadeInUp" data-wow-duration="2s"
-                        data-wow-delay=".2s">
-                        <h2 style="font-size: 100px;">Finished courses</h2>
-                    </div>
-                </div>
-                <div class="support-wrapper align-items-center">
-                    <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                        <!-- img -->
-                        <div>
-                            <img style="margin-left: 10%; height: 400px; width: 400px;"
-                                src="assets/img/gallery/profile.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="left-content2" style="border: 1px solid lightgrey;">
-                        <!-- section tittle -->
-
-                    </div>
-                </div>
-
-                <div class="support-wrapper align-items-center">
-                    <div class="left-content2" style="margin-left: 12%; border: 1px solid lightgrey;">
-                        <!-- section tittle -->
-                        <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                            <?php
-                               if (isset($_SESSION['user_id'])) {
-                                $user_id = $_SESSION['user_id']; // Gán giá trị từ session vào biến $user_id
-                            }
-
-                            // Kiểm tra xem biến $user_id đã được xác định chưa
-                            if (isset($user_id)) {
-                                include ("connect.php");
-                            // Truy vấn thông tin khóa học đã hoàn thành từ bảng profile, courses và progress
-                                $sql = "SELECT courses.Cname, courses.Ccate,
-                                    CASE
-                                        WHEN progress.Pstatus = 'completed' THEN 'Completed'
-                                        ELSE 'Incomplete'
-                                    END AS Pstatus
-                                    FROM profile
-                                    INNER JOIN courses ON profile.Cid = courses.Cid
-                                    LEFT JOIN progress ON profile.USid = progress.USid AND profile.Cid = progress.Cid
-                                    WHERE profile.USid = $user_id";
-
-                                $result = $conn->query($sql);
-
-                                // Kiểm tra lỗi trong quá trình truy vấn
-                                if (!$result) {
-                                    die("Query failed: " . $conn->error);
-                                }
-
-                                // Kiểm tra xem có dữ liệu trả về hay không
-                                if ($result->num_rows > 0) {
-                                    while ($row = $result->fetch_assoc()) {
-                                        echo "<div class='front-text'>";
-                                        echo "<h2 style='color: lightcoral; text-align: left;'>" . $row["Cname"] . "</h2>";
-                                        echo "<h3 style='color: white;'><img class='mr-3 mt-3 mb-3' src='assets/img/icon/check.svg' alt=''> " . $row["Ccate"] . "</h3>";
-                                        echo "<h3 style='color: white;'><img class='mr-3 mt-3 mb-3' src='assets/img/icon/check.svg' alt=''>Status: " . $row["Pstatus"] . "</h3>";
-                                        echo "</div>";
-                                    }
-                                }
-                            }
-                            // Đóng kết nối đến cơ sở dữ liệu
-                            $conn->close();
-                            ?>
-
                         </div>
                     </div>
                 </div>
