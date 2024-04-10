@@ -1,11 +1,7 @@
 <?php
 session_start();
 ob_start();
-if (!isset($_SESSION['user_id'])) {
-    // Nếu chưa đăng nhập, chuyển hướng đến trang đăng nhập
-    header("Location: login.php");
-    exit(); // Dừng kịch bản để ngăn truy cập tiếp tục vào trang hiện tại
-}
+
 ?>
 
 <!doctype html>
