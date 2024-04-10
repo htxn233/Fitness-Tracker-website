@@ -1,15 +1,15 @@
 <?php
-include(connect.php);
+include("connect.php");
 
 // Xử lý yêu cầu khi form được gửi đi
 if ($_SERVER["catelogy"] == "POST") { // catelogy cua name
-    $catelogy = $_POST["catelogy"];
+    $catelogy = mysqli_real_escape_string($conn, $_POST['catelogy']);
     $sql = "SELECT * FROM courses WHERE Ccatelogy = '$catelogy'";
-    $result = $conn->query($sql);
+    $result = mysqli_query($conn, $sql);
 
-    if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-            echo "Cname: " . $row["Cname"]. " - Ctime: " . $row["Ctime"]. " - Cdes: " . $row["Cdes"].  $row["Ccatelogy"]. " - Ccatelogy: ."<br>"; //check dau
+    if (mysqli_num_rows($result)> 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "Name: " . $row["Cname"]. " - Time: " . $row["Ctime"]. " - Description: " . $row["Cdes"].  " - Catelogy: " .$row["Ccatelogy"] ."<br>"; //check dau
         }
     } else {
         echo "This catelogy is developing. Please select other catelogy to find a course.";
