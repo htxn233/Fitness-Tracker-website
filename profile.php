@@ -106,9 +106,7 @@
                         <br><br>
                         <button class="border-btn" style="color: red">Canopy ID</button>
                         <br>
-                        <button class="border-btn" style="color: red">Progress</button>
-                        <br>
-                        <button class="border-btn mt-4" style="color: red">Courses</button>
+                        <button class="border-btn mt-4" style="color: red">Email</button>
                         <br>
                         <button class="border-btn mt-4" style="color: red">Phone</button>
                     </div>
