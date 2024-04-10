@@ -2763,6 +2763,7 @@ h2.wow {
   margin-bottom: 25px;
 }
 
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .section-tittle2 h2 {
     font-size: 50px;
@@ -3450,6 +3451,7 @@ h2.wow {
   line-height: 1;
 }
 
+
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .slider-area2 .hero-cap h2 {
     font-size: 50px;
@@ -3665,6 +3667,7 @@ h2.wow {
 }
 
 .about-area2 .support-wrapper {
+  padding-top: 100px;
   display: flex;
   justify-content: start;
   flex-wrap: wrap;

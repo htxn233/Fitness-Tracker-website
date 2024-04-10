@@ -1,17 +1,13 @@
-<?php
-session_start();
-?>
-
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Profile </title>
+    <title>Canopy | Fitness Tracker</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo1.ico">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -55,8 +51,9 @@ session_start();
                         <div class="main-menu f-right d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a href="personal.php">Home</a></li>
-                                    <li><a href="courses.html">Courses</a></li>
+                                    <li><a href="personal.php">Personal</a></li>
+                                    <li><a href="courses.php">Courses</a></li>
+                                    <li><a href="discover.php">Discover</a>
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="profile.php">Profile</a></li>
                                 </ul>
@@ -105,14 +102,15 @@ session_start();
                 <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                     <div class="front-text">
                         <h2>Emma Williams</h2>
-                        <button class="border-btn" style="color: red">Level</button>
-                        <button class="border-btn" style="color: red; margin-left: 30%;">Beginner</button>
+                        <button class="border-btn" style="color: red;">Beginner</button>
+                        <br><br>
+                        <button class="border-btn" style="color: red">Canopy ID</button>
+                        <br>
+                        <button class="border-btn" style="color: red">Progress</button>
                         <br>
                         <button class="border-btn mt-4" style="color: red">Courses</button>
-                        <button class="border-btn mt-4" style="color: red; margin-left: 38%;">3</button>
                         <br>
-                        <button class="border-btn mt-4" style="color: red">BMI</button>
-                        <button class="border-btn mt-4" style="color: red; margin-left: 44%;">20</button>
+                        <button class="border-btn mt-4" style="color: red">Phone</button>
                     </div>
                 </div>
             </div>
@@ -134,7 +132,7 @@ session_start();
                 <!-- section tittle -->
                 <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                     <div class="front-text" >
-                        <h2 style="color: lightcoral; text-align: center;">Course Name</h2>
+                        <h2 style="color: lightcoral; text-align: left;">Course Name</h2>
                         <h3 style="color: white;;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Finished 56 exercises in 5 weeks!</h3>
                         <h3 style="color: white;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Gained BMI 20!</h3>
                         <h3 style="color: white;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Achieved goal in the shortest time!</h3>
@@ -147,7 +145,7 @@ session_start();
                 <!-- section tittle -->
                 <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                     <div class="front-text" >
-                        <h2 style="color: lightcoral; text-align: center;">Course Name</h2>
+                        <h2 style="color: lightcoral; text-align: left;">Course Name</h2>
                         <h3 style="color: white;;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Finished 56 exercises in 5 weeks!</h3>
                         <h3 style="color: white;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Gained BMI 20!</h3>
                         <h3 style="color: white;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Achieved goal in the shortest time!</h3>
@@ -172,7 +170,7 @@ session_start();
                 <!-- section tittle -->
                 <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                     <div class="front-text" >
-                        <h2 style="color: lightcoral; text-align: center;">Course Name</h2>
+                        <h2 style="color: lightcoral; text-align: left;">Course Name</h2>
                         <h3 style="color: white;;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Finished 56 exercises in 5 weeks!</h3>
                         <h3 style="color: white;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Gained BMI 20!</h3>
                         <h3 style="color: white;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Achieved goal in the shortest time!</h3>
@@ -182,29 +180,6 @@ session_start();
         </div>
         <br><br><br>
         <hr>
-        <div class="support-wrapper align-items-center ml-40" >
-            <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" >
-                <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                    <div class="front-text" >
-                        <h2 style="color: white;">Edit profile</h2>
-                        <!-- Edit email -->
-                        <p class="mb-1 mt-10" style="margin-left: 6px;">Email</p>
-                        <input type="email" placeholder="emma****@gmail.com" style="background-color: black; border: 1px solid red; border-radius: 30px; width: 50%; height: 40px; color: white; font-size: 15px; padding-left: 10px;" size="5">
-                        <button style="border: 1px solid red; background-color: black; height: 30px; width: 75px; border-radius: 30px; margin-left: 10px; margin-bottom: 10px; font-size: 15px;">Edit</button>
-                        <button style="border: 1px solid red; background-color: black; height: 30px; width: 75px; border-radius: 30px; margin-left: 10px; margin-bottom: 10px; font-size: 15px;">Save</button>
-                        <!-- Edit username -->
-                        <p class="mb-1 mt-10" style="margin-left: 6px;">Username</p>
-                        <input type="email" placeholder="Emma Williams" style="background-color: black; border: 1px solid red; border-radius: 30px; width: 50%; height: 40px; color: white; font-size: 15px; padding-left: 10px;" size="5">
-                        <button style="border: 1px solid red; background-color: black; height: 30px; width: 75px; border-radius: 30px; margin-left: 10px; margin-bottom: 10px; font-size: 15px;">Edit</button>
-                        <button style="border: 1px solid red; background-color: black; height: 30px; width: 75px; border-radius: 30px; margin-left: 10px; margin-bottom: 10px; font-size: 15px;">Save</button>
-                        <!-- Edit password -->
-                        <p class="mb-1 mt-10" style="margin-left: 6px;">Password</p>
-                        <input type="password" placeholder="**********" style="background-color: black; border: 1px solid red; border-radius: 30px; width: 50%; height: 40px; color: white; font-size: 15px; padding-left: 10px;" size="5">
-                        <button style="border: 1px solid red; background-color: black; height: 30px; width: 75px; border-radius: 30px; margin-left: 10px; margin-bottom: 10px; font-size: 15px;">Edit</button>
-                        <button style="border: 1px solid red; background-color: black; height: 30px; width: 75px; border-radius: 30px; margin-left: 10px; margin-bottom: 10px; font-size: 15px;">Save</button>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
     <!-- Profile Area End -->
@@ -219,7 +194,7 @@ session_start();
                         </div>
                         <div class="features-caption">
                             <h3>Location</h3>
-                            <p>You'll look at graphs and charts in Task One, how to approach </p>
+                            <p> 20/22/23 Dragon Hill, Nguyen Huu Tho St., Phuoc Kien Ward, Nha Be District.</p>
                         </div>
                     </div>
                 </div>
