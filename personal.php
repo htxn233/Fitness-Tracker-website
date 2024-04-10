@@ -1,3 +1,7 @@
+<?php
+session_start();
+ob_start();
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -27,6 +31,7 @@
     <link rel="stylesheet" href="assets/css/personal.css">
 </head>
 <body class="black-bg">
+    
     <!-- ? Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">

@@ -1,5 +1,6 @@
 <?php
-    include ("connect.php");
+    session_start();
+    include("connect.php");
 
     if(isset($_POST['signin-button'])){
         $email = mysqli_real_escape_string($conn, $_POST['email']); //user nhap
@@ -7,19 +8,22 @@
         
         // Kiểm tra thông tin đăng nhập
         $query = "SELECT * FROM users WHERE USemail = '$email' AND USpassword = '$password'";
-        $USemail = "SELECT USemail FROM users Where USemail = '$email' AND USpassword = '$password'"; //cua he thong
-        $USpw = "SELECT USpassword FROM users Where USemail = '$email' AND USpassword = '$password'";
         $result = mysqli_query($conn, $query);
         $numRows = mysqli_num_rows($result);
 
-        if ($email == 'admin@gmail.com' && $password == 'admin') {
-            // Đăng nhập thành công với vai trò admin
-            header("Location: index.html");
-            exit();
-        } else if ($numRows == 1) {
-            // Đăng nhập thành công với vai trò người dùng
-            header("Location: personal.php");
-            exit();
+        if ($row = mysqli_fetch_assoc($result)) {
+            // Lưu USid của người dùng vào phiên
+            $_SESSION['user_id'] = $row['USid'];
+
+            if ($email == 'admin@gmail.com' && $password == 'admin123') {
+                // Đăng nhập thành công với vai trò admin
+                header("Location: admin.php");
+                exit();
+            } else if ($numRows == 1) {
+                // Đăng nhập thành công với vai trò người dùng
+                header("Location: personal.php");
+                exit();
+            }
         } else {
             // Thất bại trong việc đăng nhập
             header("Location: loginform.php?error=invalid");

@@ -2,16 +2,16 @@
   outline: none;
 }
 
-.tb {
-  display: table;
-  width: 100%;
+.table {
+    display: table;
+    width: 100%;
 }
 
-.td {
-  display: table-cell;
-  vertical-align: middle;
+.table-row {
+    display: table-row;
 }
 
+<<<<<<< HEAD
 .searchbar {
   position: absolute;
   top: 50%;
@@ -20,8 +20,20 @@
   width: 80%; /* Điều chỉnh chiều rộng tùy thích */
 }
 
+=======
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+.table-cell
+
+
+>>>>>>> a42682664b782caff3e69bf96cd8d863e4fb87e9
 input,
-button {
+button,
+option {
   color: #fff;
   font-family: Nunito;
   padding: 0;
@@ -35,7 +47,7 @@ button {
   top: 72%;
   left: 0;
   right: 0;
-  width: 80%;
+  width: 50%;
   height: 12%;
   padding: 35px;
   margin: -83px auto 0 auto;
@@ -45,14 +57,10 @@ button {
   transform: scale(0.6);
 }
 
-form {
-  height: 85px;
-}
-
 input[type="text"] {
   width: calc(100% - 100px); /* Độ rộng của input giảm đi 100px */
   height: 80px;
-  font-size: 50px;
+  font-size: 40px;
   line-height: 1;
   position: absolute; /* Đặt input là một phần tử tuyệt đối */
   left: 15px;
@@ -62,6 +70,7 @@ input[type="text"] {
 input[type="text"]::placeholder {
   color: #ffffff; /* Màu đỏ nhạt */
 }
+
 
 #s-cover {
   width: 100px;
@@ -89,7 +98,7 @@ button {
   height: 43px;
   margin-top: 0;
   border-width: 15px;
-  border: 8px solid #fff;
+  border: 5px solid #fff;
   background-color: transparent;
   border-radius: 50%;
   transition: 0.5s ease all;
@@ -103,7 +112,7 @@ button span {
   width: 30px;
   height: 15px;
   background-color: transparent;
-  border-radius: 8px;
+  border-radius: 5px;
   transform: rotateZ(43deg);
   transition: 0.5s ease all;
 }
@@ -156,3 +165,4 @@ button span:after {
   width: 40px;
   background-color: #fff;
 }
+
