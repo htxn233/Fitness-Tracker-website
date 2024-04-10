@@ -57,7 +57,7 @@
                         <div class="main-menu f-right d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a href="personal.php">Home</a></li>
+                                    <li><a href="personal.php">Personal</a></li>
                                     <li><a href="courses.html">Courses</a></li>
                                     <li><a href="discover.php">Discover</a>
                                         <ul class="submenu">
@@ -454,7 +454,7 @@
                                             <div class="main-menu main-menu2 text-center">
                                                 <nav>
                                                     <ul>
-                                                        <li><a href="personal.html">Home</a></li>
+                                                        <li><a href="personal.html">Peronal</a></li>
                                                         <li><a href="courses.html">Courses</a></li>
                                                         <li><a href="contact.html">Contact</a></li>
                                                     </ul>

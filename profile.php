@@ -1,9 +1,5 @@
 <?php
 session_start();
-
-if(!isset($_SESSION['user'])) {
-    $errorMessage = "You are not logged in.";
-}
 ?>
 
 <!doctype html>
@@ -59,7 +55,7 @@ if(!isset($_SESSION['user'])) {
                         <div class="main-menu f-right d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="personal.php">Home</a></li>
                                     <li><a href="courses.html">Courses</a></li>
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="profile.php">Profile</a></li>
@@ -68,8 +64,8 @@ if(!isset($_SESSION['user'])) {
                         </div>          
                         <!-- Header-btn -->
                         <div class="header-btns d-none d-lg-block f-right">
-                            <a href="loginform.php" class="btn">Login</a>
-                       </div>
+                            <a href="index.html" class="btn">Sign Out</a>
+                        </div>
                        <!-- Mobile Menu -->
                        <div class="col-12">
                         <div class="mobile_menu d-block d-lg-none"></div>
@@ -96,171 +92,164 @@ if(!isset($_SESSION['user'])) {
         </div>
     </div>
     <!-- Hero End -->
-    <!--? Profile Area Start -->
-    <?php if(isset($errorMessage)): ?>
-        <!-- Hiển thị thông báo lỗi -->
-        <h1><?php echo $errorMessage; ?></h1>
-        <a href="loginform.php">Login</a>
-    <?php else: ?>
-        <section class="about-area2 fix pb-padding pt-50 pb-80">
-            <div class="support-wrapper align-items-center">
-                <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" >
-                    <!-- img -->
-                    <div >
-                        <img style="border-radius: 100%;" src="assets/img/gallery/profile.jpg" alt="">
+    <section class="about-area2 fix pb-padding pt-50 pb-80">
+        <div class="support-wrapper align-items-center">
+            <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" >
+                <!-- img -->
+                <div >
+                    <img style="border-radius: 100%;" src="assets/img/gallery/profile.jpg" alt="">
+                </div>
+            </div>
+            <div class="left-content2">
+                <!-- section tittle -->
+                <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div class="front-text">
+                        <h2>Emma Williams</h2>
+                        <button class="border-btn" style="color: red">Level</button>
+                        <button class="border-btn" style="color: red; margin-left: 30%;">Beginner</button>
+                        <br>
+                        <button class="border-btn mt-4" style="color: red">Courses</button>
+                        <button class="border-btn mt-4" style="color: red; margin-left: 38%;">3</button>
+                        <br>
+                        <button class="border-btn mt-4" style="color: red">BMI</button>
+                        <button class="border-btn mt-4" style="color: red; margin-left: 44%;">20</button>
                     </div>
                 </div>
-                <div class="left-content2">
-                    <!-- section tittle -->
-                    <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <div class="front-text">
-                            <h2>Emma Williams</h2>
-                            <button class="border-btn" style="color: red">Level</button>
-                            <button class="border-btn" style="color: red; margin-left: 30%;">Beginner</button>
-                            <br>
-                            <button class="border-btn mt-4" style="color: red">Courses</button>
-                            <button class="border-btn mt-4" style="color: red; margin-left: 38%;">3</button>
-                            <br>
-                            <button class="border-btn mt-4" style="color: red">BMI</button>
-                            <button class="border-btn mt-4" style="color: red; margin-left: 44%;">20</button>
+            </div>
+        </div>
+        <br>
+        <div>
+            <div class="section-tittle text-center mt-50 mb-20 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                <h2 style="font-size: 100px;">Finished courses</h2>
+            </div>
+        </div>
+        <div class="support-wrapper align-items-center" >
+            <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" >
+                <!-- img -->
+                <div >
+                    <img style="margin-left: 10%; height: 400px; width: 400px;" src="assets/img/gallery/profile.jpg" alt="">
+                </div>
+            </div>
+            <div class="left-content2" style="border: 1px solid lightgrey;">
+                <!-- section tittle -->
+                <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div class="front-text" >
+                        <h2 style="color: lightcoral; text-align: center;">Course Name</h2>
+                        <h3 style="color: white;;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Finished 56 exercises in 5 weeks!</h3>
+                        <h3 style="color: white;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Gained BMI 20!</h3>
+                        <h3 style="color: white;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Achieved goal in the shortest time!</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="support-wrapper align-items-center">
+            <div class="left-content2" style="margin-left: 12%; border: 1px solid lightgrey;">
+                <!-- section tittle -->
+                <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div class="front-text" >
+                        <h2 style="color: lightcoral; text-align: center;">Course Name</h2>
+                        <h3 style="color: white;;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Finished 56 exercises in 5 weeks!</h3>
+                        <h3 style="color: white;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Gained BMI 20!</h3>
+                        <h3 style="color: white;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Achieved goal in the shortest time!</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" >
+                <!-- img -->
+                <div >
+                    <img style="margin-left: 10%; height: 400px; width: 400px;" src="assets/img/gallery/profile.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="support-wrapper align-items-center" >
+            <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" >
+                <!-- img -->
+                <div >
+                    <img style="margin-left: 10%; height: 400px; width: 400px;" src="assets/img/gallery/profile.jpg" alt="">
+                </div>
+            </div>
+            <div class="left-content2" style="border: 1px solid lightgrey;">
+                <!-- section tittle -->
+                <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div class="front-text" >
+                        <h2 style="color: lightcoral; text-align: center;">Course Name</h2>
+                        <h3 style="color: white;;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Finished 56 exercises in 5 weeks!</h3>
+                        <h3 style="color: white;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Gained BMI 20!</h3>
+                        <h3 style="color: white;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Achieved goal in the shortest time!</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <hr>
+        <div class="support-wrapper align-items-center ml-40" >
+            <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" >
+                <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div class="front-text" >
+                        <h2 style="color: white;">Edit profile</h2>
+                        <!-- Edit email -->
+                        <p class="mb-1 mt-10" style="margin-left: 6px;">Email</p>
+                        <input type="email" placeholder="emma****@gmail.com" style="background-color: black; border: 1px solid red; border-radius: 30px; width: 50%; height: 40px; color: white; font-size: 15px; padding-left: 10px;" size="5">
+                        <button style="border: 1px solid red; background-color: black; height: 30px; width: 75px; border-radius: 30px; margin-left: 10px; margin-bottom: 10px; font-size: 15px;">Edit</button>
+                        <button style="border: 1px solid red; background-color: black; height: 30px; width: 75px; border-radius: 30px; margin-left: 10px; margin-bottom: 10px; font-size: 15px;">Save</button>
+                        <!-- Edit username -->
+                        <p class="mb-1 mt-10" style="margin-left: 6px;">Username</p>
+                        <input type="email" placeholder="Emma Williams" style="background-color: black; border: 1px solid red; border-radius: 30px; width: 50%; height: 40px; color: white; font-size: 15px; padding-left: 10px;" size="5">
+                        <button style="border: 1px solid red; background-color: black; height: 30px; width: 75px; border-radius: 30px; margin-left: 10px; margin-bottom: 10px; font-size: 15px;">Edit</button>
+                        <button style="border: 1px solid red; background-color: black; height: 30px; width: 75px; border-radius: 30px; margin-left: 10px; margin-bottom: 10px; font-size: 15px;">Save</button>
+                        <!-- Edit password -->
+                        <p class="mb-1 mt-10" style="margin-left: 6px;">Password</p>
+                        <input type="password" placeholder="**********" style="background-color: black; border: 1px solid red; border-radius: 30px; width: 50%; height: 40px; color: white; font-size: 15px; padding-left: 10px;" size="5">
+                        <button style="border: 1px solid red; background-color: black; height: 30px; width: 75px; border-radius: 30px; margin-left: 10px; margin-bottom: 10px; font-size: 15px;">Edit</button>
+                        <button style="border: 1px solid red; background-color: black; height: 30px; width: 75px; border-radius: 30px; margin-left: 10px; margin-bottom: 10px; font-size: 15px;">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Profile Area End -->
+    <!-- ? services-area -->
+    <section class="services-area">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
+                    <div class="single-services mb-40">
+                        <div class="features-icon">
+                            <img src="assets/img/icon/icon1.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <h3>Location</h3>
+                            <p>You'll look at graphs and charts in Task One, how to approach </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                    <div class="single-services mb-40">
+                        <div class="features-icon">
+                            <img src="assets/img/icon/icon2.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <h3>Phone</h3>
+                            <p>(90) 277 278 2566</p>
+                            <p>  (78) 267 256 2578</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                    <div class="single-services mb-40">
+                        <div class="features-icon">
+                            <img src="assets/img/icon/icon3.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                        <h3>Email</h3>
+                        <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=canopyFit@gmail.com" target="_blank">canopyfit@gmail.com</a></p>
+                        <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=canopycarepro@gmail.com" target="_blank">canopycarepro@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <br>
-            <div>
-                <div class="section-tittle text-center mt-50 mb-20 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                    <h2 style="font-size: 100px;">Finished courses</h2>
-                </div>
-            </div>
-            <div class="support-wrapper align-items-center" >
-                <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" >
-                    <!-- img -->
-                    <div >
-                        <img style="margin-left: 10%; height: 400px; width: 400px;" src="assets/img/gallery/profile.jpg" alt="">
-                    </div>
-                </div>
-                <div class="left-content2" style="border: 1px solid lightgrey;">
-                    <!-- section tittle -->
-                    <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <div class="front-text" >
-                            <h2 style="color: lightcoral; text-align: center;">Course Name</h2>
-                            <h3 style="color: white;;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Finished 56 exercises in 5 weeks!</h3>
-                            <h3 style="color: white;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Gained BMI 20!</h3>
-                            <h3 style="color: white;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Achieved goal in the shortest time!</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="support-wrapper align-items-center">
-                <div class="left-content2" style="margin-left: 12%; border: 1px solid lightgrey;">
-                    <!-- section tittle -->
-                    <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <div class="front-text" >
-                            <h2 style="color: lightcoral; text-align: center;">Course Name</h2>
-                            <h3 style="color: white;;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Finished 56 exercises in 5 weeks!</h3>
-                            <h3 style="color: white;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Gained BMI 20!</h3>
-                            <h3 style="color: white;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Achieved goal in the shortest time!</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" >
-                    <!-- img -->
-                    <div >
-                        <img style="margin-left: 10%; height: 400px; width: 400px;" src="assets/img/gallery/profile.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="support-wrapper align-items-center" >
-                <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" >
-                    <!-- img -->
-                    <div >
-                        <img style="margin-left: 10%; height: 400px; width: 400px;" src="assets/img/gallery/profile.jpg" alt="">
-                    </div>
-                </div>
-                <div class="left-content2" style="border: 1px solid lightgrey;">
-                    <!-- section tittle -->
-                    <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <div class="front-text" >
-                            <h2 style="color: lightcoral; text-align: center;">Course Name</h2>
-                            <h3 style="color: white;;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Finished 56 exercises in 5 weeks!</h3>
-                            <h3 style="color: white;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Gained BMI 20!</h3>
-                            <h3 style="color: white;"><img class="mr-3 mt-3 mb-3" src="assets/img/icon/check.svg" alt="">Achieved goal in the shortest time!</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br><br><br>
-            <hr>
-            <div class="support-wrapper align-items-center ml-40" >
-                <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" >
-                    <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <div class="front-text" >
-                            <h2 style="color: white;">Edit profile</h2>
-                            <!-- Edit email -->
-                            <p class="mb-1 mt-10" style="margin-left: 6px;">Email</p>
-                            <input type="email" placeholder="emma****@gmail.com" style="background-color: black; border: 1px solid red; border-radius: 30px; width: 50%; height: 40px; color: white; font-size: 15px; padding-left: 10px;" size="5">
-                            <button style="border: 1px solid red; background-color: black; height: 30px; width: 75px; border-radius: 30px; margin-left: 10px; margin-bottom: 10px; font-size: 15px;">Edit</button>
-                            <button style="border: 1px solid red; background-color: black; height: 30px; width: 75px; border-radius: 30px; margin-left: 10px; margin-bottom: 10px; font-size: 15px;">Save</button>
-                            <!-- Edit username -->
-                            <p class="mb-1 mt-10" style="margin-left: 6px;">Username</p>
-                            <input type="email" placeholder="Emma Williams" style="background-color: black; border: 1px solid red; border-radius: 30px; width: 50%; height: 40px; color: white; font-size: 15px; padding-left: 10px;" size="5">
-                            <button style="border: 1px solid red; background-color: black; height: 30px; width: 75px; border-radius: 30px; margin-left: 10px; margin-bottom: 10px; font-size: 15px;">Edit</button>
-                            <button style="border: 1px solid red; background-color: black; height: 30px; width: 75px; border-radius: 30px; margin-left: 10px; margin-bottom: 10px; font-size: 15px;">Save</button>
-                            <!-- Edit password -->
-                            <p class="mb-1 mt-10" style="margin-left: 6px;">Password</p>
-                            <input type="password" placeholder="**********" style="background-color: black; border: 1px solid red; border-radius: 30px; width: 50%; height: 40px; color: white; font-size: 15px; padding-left: 10px;" size="5">
-                            <button style="border: 1px solid red; background-color: black; height: 30px; width: 75px; border-radius: 30px; margin-left: 10px; margin-bottom: 10px; font-size: 15px;">Edit</button>
-                            <button style="border: 1px solid red; background-color: black; height: 30px; width: 75px; border-radius: 30px; margin-left: 10px; margin-bottom: 10px; font-size: 15px;">Save</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Profile Area End -->
-        <!-- ? services-area -->
-        <section class="services-area">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
-                        <div class="single-services mb-40">
-                            <div class="features-icon">
-                                <img src="assets/img/icon/icon1.svg" alt="">
-                            </div>
-                            <div class="features-caption">
-                                <h3>Location</h3>
-                                <p>You'll look at graphs and charts in Task One, how to approach </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                        <div class="single-services mb-40">
-                            <div class="features-icon">
-                                <img src="assets/img/icon/icon2.svg" alt="">
-                            </div>
-                            <div class="features-caption">
-                                <h3>Phone</h3>
-                                <p>(90) 277 278 2566</p>
-                                <p>  (78) 267 256 2578</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                        <div class="single-services mb-40">
-                            <div class="features-icon">
-                                <img src="assets/img/icon/icon3.svg" alt="">
-                            </div>
-                            <div class="features-caption">
-                            <h3>Email</h3>
-                            <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=canopyFit@gmail.com" target="_blank">canopyfit@gmail.com</a></p>
-                            <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=canopycarepro@gmail.com" target="_blank">canopycarepro@gmail.com</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <?php endif; ?>
+        </div>
+    </section>
 </main>
 <footer>
     <!--? Footer Start-->

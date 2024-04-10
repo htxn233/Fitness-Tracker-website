@@ -1,0 +1,158 @@
+* {
+  outline: none;
+}
+
+.tb {
+  display: table;
+  width: 100%;
+}
+
+.td {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.searchbar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Điều chỉnh chiều rộng tùy thích */
+}
+
+input,
+button {
+  color: #fff;
+  font-family: Nunito;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+#cover {
+  position: absolute;
+  top: 72%;
+  left: 0;
+  right: 0;
+  width: 80%;
+  height: 12%;
+  padding: 35px;
+  margin: -83px auto 0 auto;
+  background-color: #7f0000; /* Màu đỏ đậm */
+  box-shadow: 0 10px 40px #000000eb, 0 0 0 20px #800000;
+  border-radius: 20px;
+  transform: scale(0.6);
+}
+
+form {
+  height: 85px;
+}
+
+input[type="text"] {
+  width: calc(100% - 100px); /* Độ rộng của input giảm đi 100px */
+  height: 80px;
+  font-size: 50px;
+  line-height: 1;
+  position: absolute; /* Đặt input là một phần tử tuyệt đối */
+  left: 15px;
+  top: 9px;
+}
+
+input[type="text"]::placeholder {
+  color: #ffffff; /* Màu đỏ nhạt */
+}
+
+#s-cover {
+  width: 100px;
+  padding-left: 35px;
+  position: absolute; 
+  right: 0;
+  top: 0;
+}
+
+button {
+  position: relative;
+  display: block;
+  right: 30px;
+  bottom: 8px;
+  width: 84px;
+  height: 96px;
+  cursor: pointer;
+}
+
+#s-circle {
+  position: relative;
+  top: -8px;
+  left: 0;
+  width: 43px;
+  height: 43px;
+  margin-top: 0;
+  border-width: 15px;
+  border: 8px solid #fff;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: 0.5s ease all;
+}
+
+button span {
+  position: absolute;
+  top: 68px;
+  left: 43px;
+  display: block;
+  width: 30px;
+  height: 15px;
+  background-color: transparent;
+  border-radius: 8px;
+  transform: rotateZ(43deg);
+  transition: 0.5s ease all;
+}
+
+button span:before,
+button span:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 45px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  transform: rotateZ(0);
+  transition: 0.5s ease all;
+}
+
+#s-cover:hover #s-circle {
+  top: 10%;
+  bottom: 10px;
+  width: 67px;
+  height: 15px;
+  border-width: 0;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+#s-cover:hover span {
+  top: 60%;
+  bottom: 10px;
+  left: 56px;
+  width: 25px;
+  margin-top: -9px;
+  transform: rotateZ(0);
+}
+
+#s-cover:hover button span:before {
+  bottom: 11px;
+  transform: rotateZ(52deg);
+}
+
+#s-cover:hover button span:after {
+  bottom: -11px;
+  transform: rotateZ(-52deg);
+}
+#s-cover:hover button span:before,
+#s-cover:hover button span:after {
+  right: -6px;
+  width: 40px;
+  background-color: #fff;
+}
