@@ -59,7 +59,7 @@ ob_start();
                             <nav>
                                 <ul id="navigation">
                                     <li><a href="personal.php">Personal</a></li>
-                                    <li><a href="courses.html">Courses</a></li>
+                                    <li><a href="courses.php">Courses</a></li>
                                     <li><a href="discover.php">Discover</a></li>
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="profile.php">Profile</a></li>

@@ -1,4 +1,22 @@
+<?php
+include("connect.php");
 
+// Xử lý yêu cầu khi form được gửi đi
+if ($_SERVER["catelogy"] == "POST") { // catelogy cua name
+    $catelogy = mysqli_real_escape_string($conn, $_POST['catelogy']);
+    $sql = "SELECT * FROM courses WHERE Ccatelogy = '$catelogy'";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result)> 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "Name: " . $row["Cname"]. " - Time: " . $row["Ctime"]. " - Description: " . $row["Cdes"].  " - Catelogy: " .$row["Ccatelogy"] ."<br>"; //check dau
+        }
+    } else {
+        echo "This catelogy is developing. Please select other catelogy to find a course.";
+    }
+}
+$conn->close();
+?>
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -96,182 +114,41 @@
     <section class="team-area fix section-padding30">
         <div class="container" style="position: relative;">
             <div class="row">
-                <div class="searchbar text-center mb-55">
-                    <div id="cover">
-                        <form method="get" action="">
-                            <div class="table">
-                                <div class="table-row">
-                                    <div class="table-cell">
-                                        <input type="text" placeholder="Search a course" required>
-                                    </div>
-                                    <div class="table-cell" id="s-cover">
-                                        <button type="submit">
-                                            <div id="s-circle"></div>
-                                            <span></span>
-                                        </button>
-                                    </div>
-                                    <div class="table-cell">
-                                        <select>
-                                            <option value="0">Select car:</option>
-                                            <option value="1">Audi</option>
-                                            <option value="2">BMW</option>
-                                            <option value="3">Citroen</option>
-                                            <option value="4">Ford</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>                        
+                <div class="wrapper">
+                    <div class="search_box">
+                        <div class="dropdown">
+                            <div class="default_option">Select</div>  
+                            <ul>
+                                <li><button type="submit" name="catelogy" value="Weight loss">Weight loss</button></li>
+                                <li><button type="submit" name="catelogy" value="Body building">Body building</button></li>
+                                <li><button type="submit" name="catelogy" value="Muscle gain">Muscle gain</button></li>
+                                <li><button type="submit" name="catelogy" value="Relaxing">Relaxing</button></li>
+                            </ul>
+                        </div>
+                        <div class="search_field">
+                          <input type="text" class="input2" placeholder="Search">
+                          <i class="fas fa-search"></i>
+                      </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="properties mb-30">
-                        <div class="properties__card">
-                            <div class="about-icon">
-                                <div class="about-icon__img-wrapper">
-                                    <img src="assets/img/logo/logo2.png" alt="">
-                                </div>
-                            </div>
-                            <div class="properties__caption">
-                                <p class="mb-25">$Free<span> (For beginner)</span></p>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Free riding </p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Unlimited equipments</p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Personal trainer</p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Weight losing classes</p>
-                                    </div>
-                                </div>
-                                <div class="single-features mb-20">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Month to mouth</p>
-                                    </div>
-                                </div>
-                                <a href="#" class="border-btn border-btn2">Start</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="properties mb-30">
-                        <div class="properties__card">
-                            <div class="about-icon">
-                                <div class="about-icon__img-wrapper">
-                                    <img src="assets/img/logo/logo2.png" alt="">
-                                </div>
-                            </div>
-                            <div class="properties__caption">
-                                <p class="mb-25">$Free<span> (For beginner)</span></p>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Introduction to the body building process and the benefits of having toned body.</p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Provides basic knowledge about body, their structure and functions.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>An introduction to the fundamentals of training for body building, including load, volume, and frequency.</p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Recommend a basic body training schedule for beginners.
-                                        </p>
-                                    </div>
-                                </div>
-                                <a href="#" class="border-btn border-btn2">Start</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="properties mb-30">
-                        <div class="properties__card">
-                            
-                            <div class="properties__caption">
-                                <div class="about-icon">
-                                    <div class="about-icon__img-wrapper">
-                                        <img src="assets/img/logo/logo2.png" alt="">
-                                    </div>
-                                </div>
-                                <p class="mb-25">$Free<span> (For beginner)</span></p>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Introduction to stress and its negative impact on health and mind.</p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Instruction on stress management techniques such as breathing practices, physical relaxation techniques, and focusing on stress reduction.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Provide stress reduction methods such as yoga and stress reduction techniques through music or herbal scents.</p>
-                                    </div>
-                                </div>
-                                <a href="#" class="border-btn border-btn2">Start</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php
+            $sql = "SELECT * FROM courses WHERE Ccategory = 'weight loss'";
+            $result = $conn->query($sql);
+
+            // Kiểm tra kết quả và hiển thị dữ liệu
+            if ($result->num_rows > 0) {
+                // Duyệt qua các hàng kết quả
+                while($row = $result->fetch_assoc()) {
+                    echo "Course ID: " . $row["Cid"]. " - Course Name: " . $row["Cname"]. "<br>";
+                }
+            } else {
+                echo "Không có kết quả nào";
+            }
+
+            // Đóng kết nối
+            $conn->close();
+            ?>
         </div>
     </section>
     <!-- Services End -->
@@ -281,7 +158,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="section-tittle text-center mb-55">
-                        <h2>What We Have</h2>
+                        <h2>Your courses</h2>
                     </div>
                 </div>
             </div>
@@ -490,6 +367,12 @@
 <!-- Jquery Plugins, main Jquery -->	
 <script src="./assets/js/plugins.js"></script>
 <script src="./assets/js/main.js"></script>
+
+<!-- Search and Select bar -->
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="./assets/js/ssbar.js"></script>
+
 
 </body>
 </html>
