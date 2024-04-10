@@ -11,9 +11,10 @@
         $result = mysqli_query($conn, $query);
         $numRows = mysqli_num_rows($result);
 
-        if ($row = mysqli_fetch_assoc($result)) {
+        if (mysqli_num_rows($result) > 0){
             // Lưu USid của người dùng vào phiên
             $_SESSION['user_id'] = $row['USid'];
+            $_SESSION['email'] = $row['USemail'];
 
             if ($email == 'admin@gmail.com' && $password == 'admin123') {
                 // Đăng nhập thành công với vai trò admin

@@ -1,10 +1,6 @@
 <?php
 session_start();
-ob_start();
-
 ?>
-
-
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -113,47 +109,45 @@ ob_start();
                         <div class="front-text">
                             <div class="front-text">
                                 <?php
-                                    include("connect.php");
-                                    $email = mysqli_real_escape_string($conn, $_POST['email']); //user nhap
-                                    $sql = "SELECT USid FROM users WHERE USemail = '$email'";
-                                    $result = mysqli_query($conn, $sql);
-                                    
-                                    if (!$result) {
-                                        die("Query failed: " . $conn->error);
+                                    if(isset($_SESSION['email_us'])) {
+                                        $email = $_SESSION['email_us'];
                                     }
-                                    
-                                    if (mysqli_num_rows($result) > 0) {
-                                        $row = mysqli_fetch_assoc($result);
-                                        $userId = $row["USid"];
-                                        
-                                        $sql2 = "SELECT C.Cname, C.Ctime, C.Ccate 
-                                                FROM courses C
-                                                WHERE C.Cid IN (
-                                                    SELECT P.Cid
-                                                    FROM progress P
-                                                    WHERE P.USid = '$userId' AND P.status = 'Completed'
-                                                )";
-                                        
-                                        $result2 = mysqli_query($conn, $sql2);
-                                        
-                                        if (!$result2) {
-                                            die("Query failed: " . $conn->error);
-                                        }
-                                        
-                                        if (mysqli_num_rows($result2) > 0) {
-                                            while ($row = mysqli_fetch_assoc($result2)) {
-                                                echo "<div class='front-text'>";
-                                                echo "<h2 style='color: lightcoral; text-align: left;'>" . $row["Cname"] . "</h2>";
-                                                echo "<h3 style='color: white;'><img class='mr-3 mt-3 mb-3' src='assets/img/icon/check.svg' alt=''> " . $row["Ccate"] . "</h3>";
-                                                echo "</div>";
+                                    if (isset($email)) {
+                                        include("connect.php");
+                                        $sql = "SELECT USid FROM users WHERE USemail = '$email'";
+                                        $result = mysqli_query($conn, $sql);
+                                                                         
+                                        if (mysqli_num_rows($result) > 0) {
+                                            $row = mysqli_fetch_assoc($result);
+                                            $userId = $row["USid"];
+                                            
+                                            $sql2 = "SELECT C.Cname, C.Ctime, C.Ccate 
+                                                    FROM courses C
+                                                    WHERE C.Cid IN (
+                                                        SELECT P.Cid
+                                                        FROM progress P
+                                                        WHERE P.USid = '$userId' AND P.status = 'Completed'
+                                                    )";
+                                            
+                                            $result2 = mysqli_query($conn, $sql2);
+                                            
+                                            if (mysqli_num_rows($result2) > 0) {
+                                                while ($row = mysqli_fetch_assoc($result2)) {
+                                                    echo "<div class='front-text'>";
+                                                    echo "<h2 style='color: lightcoral; text-align: left;'>" . $row["Cname"] . "</h2>";
+                                                    echo "<h3 style='color: white;'><img class='mr-3 mt-3 mb-3' src='assets/img/icon/check.svg' alt=''> " . $row["Ccate"] . "</h3>";
+                                                    echo "</div>";
+                                                }
+                                            } else {
+                                                echo "No completed courses found.";
                                             }
                                         } else {
-                                            echo "No completed courses found.";
+                                            echo "User not found.";
                                         }
-                                    } else {
-                                        echo "User not found.";
                                     }
-                                    
+                                    else {
+                                        echo "Error!";
+                                    }
                                     mysqli_close($conn);
                                 ?>
                         </div>
