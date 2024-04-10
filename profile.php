@@ -4,8 +4,6 @@ ob_start();
 
 ?>
 
-
-
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -32,6 +30,8 @@ ob_start();
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+
 </head>
 
 <body class="black-bg">
@@ -113,15 +113,25 @@ ob_start();
                         <div class="front-text">
                             <div class="front-text">
                                 <?php
-                                if(isset($_SESSION['email_us'])) {
-                                    $email_us = $_SESSION['email_us'];
+                                
+                                // Kiểm tra xem biến $_SESSION['user_id'] đã được khởi tạo chưa
+                                if (isset($_SESSION['user_id'])) {
+                                    $user_id = $_SESSION['user_id']; // Gán giá trị từ session vào biến $user_id
                                 }
-                                if (isset($email_us)) {
-                                    include("connect.php");
-                                    $sql = "SELECT USname, USemail, USphone from users where USemail ='$email_us'";
-                                    $result = mysqli_query($conn, $sql);
-                                    if(mysqli_num_rows($result) > 0){
-                                        while ($row = mysqli_fetch_assoc($result)) {
+
+                                // Kiểm tra xem biến $user_id đã được xác định chưa
+                                if (isset($user_id)) {
+                                    include ("connect.php");
+
+                                    // Truy vấn dữ liệu từ bảng profile và users trong cơ sở dữ liệu cho USid cụ thể
+                                    $sql = $sql = "SELECT USname, USemail, USphone from users WHERE USid = $user_id";
+
+
+                                    $result = $conn->query($sql);
+                                    if ($result->num_rows > 0) {
+                                        // Duyệt qua từng hàng dữ liệu
+                                        while ($row = $result->fetch_assoc()) {
+                                            // Hiển thị thông tin từ mỗi hàng dữ liệu
                                             echo "<h2>" . $row["USname"] . "</h2>";
                                             echo "<button class='border-btn mt-4' style='color: red'>Email: " . $row["USemail"] . "</button>";
                                             echo "<br>";
@@ -129,8 +139,10 @@ ob_start();
                                             echo "<br>";
                                         }
                                     }
+                                    $conn->close();
+                                } else {
+                                    echo "User ID is not set."; // Xuất thông báo nếu user_id không được xác định
                                 }
-                                mysqli_close($conn);
                                 ?>
                             </div>
                         </div>
@@ -141,69 +153,54 @@ ob_start();
                 <div>
                     <div class="section-tittle text-center mt-50 mb-20 wow fadeInUp" data-wow-duration="2s"
                         data-wow-delay=".2s">
-                        <h2 style="font-size: 100px;">Finished courses</h2>
+                        <h2 style="font-size: 100px;">Finished courses</h2><br><br>
                     </div>
                 </div>
+
                 <div class="support-wrapper align-items-center">
-                    <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                        <!-- img -->
-                        <div>
-                            <img style="margin-left: 10%; height: 400px; width: 400px;"
-                                src="assets/img/gallery/profile.jpg" alt="">
-                        </div>
-                    </div>
                     <div class="left-content2" style="border: 1px solid lightgrey;">
                         <!-- section tittle -->
-
-                    </div>
-                </div>
-
-                <div class="support-wrapper align-items-center">
-                    <div class="left-content2" style="margin-left: 12%; border: 1px solid lightgrey;">
-                        <!-- section tittle -->
                         <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <?php
-                                if(isset($_SESSION['email_us'])) {
-                                    $email_us = $_SESSION['email_us'];
+                            <?php
+                            if (isset($_SESSION['user_id'])) {
+                                $user_id = $_SESSION['user_id']; // Gán giá trị từ session vào biến $user_id
+                            }
+
+                            // Kiểm tra xem biến $user_id đã được xác định chưa
+                            if (isset($user_id)) {
+                                include ("connect.php");
+                                $sql = "SELECT Cname
+                                FROM courses
+                                WHERE Cid IN (
+                                    SELECT Cid
+                                    FROM progress
+                                    WHERE USid = $user_id
+                                    AND Pstatus = 'Completed'
+                                )";
+
+                                $result = $conn->query($sql);
+
+                                // Kiểm tra lỗi trong quá trình truy vấn
+                                if (!$result) {
+                                    die("Query failed: " . $conn->error);
                                 }
-                                if (isset($email_us)) {
-                                    include("connect.php");
-                                    $sql = "SELECT USid FROM users WHERE USemail = '$email_us'";
-                                    $result = mysqli_query($conn, $sql);
-                                                                        
-                                    if (mysqli_num_rows($result) > 0) {
-                                        $row = mysqli_fetch_assoc($result);
-                                        $userId = $row["USid"];
-                                        
-                                        $sql2 = "SELECT C.Cname, C.Ctime, C.Ccate 
-                                                FROM courses C
-                                                WHERE C.Cid IN (
-                                                    SELECT P.Cid
-                                                    FROM progress P
-                                                    WHERE P.USid = '$userId' AND P.status = 'Completed'
-                                                )";
-                                        
-                                        $result2 = mysqli_query($conn, $sql2);
-                                        
-                                        if (mysqli_num_rows($result2) > 0) {
-                                            while ($row = mysqli_fetch_assoc($result2)) {
-                                                echo "<div class='front-text'>";
-                                                echo "<h2 style='color: lightcoral; text-align: left;'>" . $row["Cname"] . "</h2>";
-                                                echo "<h3 style='color: white;'><img class='mr-3 mt-3 mb-3' src='assets/img/icon/check.svg' alt=''> " . $row["Ccate"] . "</h3>";
-                                                echo "</div>";
-                                            }
-                                        } else {
-                                            echo "No completed courses found.";
-                                        }
-                                    } else {
-                                        echo "User not found.";
+
+                                // Kiểm tra xem có dữ liệu trả về hay không
+                                if ($result->num_rows > 0) {
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo "<div class='finished-course'>"; 
+                                        echo "<div class='front-text'>";
+                                        echo "<h2>" . $row["Cname"] . "</h2>";
+                                        echo "</div>";
                                     }
+                                } else {
+                                    echo "No completed courses found for this user.";
                                 }
-                                else {
-                                    echo "Error!";
-                                }
-                                mysqli_close($conn);
+                            }
+                            // Đóng kết nối đến cơ sở dữ liệu
+                            $conn->close();
                             ?>
+
                         </div>
                     </div>
                 </div>
@@ -278,7 +275,7 @@ ob_start();
                                                 <nav>
                                                     <ul>
                                                         <li><a href="index.html">Home</a></li>
-                                                        <li><a href="courses.html">Courses</a></li>
+                                                    <li><a href="courses.html">Courses</a></li>
                                                         <li><a href="about.html">About</a></li>
                                                     </ul>
                                                 </nav>

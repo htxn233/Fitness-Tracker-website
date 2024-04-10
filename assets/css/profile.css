@@ -1,0 +1,16 @@
+/* Thêm margin giữa các khóa học */
+.finished-course {
+    margin-bottom: 20px; /* Điều chỉnh khoảng cách giữa các khóa học */
+}
+
+/* Căn giữa tên khóa học */
+.finished-course h2 {
+    color: lightcoral; 
+    font-size: 50px;
+}
+
+/* Đặt width cho phần hiển thị tên khóa học */
+.finished-course .front-text {
+    max-width: 600px; /* Điều chỉnh chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa phần hiển thị */
+}

@@ -2708,7 +2708,6 @@ hr {
   color: #fff;
   -webkit-text-stroke: 1px #f6f7f8;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 30px;
 }
 
 .section-tittle .current-time {
@@ -3680,8 +3679,8 @@ h2.wow {
 }
 
 .about-area2 .support-wrapper .left-content2 {
-  width: 38%;
-  padding-left: 60px;
+  width: 50%;
+  margin-left: 120px;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1440px) {
@@ -3726,7 +3725,6 @@ h2.wow {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 11, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_about.scss */
   .about-area2 .support-wrapper .left-content2 {
     width: 100%;
     padding-left: 30px;
@@ -3736,7 +3734,6 @@ h2.wow {
 }
 
 @media (max-width: 575px) {
-  /* line 11, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_about.scss */
   .about-area2 .support-wrapper .left-content2 {
     width: 100%;
     padding-left: 30px;
@@ -3745,15 +3742,13 @@ h2.wow {
   }
 }
 
-/* line 52, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_about.scss */
 .about-area2 .support-wrapper .right-content2 {
-  width: 40%;
+  width: 30%;
   margin-left: 100px;
   position: relative;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
-  /* line 52, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_about.scss */
   .about-area2 .support-wrapper .right-content2 {
     width: 46%;
     margin-left: 50px;
