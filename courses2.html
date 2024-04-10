@@ -1,4 +1,22 @@
+<?php
+include(connect.php);
 
+// Xử lý yêu cầu khi form được gửi đi
+if ($_SERVER["catelogy"] == "POST") { // catelogy cua name
+    $catelogy = $_POST["catelogy"];
+    $sql = "SELECT * FROM courses WHERE Ccatelogy = '$catelogy'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            echo "Cname: " . $row["Cname"]. " - Ctime: " . $row["Ctime"]. " - Cdes: " . $row["Cdes"].  $row["Ccatelogy"]. " - Ccatelogy: ."<br>"; //check dau
+        }
+    } else {
+        echo "This catelogy is developing. Please select other catelogy to find a course.";
+    }
+}
+$conn->close();
+?>
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -101,10 +119,10 @@
                         <div class="dropdown">
                             <div class="default_option">Select</div>  
                             <ul>
-                              <li>Weight loss</li>
-                              <li>Body building</li>
-                              <li>Muscle gain</li>
-                              <li>Relaxing</li>
+                                <li><button type="submit" name="catelogy" value="Weight loss">Weight loss</button></li>
+                                <li><button type="submit" name="catelogy" value="Body building">Body building</button></li>
+                                <li><button type="submit" name="catelogy" value="Muscle gain">Muscle gain</button></li>
+                                <li><button type="submit" name="catelogy" value="Relaxing">Relaxing</button></li>
                             </ul>
                         </div>
                         <div class="search_field">
@@ -114,6 +132,23 @@
                     </div>
                 </div>
             </div>
+            <?php
+            $sql = "SELECT * FROM courses WHERE Ccategory = 'weight loss'";
+            $result = $conn->query($sql);
+
+            // Kiểm tra kết quả và hiển thị dữ liệu
+            if ($result->num_rows > 0) {
+                // Duyệt qua các hàng kết quả
+                while($row = $result->fetch_assoc()) {
+                    echo "Course ID: " . $row["Cid"]. " - Course Name: " . $row["Cname"]. "<br>";
+                }
+            } else {
+                echo "Không có kết quả nào";
+            }
+
+            // Đóng kết nối
+            $conn->close();
+            ?>
         </div>
     </section>
     <!-- Services End -->
