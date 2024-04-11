@@ -3,7 +3,6 @@ session_start();
 ob_start();
 
 ?>
-
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -139,28 +138,31 @@ ob_start();
                                             echo "<br>";
                                         }
                                     }
+
                                     $conn->close();
                                 } else {
                                     echo "User ID is not set."; // Xuất thông báo nếu user_id không được xác định
                                 }
                                 ?>
+
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <br>
-                <div>
-                    <div class="section-tittle text-center mt-50 mb-20 wow fadeInUp" data-wow-duration="2s"
-                        data-wow-delay=".2s">
-                        <h2 style="font-size: 100px;">Finished courses</h2><br><br>
-                    </div>
+                <div class="section-tittle text-center mt-50 mb-20 wow fadeInUp finished-course-title" data-wow-duration="2s" data-wow-delay=".2s">
+                    <h2>Finished courses</h2>
                 </div>
-
                 <div class="support-wrapper align-items-center">
-                    <div class="left-content2" style="border: 1px solid lightgrey;">
+                    <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                        <!-- img -->
+                        <div>
+                            <img style="width: 50%; border-radius: 100%; margin-left: 120px;" src="assets/img/logo/logo2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="left-content3" style="border: 1px solid lightgrey;">
                         <!-- section tittle -->
-                        <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                        <div class="section-tittle mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                             <?php
                             if (isset($_SESSION['user_id'])) {
                                 $user_id = $_SESSION['user_id']; // Gán giá trị từ session vào biến $user_id
@@ -188,15 +190,17 @@ ob_start();
                                 // Kiểm tra xem có dữ liệu trả về hay không
                                 if ($result->num_rows > 0) {
                                     while ($row = $result->fetch_assoc()) {
-                                        echo "<div class='finished-course'>"; 
+                                        echo "</div>";
+                                        echo "<div class='finished-course'>";
                                         echo "<div class='front-text'>";
-                                        echo "<h2>" . $row["Cname"] . "</h2>";
+                                        echo "<div class='features-icon'><h2><img src='assets/img/icon/check.svg'>" . $row["Cname"] . "</h2></div>";
                                         echo "</div>";
                                     }
                                 } else {
                                     echo "No completed courses found for this user.";
                                 }
                             }
+
                             // Đóng kết nối đến cơ sở dữ liệu
                             $conn->close();
                             ?>
@@ -275,7 +279,7 @@ ob_start();
                                                 <nav>
                                                     <ul>
                                                         <li><a href="index.html">Home</a></li>
-                                                    <li><a href="courses.html">Courses</a></li>
+                                                        <li><a href="courses.html">Courses</a></li>
                                                         <li><a href="about.html">About</a></li>
                                                     </ul>
                                                 </nav>

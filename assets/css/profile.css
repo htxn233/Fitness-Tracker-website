@@ -1,16 +1,30 @@
-/* Thêm margin giữa các khóa học */
 .finished-course {
-    margin-bottom: 20px; /* Điều chỉnh khoảng cách giữa các khóa học */
+    margin-bottom: 30px; 
 }
 
-/* Căn giữa tên khóa học */
-.finished-course h2 {
+.finished-course .front-text h2 {
     color: lightcoral; 
     font-size: 50px;
 }
 
-/* Đặt width cho phần hiển thị tên khóa học */
 .finished-course .front-text {
-    max-width: 600px; /* Điều chỉnh chiều rộng tối đa */
-    margin: 0 auto; /* Căn giữa phần hiển thị */
+    max-width: 600px;
+    margin: 0 auto;
 }
+
+.finished-course .front-text h2 img{
+    width: 30px; 
+    margin-right: 10px;
+}
+
+.finished-course-title {
+    padding-left: 25%;
+    padding-top: 50px;
+}
+
+.about-area2 .support-wrapper .left-content3 {
+    padding-left: 40px;
+    width: 40%;
+    margin-left: 50px;
+}
+

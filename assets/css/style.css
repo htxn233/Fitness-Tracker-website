@@ -3743,7 +3743,7 @@ h2.wow {
 }
 
 .about-area2 .support-wrapper .right-content2 {
-  width: 30%;
+  width: 40%;
   margin-left: 100px;
   position: relative;
 }
@@ -3756,7 +3756,6 @@ h2.wow {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  /* line 52, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_about.scss */
   .about-area2 .support-wrapper .right-content2 {
     width: 78%;
     margin-left: 119px;
@@ -3765,7 +3764,6 @@ h2.wow {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 52, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_about.scss */
   .about-area2 .support-wrapper .right-content2 {
     width: 80%;
     padding-top: 50px;
@@ -3775,7 +3773,6 @@ h2.wow {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 52, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_about.scss */
   .about-area2 .support-wrapper .right-content2 {
     width: 100%;
     padding-top: 50px;
@@ -3785,7 +3782,6 @@ h2.wow {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 52, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_about.scss */
   .about-area2 .support-wrapper .right-content2 {
     width: 100%;
     padding-top: 50px;
