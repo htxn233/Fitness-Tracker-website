@@ -124,8 +124,6 @@ ob_start();
 
                                     // Truy vấn dữ liệu từ bảng profile và users trong cơ sở dữ liệu cho USid cụ thể
                                     $sql = $sql = "SELECT USname, USemail, USphone from users WHERE USid = $user_id";
-
-
                                     $result = $conn->query($sql);
                                     if ($result->num_rows > 0) {
                                         // Duyệt qua từng hàng dữ liệu
@@ -177,7 +175,7 @@ ob_start();
                                     SELECT Cid
                                     FROM progress
                                     WHERE USid = $user_id
-                                    AND Pstatus = 'Completed'
+                                    AND Pstatus = 2
                                 )";
 
                                 $result = $conn->query($sql);
