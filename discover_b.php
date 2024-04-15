@@ -7,9 +7,8 @@
     <title>Gym trainer | Template </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo1.ico">
-
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -53,21 +52,16 @@
                     <div class="menu-wrapper d-flex align-items-center justify-content-between">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="personal.php"><img src="assets/img/logo/logo.png" alt=""></a>
+                            <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu f-right d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a href="personal.php">Personal</a></li>
-                                    <li><a href="courses.php">Courses</a></li>
-                                    <li><a href="discover.php">Discover</a>
-                                        <ul class="submenu">
-                                            <li><a href="fittube.html">FitTube</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="profile.php">Profile</a></li>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="courses.html">Courses</a></li>
+                                    <li><a href="discover_b.php">Discover</a>
+                                    <li><a href="about _b.html">About</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -233,10 +227,10 @@
                                         <a href="discover.html" class="page-link">1</a>
                                     </li>
                                     <li class="page-item active">
-                                        <a href="nextpage.html" class="page-link">2</a>
+                                        <a href="discover_2.html" class="page-link">2</a>
                                     </li>
                                     <li class="page-item">
-                                        <a href="nextpage.html" class="page-link" aria-label="Next">
+                                        <a href="discover_2.html" class="page-link" aria-label="Next">
                                             <i class="ti-angle-right"></i>
                                         </a>
                                     </li>
@@ -445,7 +439,7 @@
                             <div class="single-footer-caption mb-50 text-center">
                                 <!-- logo -->
                                 <div class="footer-logo wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                                    <a href="personal.php"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
                                 </div>
                                 <!-- Menu -->
                                 <!-- Header Start -->
@@ -457,9 +451,9 @@
                                             <div class="main-menu main-menu2 text-center">
                                                 <nav>
                                                     <ul>
-                                                        <li><a href="personal.php">Peronal</a></li>
-                                                        <li><a href="courses.php">Courses</a></li>
-                                                        <li><a href="about.html">About</a></li>
+                                                        <li><a href="index.html">Home</a></li>
+                                                        <li><a href="courses.html">Courses</a></li>
+                                                        <li><a href="about_b.html">About</a></li>
                                                     </ul>
                                                 </nav>
                                             </div>

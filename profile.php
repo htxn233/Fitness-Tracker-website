@@ -1,7 +1,11 @@
 <?php
 session_start();
 ob_start();
-
+if (!isset($_SESSION['user_id'])) {
+    // Nếu chưa đăng nhập, chuyển hướng đến trang đăng nhập
+    header("Location: login.php");
+    exit(); // Dừng kịch bản để ngăn truy cập tiếp tục vào trang hiện tại
+}
 ?>
 
 <!doctype html>
@@ -53,7 +57,7 @@ ob_start();
                     <div class="menu-wrapper d-flex align-items-center justify-content-between">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            <a href="personal.php"><img src="assets/img/logo/logo.png" alt=""></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu f-right d-none d-lg-block">
@@ -62,6 +66,10 @@ ob_start();
                                     <li><a href="personal.php">Personal</a></li>
                                     <li><a href="courses.php">Courses</a></li>
                                     <li><a href="discover.php">Discover</a>
+                                        <ul class="submenu">
+                                            <li><a href="fittube.html">FitTube</a></li>
+                                        </ul>
+                                    </li>
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="profile.php">Profile</a></li>
                                 </ul>
@@ -111,7 +119,7 @@ ob_start();
                         <div class="front-text">
                             <div class="front-text">
                                 <?php
-                                
+
                                 // Kiểm tra xem biến $_SESSION['user_id'] đã được khởi tạo chưa
                                 if (isset($_SESSION['user_id'])) {
                                     $user_id = $_SESSION['user_id']; // Gán giá trị từ session vào biến $user_id
@@ -122,10 +130,8 @@ ob_start();
                                     include ("connect.php");
 
                                     // Truy vấn dữ liệu từ bảng profile và users trong cơ sở dữ liệu cho USid cụ thể
-                                    $sql = "SELECT profile.Pid, users.USname, users.USemail, users.USphone
-                                    FROM profile 
-                                    INNER JOIN users ON profile.USid = users.USid
-                                    WHERE profile.USid = $user_id";
+                                    $sql = $sql = "SELECT USname, USemail, USphone from users WHERE USid = $user_id";
+
 
                                     $result = $conn->query($sql);
 
@@ -141,8 +147,11 @@ ob_start();
                                             echo "<br>";
                                         }
                                     }
+
                                     $conn->close();
-                                } 
+                                } else {
+                                    echo "User ID is not set."; // Xuất thông báo nếu user_id không được xác định
+                                }
                                 ?>
 
                             </div>
@@ -176,23 +185,23 @@ ob_start();
                         <!-- section tittle -->
                         <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                             <?php
-                               if (isset($_SESSION['user_id'])) {
+                            // Kiểm tra xem biến $_SESSION['user_id'] đã được khởi tạo chưa
+                            if (isset($_SESSION['user_id'])) {
                                 $user_id = $_SESSION['user_id']; // Gán giá trị từ session vào biến $user_id
                             }
 
                             // Kiểm tra xem biến $user_id đã được xác định chưa
                             if (isset($user_id)) {
                                 include ("connect.php");
-                            // Truy vấn thông tin khóa học đã hoàn thành từ bảng profile, courses và progress
-                                $sql = "SELECT courses.Cname, courses.Ccate,
-                                    CASE
-                                        WHEN progress.Pstatus = 'completed' THEN 'Completed'
-                                        ELSE 'Incomplete'
-                                    END AS Pstatus
-                                    FROM profile
-                                    INNER JOIN courses ON profile.Cid = courses.Cid
-                                    LEFT JOIN progress ON profile.USid = progress.USid AND profile.Cid = progress.Cid
-                                    WHERE profile.USid = $user_id";
+
+                                $sql = "SELECT Cname
+                            FROM courses
+                            WHERE Cid IN (
+                                SELECT Cid
+                                FROM progress
+                                WHERE USid = $user_id
+                                AND Pstatus = 'Completed'
+                            )";
 
                                 $result = $conn->query($sql);
 
@@ -206,12 +215,13 @@ ob_start();
                                     while ($row = $result->fetch_assoc()) {
                                         echo "<div class='front-text'>";
                                         echo "<h2 style='color: lightcoral; text-align: left;'>" . $row["Cname"] . "</h2>";
-                                        echo "<h3 style='color: white;'><img class='mr-3 mt-3 mb-3' src='assets/img/icon/check.svg' alt=''> " . $row["Ccate"] . "</h3>";
-                                        echo "<h3 style='color: white;'><img class='mr-3 mt-3 mb-3' src='assets/img/icon/check.svg' alt=''>Status: " . $row["Pstatus"] . "</h3>";
-                                        echo "</div>";
+
                                     }
+                                } else {
+                                    echo "No completed courses found for this user.";
                                 }
                             }
+
                             // Đóng kết nối đến cơ sở dữ liệu
                             $conn->close();
                             ?>
@@ -289,8 +299,8 @@ ob_start();
                                             <div class="main-menu main-menu2 text-center">
                                                 <nav>
                                                     <ul>
-                                                        <li><a href="index.html">Home</a></li>
-                                                        <li><a href="courses.html">Courses</a></li>
+                                                        <li><a href="personal.php">Peronal</a></li>
+                                                        <li><a href="courses.php">Courses</a></li>
                                                         <li><a href="about.html">About</a></li>
                                                     </ul>
                                                 </nav>

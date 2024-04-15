@@ -18,3 +18,13 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 	window.location.href = "index.html?email=" + email + "&password=" + password;
 });
 
+// Lấy tham số từ URL
+const urlParams = new URLSearchParams(window.location.search);
+const signupToast = urlParams.get('signup-toast');
+
+// Hiển thị Toast nếu có
+if (signupToast === 'true') {
+    showToast('signup-toast');
+}
+
+

@@ -59,10 +59,6 @@ ob_start();
 				<span>or use your account</span>
 				<input name="email" type="email" placeholder="Email" />
 				<input name="password" type="password" placeholder="Password" />
-					<!-- Alert Bootstrap -->
-				<div class="alert alert-danger border border-danger" role="alert">
-					Invalid username or password
-				</div>
 				<a href="#">Forgot your password?</a>
 				<button type="submit" name="signin-button" class="signin-button">Sign In</button>
 			</form>

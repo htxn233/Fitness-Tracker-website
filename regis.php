@@ -1,7 +1,7 @@
 <?php
     include("connect.php");
 
-    if(isset($_POST['signup-button'])){
+    if(!isset($_POST['signup-button'])){
         $name = mysqli_real_escape_string($conn, $_POST['name']);
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         $password = mysqli_real_escape_string($conn, $_POST['password']);
@@ -16,7 +16,7 @@
         } else{
             $insertQuery = "INSERT INTO users (USname, USemail, USphone, USpassword) VALUES ('$name', '$email', '$phone', '$password')";
             if(mysqli_query($conn, $insertQuery)){
-                header("Location: index.html");
+                header("Location: personal.php");
                 exit();
             } else{
                 $error = mysqli_error($conn);
