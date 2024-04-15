@@ -132,11 +132,6 @@ if (!isset($_SESSION['user_id'])) {
 
                                     // Truy vấn dữ liệu từ bảng profile và users trong cơ sở dữ liệu cho USid cụ thể
                                     $sql = $sql = "SELECT USname, USemail, USphone from users WHERE USid = $user_id";
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 19760152e37d5e19dd68c30d497c8dd36dbcd75c
                                     $result = $conn->query($sql);
                                     if ($result->num_rows > 0) {
                                         // Duyệt qua từng hàng dữ liệu
@@ -175,10 +170,7 @@ if (!isset($_SESSION['user_id'])) {
                         <!-- section tittle -->
                         <div class="section-tittle mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                             <?php
-<<<<<<< HEAD
                             // Kiểm tra xem biến $_SESSION['user_id'] đã được khởi tạo chưa
-=======
->>>>>>> 19760152e37d5e19dd68c30d497c8dd36dbcd75c
                             if (isset($_SESSION['user_id'])) {
                                 $user_id = $_SESSION['user_id']; // Gán giá trị từ session vào biến $user_id
                             }
@@ -186,17 +178,6 @@ if (!isset($_SESSION['user_id'])) {
                             // Kiểm tra xem biến $user_id đã được xác định chưa
                             if (isset($user_id)) {
                                 include ("connect.php");
-<<<<<<< HEAD
-
-                                $sql = "SELECT Cname
-                            FROM courses
-                            WHERE Cid IN (
-                                SELECT Cid
-                                FROM progress
-                                WHERE USid = $user_id
-                                AND Pstatus = 'Completed'
-                            )";
-=======
                                 $sql = "SELECT Cname
                                 FROM courses
                                 WHERE Cid IN (
@@ -205,7 +186,6 @@ if (!isset($_SESSION['user_id'])) {
                                     WHERE USid = $user_id
                                     AND Pstatus = 2
                                 )";
->>>>>>> 19760152e37d5e19dd68c30d497c8dd36dbcd75c
 
                                 $result = $conn->query($sql);
 
@@ -220,13 +200,8 @@ if (!isset($_SESSION['user_id'])) {
                                         echo "</div>";
                                         echo "<div class='finished-course'>";
                                         echo "<div class='front-text'>";
-<<<<<<< HEAD
-                                        echo "<h2 style='color: lightcoral; text-align: left;'>" . $row["Cname"] . "</h2>";
-
-=======
                                         echo "<div class='features-icon'><h2><img src='assets/img/icon/check.svg'>" . $row["Cname"] . "</h2></div>";
                                         echo "</div>";
->>>>>>> 19760152e37d5e19dd68c30d497c8dd36dbcd75c
                                     }
                                 } else {
                                     echo "No completed courses found for this user.";

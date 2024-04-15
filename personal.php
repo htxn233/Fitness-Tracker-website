@@ -76,11 +76,9 @@ ob_start();
                         <div class="header-btns d-none d-lg-block f-right">
                             <a href="loginform.php" class="btn">Sign out</a>
                         </div>
-<<<<<<< HEAD
                         <!-- Mobile Menu -->
                         <div class="col-12">
                             <div class="mobile_menu d-block d-lg-none"></div>
-=======
                     </div>
                 </div>          
             </div>
@@ -168,7 +166,6 @@ ob_start();
                             <h3>Email</h3>
                             <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=canopyFit@gmail.com" target="_blank">canopyfit@gmail.com</a></p>
                             <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=canopycarepro@gmail.com" target="_blank">canopycarepro@gmail.com</a></p>
->>>>>>> 19760152e37d5e19dd68c30d497c8dd36dbcd75c
                         </div>
                     </div>
                 </div>
