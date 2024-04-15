@@ -7,7 +7,6 @@ if (!isset($_SESSION['user_id'])) {
     exit(); // Dừng kịch bản để ngăn truy cập tiếp tục vào trang hiện tại
 }
 ?>
-
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -34,6 +33,8 @@ if (!isset($_SESSION['user_id'])) {
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+
 </head>
 
 <body class="black-bg">
@@ -131,11 +132,12 @@ if (!isset($_SESSION['user_id'])) {
 
                                     // Truy vấn dữ liệu từ bảng profile và users trong cơ sở dữ liệu cho USid cụ thể
                                     $sql = $sql = "SELECT USname, USemail, USphone from users WHERE USid = $user_id";
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 19760152e37d5e19dd68c30d497c8dd36dbcd75c
                                     $result = $conn->query($sql);
-
-                                    // Kiểm tra xem có dữ liệu trả về hay không
                                     if ($result->num_rows > 0) {
                                         // Duyệt qua từng hàng dữ liệu
                                         while ($row = $result->fetch_assoc()) {
@@ -158,34 +160,25 @@ if (!isset($_SESSION['user_id'])) {
                         </div>
                     </div>
                 </div>
-
                 <br>
-                <div>
-                    <div class="section-tittle text-center mt-50 mb-20 wow fadeInUp" data-wow-duration="2s"
-                        data-wow-delay=".2s">
-                        <h2 style="font-size: 100px;">Finished courses</h2>
-                    </div>
+                <div class="section-tittle text-center mt-50 mb-20 wow fadeInUp finished-course-title" data-wow-duration="2s" data-wow-delay=".2s">
+                    <h2>Finished courses</h2>
                 </div>
                 <div class="support-wrapper align-items-center">
                     <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                         <!-- img -->
                         <div>
-                            <img style="margin-left: 10%; height: 400px; width: 400px;"
-                                src="assets/img/gallery/profile.jpg" alt="">
+                            <img style="width: 50%; border-radius: 100%; margin-left: 120px;" src="assets/img/logo/logo2.png" alt="">
                         </div>
                     </div>
-                    <div class="left-content2" style="border: 1px solid lightgrey;">
+                    <div class="left-content3" style="border: 1px solid lightgrey;">
                         <!-- section tittle -->
-
-                    </div>
-                </div>
-
-                <div class="support-wrapper align-items-center">
-                    <div class="left-content2" style="margin-left: 12%; border: 1px solid lightgrey;">
-                        <!-- section tittle -->
-                        <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                        <div class="section-tittle mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                             <?php
+<<<<<<< HEAD
                             // Kiểm tra xem biến $_SESSION['user_id'] đã được khởi tạo chưa
+=======
+>>>>>>> 19760152e37d5e19dd68c30d497c8dd36dbcd75c
                             if (isset($_SESSION['user_id'])) {
                                 $user_id = $_SESSION['user_id']; // Gán giá trị từ session vào biến $user_id
                             }
@@ -193,6 +186,7 @@ if (!isset($_SESSION['user_id'])) {
                             // Kiểm tra xem biến $user_id đã được xác định chưa
                             if (isset($user_id)) {
                                 include ("connect.php");
+<<<<<<< HEAD
 
                                 $sql = "SELECT Cname
                             FROM courses
@@ -202,6 +196,16 @@ if (!isset($_SESSION['user_id'])) {
                                 WHERE USid = $user_id
                                 AND Pstatus = 'Completed'
                             )";
+=======
+                                $sql = "SELECT Cname
+                                FROM courses
+                                WHERE Cid IN (
+                                    SELECT Cid
+                                    FROM progress
+                                    WHERE USid = $user_id
+                                    AND Pstatus = 2
+                                )";
+>>>>>>> 19760152e37d5e19dd68c30d497c8dd36dbcd75c
 
                                 $result = $conn->query($sql);
 
@@ -213,9 +217,16 @@ if (!isset($_SESSION['user_id'])) {
                                 // Kiểm tra xem có dữ liệu trả về hay không
                                 if ($result->num_rows > 0) {
                                     while ($row = $result->fetch_assoc()) {
+                                        echo "</div>";
+                                        echo "<div class='finished-course'>";
                                         echo "<div class='front-text'>";
+<<<<<<< HEAD
                                         echo "<h2 style='color: lightcoral; text-align: left;'>" . $row["Cname"] . "</h2>";
 
+=======
+                                        echo "<div class='features-icon'><h2><img src='assets/img/icon/check.svg'>" . $row["Cname"] . "</h2></div>";
+                                        echo "</div>";
+>>>>>>> 19760152e37d5e19dd68c30d497c8dd36dbcd75c
                                     }
                                 } else {
                                     echo "No completed courses found for this user.";

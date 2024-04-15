@@ -76,9 +76,99 @@ ob_start();
                         <div class="header-btns d-none d-lg-block f-right">
                             <a href="loginform.php" class="btn">Sign out</a>
                         </div>
+<<<<<<< HEAD
                         <!-- Mobile Menu -->
                         <div class="col-12">
                             <div class="mobile_menu d-block d-lg-none"></div>
+=======
+                    </div>
+                </div>          
+            </div>
+        </div>
+    </div>
+    <!-- slider Area End-->
+    <section class="current-course-area">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+              <div class="section-tittle text-center mb-55 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                <h2 class="wow fadeIn" data-wow-duration="6s" data-wow-delay=".8s">Your progress</h2>
+              </div>
+            </div>
+          </div>
+          <div class="display-date">
+            <span id="day">day</span>,
+            <span id="daynum">00</span>
+            <span id="month">month</span>
+            <span id="year">0000</span>
+            <span class="display-time"></span>
+          </div>
+          <div class="course-list">
+            <?php
+                // Kết nối đến cơ sở dữ liệu và truy vấn dữ liệu
+                include "connect.php"; 
+                $query = "SELECT * FROM courses";
+                $result = mysqli_query($conn, $query);
+        
+                // Kiểm tra và hiển thị dữ liệu
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo '<div class="course-item">';
+                        echo '<h3 style="color: yellow">' . $row['Cname'] . '</h3>';
+                        echo '<p>Time: ' . $row['Ctime'] . '</p>';
+                        echo '<p>Exercise: ' . $row['Cexercise'] . '</p>';
+                        echo '<p>Description: ' . $row['Cdes'] . '</p>';
+                        echo '</div>';
+                    }
+                } else {
+                    echo 'You are not apply to any courses. Please click here to find a course.';
+                }
+    
+                // Đóng kết nối cơ sở dữ liệu
+                mysqli_close($conn);
+            ?>
+        </div>
+        <a href="courses.html" class="border-btn hero-btn" data-animation="fadeInLeft" data-delay="0.8s">My Courses</a>
+        </div>
+      </section>
+    
+    <!-- ? services-area -->
+    <section class="services-area">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
+                    <div class="single-services mb-40">
+                        <div class="features-icon">
+                            <img src="assets/img/icon/icon1.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <h3>Location</h3>
+                            <p> 20/22/23 Dragon Hill, Nguyen Huu Tho St., Phuoc Kien Ward, Nha Be District.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                    <div class="single-services mb-40 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                        <div class="features-icon">
+                            <img src="assets/img/icon/icon2.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <h3>Phone</h3>
+                            <p>(90) 277 278 2566</p>
+                            <p>  (78) 267 256 2578</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                    <div class="single-services mb-40 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s">
+                        <div class="features-icon">
+                            <img src="assets/img/icon/icon3.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <h3>Email</h3>
+                            <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=canopyFit@gmail.com" target="_blank">canopyfit@gmail.com</a></p>
+                            <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=canopycarepro@gmail.com" target="_blank">canopycarepro@gmail.com</a></p>
+>>>>>>> 19760152e37d5e19dd68c30d497c8dd36dbcd75c
                         </div>
                     </div>
                 </div>

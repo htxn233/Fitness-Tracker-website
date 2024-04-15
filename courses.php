@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 session_start();
 ob_start();
@@ -19,6 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Đã sửa thành "REQUEST_METHOD
 }
 $conn->close();
 ?>
+=======
+
+>>>>>>> 19760152e37d5e19dd68c30d497c8dd36dbcd75c
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -142,6 +146,7 @@ $conn->close();
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <?php
                 include ("connect.php");
 
@@ -169,6 +174,46 @@ $conn->close();
                 $conn->close();
                 ?>
 
+=======
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <!--? Team -->
+    <section class="team-area fix section-padding30">
+        <div class="container">
+            <div class="row">
+                <div class="wrapper">
+                    <div class="search_box">
+                        <div class="dropdown">
+                            <div class="default_option">Select</div>  
+                            <ul>
+                               <li><button type="submit" name="catelogy" value="Weight loss">Weight loss</button></li>
+                                <li><button type="submit" name="catelogy" value="Body building">Body building</button></li>
+                                <li><button type="submit" name="catelogy" value="Muscle gain">Muscle gain</button></li>
+                                <li><button type="submit" name="catelogy" value="Relaxing">Relaxing</button></li>
+                            </ul>
+                        </div>
+                        <div class="search_field">
+                          <input type="text" class="input2" placeholder="Search">
+                          <i class="fas fa-search"></i>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services End -->
+    <!-- Traning categories Start -->
+    <section class="traning-categories black-bg">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section-tittle text-center mb-55">
+                        <h2>Your courses</h2>
+                    </div>
+                </div>
+>>>>>>> 19760152e37d5e19dd68c30d497c8dd36dbcd75c
             </div>
         </section>
         <!-- Services End -->
