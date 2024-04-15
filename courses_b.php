@@ -52,7 +52,7 @@
                             <nav>
                                 <ul id="navigation">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="courses.html">Courses</a></li>
+                                    <li><a href="courses_b.php">Courses</a></li>
                                     <li><a href="discover_b.php">Discover</a>
                                     <li><a href="about_b.html">About</a></li>
                                 </ul>
@@ -92,8 +92,12 @@
     <!--? Team -->
     <section class="team-area fix section-padding30">
         <div class="container">
-            <input type="text" placeholder="Search...">
-            <div class="search"></div>
+            <form action="search_courses.php" method="POST">
+                <input type="text" name="search" placeholder="Search...">
+                <div class="search">
+                    <button name ="submit-search"type="submit"></button>
+                </div>
+            </form>
         </div>
         <div class="container">
             <div class="row">
@@ -284,7 +288,7 @@
                                 <div class="topic-content">
                                     <h3>Weight Loss</h3>
                                     <p>Shed pounds, burn fat, and adopt healthy habits with our targeted program. Achieve your weight loss goals through a combination of balanced diets and effective exercises.</p>
-                                    <a href="weight_loss.html" class="btn">View More</a>
+                                    <a href="weight_loss_b.html" class="btn">View More</a>
                                 </div>
                             </div>
                         </div>
@@ -298,7 +302,7 @@
                                 <div class="topic-content">
                                     <h3>Muscle gain</h3>
                                     <p>Build strength and size with our tailored workouts and proper nutrition guidance. Transform your physique, increase muscle mass, and enhance definition.</p>
-                                    <a href="muscle_gain.html" class="btn">View More</a>
+                                    <a href="muscle_gain_b.html" class="btn">View More</a>
                                 </div>
                             </div>
                         </div>
@@ -312,7 +316,7 @@
                                 <div class="topic-content">
                                     <h3>Body building</h3>
                                     <p>Sculpt your body to perfection with our intensive program. Develop symmetrical muscles, achieve low body fat levels, and maximize muscle definition.</p>
-                                    <a href="body_building.html" class="btn">View More</a>
+                                    <a href="body_building_b.html" class="btn">View More</a>
                                 </div>
                             </div>
                         </div>
@@ -326,7 +330,7 @@
                                 <div class="topic-content">
                                     <h3>Relaxing</h3>
                                     <p>Unwind and reduce stress with our calming program. Improve flexibility, find inner peace, and restore balance in body and mind.</p>
-                                    <a href="relaxing.html" class="btn">View More</a>
+                                    <a href="relaxing_b.html" class="btn">View More</a>
                                 </div>
                             </div>
                         </div>
@@ -402,7 +406,7 @@
                                             <nav>
                                                 <ul>
                                                     <li><a href="index.html">Home</a></li>
-                                                    <li><a href="courses.html">Courses</a></li>
+                                                    <li><a href="courses_b.php">Courses</a></li>
                                                     <li><a href="about_b.html">About</a></li>
                                                     
                                                 </ul>

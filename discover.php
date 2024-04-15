@@ -247,7 +247,7 @@
                     <div class="col-lg-4">
                         <div class="blog_right_sidebar">
                             <aside class="single_sidebar_widget search_widget">
-                                <form method="POST" action="search.php" onsubmit="return validateForm()">
+                                <form method="POST" action="search_dis.php" onsubmit="return validateForm()">
                                     <div class="form-group">
                                         <div class="input-group mb-3">
                                             <input name="keyword" type="text" class="form-control"
@@ -262,7 +262,6 @@
                                     type="submit">Search</button>
                                 </form>
                             </aside>
-
                             <aside class="single_sidebar_widget post_category_widget">
                                 <div class="filter-option">
                                     <label for="category-filter"></label>
