@@ -45,14 +45,6 @@
                                 </div>
                             </ul>
                         </li>
-                        <li><a href=""><i class="ri-file-list-line"></i>Manage Discover<i
-                                    class="ri-add-box-line"></i></a>
-                            <ul class="sub-menu">
-                                <div class="sub-menu-item">
-                                    <li><a href="add_news.php"><i class="ri-arrow-right-s-fill"></i>Update News</a></li>
-                                </div>
-                            </ul>
-                        </li>
                     </ul>
                 </div>
             </div>
