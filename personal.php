@@ -30,6 +30,7 @@ ob_start();
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/personal.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
 </head>
 
 <body class="black-bg">
