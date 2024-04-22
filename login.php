@@ -15,10 +15,10 @@ include("connect.php");
             // Lưu USid của người dùng vào phiên
             $_SESSION['user_id'] = $row['USid'];
 
-            if ($email == 'admin@gmail.com' && $password == 'admin123') {
+            if ($email == 'admin@gmail.com' && $password == 'admin') {
                 // Đăng nhập thành công với vai trò admin
-                header("Location: admin.php");
-                exit();
+                header("Location: admin.html");
+                exit(); // Đảm bảo không có mã PHP hoặc HTML khác được thực thi sau lệnh chuyển hướng
             } else if ($numRows == 1) {
                 // Đăng nhập thành công với vai trò người dùng
                 header("Location: personal.php");
