@@ -156,14 +156,16 @@ if (!isset($_SESSION['user_id'])) {
                     </div>
                 </div>
                 <br>
-                <div class="section-tittle text-center mt-50 mb-20 wow fadeInUp finished-course-title" data-wow-duration="2s" data-wow-delay=".2s">
+                <div class="section-tittle text-center mt-50 mb-20 wow fadeInUp finished-course-title"
+                    data-wow-duration="2s" data-wow-delay=".2s">
                     <h2>Finished courses</h2>
                 </div>
                 <div class="support-wrapper align-items-center">
                     <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                         <!-- img -->
                         <div>
-                            <img style="width: 50%; border-radius: 100%; margin-left: 120px;" src="assets/img/logo/logo2.png" alt="">
+                            <img style="width: 50%; border-radius: 100%; margin-left: 120px;"
+                                src="assets/img/logo/logo2.png" alt="">
                         </div>
                     </div>
                     <div class="left-content3" style="border: 1px solid lightgrey;">
@@ -178,15 +180,17 @@ if (!isset($_SESSION['user_id'])) {
                             // Kiểm tra xem biến $user_id đã được xác định chưa
                             if (isset($user_id)) {
                                 include ("connect.php");
+
+                                // Sửa câu truy vấn để tránh lỗi cú pháp và sử dụng biến $user_id an toàn
                                 $sql = "SELECT Cname
                                 FROM courses
                                 WHERE Cid IN (
                                     SELECT Cid
                                     FROM progress
-                                    WHERE USid = $user_id
-                                    AND Pstatus = 2
+                                    WHERE USid = '$user_id'
+                                    AND Pstatus = 'completed'
                                 )";
-
+                                // Thực thi truy vấn
                                 $result = $conn->query($sql);
 
                                 // Kiểm tra lỗi trong quá trình truy vấn
@@ -196,20 +200,21 @@ if (!isset($_SESSION['user_id'])) {
 
                                 // Kiểm tra xem có dữ liệu trả về hay không
                                 if ($result->num_rows > 0) {
+                                    // Duyệt qua các dòng kết quả và hiển thị
                                     while ($row = $result->fetch_assoc()) {
-                                        echo "</div>";
                                         echo "<div class='finished-course'>";
                                         echo "<div class='front-text'>";
                                         echo "<div class='features-icon'><h2><img src='assets/img/icon/check.svg'>" . $row["Cname"] . "</h2></div>";
+                                        echo "</div>";
                                         echo "</div>";
                                     }
                                 } else {
                                     echo "No completed courses found for this user.";
                                 }
-                            }
 
-                            // Đóng kết nối đến cơ sở dữ liệu
-                            $conn->close();
+                                // Đóng kết nối đến cơ sở dữ liệu
+                                $conn->close();
+                            }
                             ?>
 
                         </div>
