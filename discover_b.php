@@ -67,7 +67,7 @@
                         </div>
                         <!-- Header-btn -->
                         <div class="header-btns d-none d-lg-block f-right">
-                            <a href="loginform.php" class="btn">sign out</a>
+                            <a href="loginform.php" class="btn">log in</a>
                         </div>
                         <!-- Mobile Menu -->
                         <div class="col-12">
@@ -241,7 +241,7 @@
                     <div class="col-lg-4">
                         <div class="blog_right_sidebar">
                             <aside class="single_sidebar_widget search_widget">
-                                <form method="POST" action="search.php" onsubmit="return validateForm()">
+                                <form method="POST" action="search_dis.php" onsubmit="return validateForm()">
                                     <div class="form-group">
                                         <div class="input-group mb-3">
                                             <input name="keyword" type="text" class="form-control"

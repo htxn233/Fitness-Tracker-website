@@ -1,8 +1,3 @@
-<?php
-session_start();
-ob_start();
-include ("connect.php");
-?>
 
 
 <!doctype html>
@@ -104,228 +99,164 @@ include ("connect.php");
         </div>
         <!-- Hero End -->
         <!--? Team -->
-        <section class="team-area fix section-padding30">
-            <?php
-            // Xử lý yêu cầu khi form được gửi đi
-            if ($_SERVER["REQUEST_METHOD"] == "POST") { // Đã sửa thành "REQUEST_METHOD" và so sánh với "POST"
-                $category = mysqli_real_escape_string($conn, $_POST['category']);
-                $sql = "SELECT * FROM courses WHERE Ccate = '$category'";
-                $result = mysqli_query($conn, $sql);
-
-                if (mysqli_num_rows($result) > 0) {
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        echo "Name: " . $row["Cname"] . " - Time: " . $row["Ctime"] . " - Description: " . $row["Cdes"] . " - Category: " . $row["Ccate"] . "<br>";
-                    }
-                } else {
-                    echo "This category is developing. Please select another category to find a course.";
-                }
-            }
-            $conn->close();
-            ?>
-            <div class="container" style="position: relative;">
+        <!-- Hero End -->
+        <!--? Team -->
+        <section class="team-area fix section-padding30 d-flex">
+            <<div class="container">
                 <div class="row">
                     <div class="wrapper">
-                        <div class="search_box">
-                            <div class="dropdown">
-                                <div class="default_option">Select</div>
-                                <ul>
-                                    <li><button type="submit" name="category" value="Weight loss">Weight loss</button>
-                                    </li>
-                                    <li><button type="submit" name="category" value="Body building">Body
-                                            building</button></li>
-                                    <li><button type="submit" name="category" value="Muscle gain">Muscle gain</button>
-                                    </li>
-                                    <li><button type="submit" name="category" value="Relaxing">Relaxing</button></li>
-                                </ul>
+                        <form method="POST" action="search_courses.php">
+                            <div class="search_box">
+                                <div class="dropdown">
+                                    <div class="default_option">Select</div>
+                                    <ul>
+                                        <!-- Loại bỏ các thẻ li và thay thế bằng các input -->
+                                        <li><input type="submit" name="submit" value="Weight loss">Weight loss</li>
+                                        <li><input type="submit" name="submit" value="Body building">Body building</li>
+                                        <li><input type="submit" name="submit" value="Muscle gain">Muscle gain</li>
+                                        <li><input type="submit" name="submit" value="Relaxing">Relaxing</li>
+                                    </ul>
+                                </div>
+                                <div class="search_field">
+                                    <input type="text" class="input2" name="submit" placeholder="Search">
+                                    <button name="submit" type="submit"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                </div>
+
+        </section>
+        <!-- Services End -->
+        <!-- Traning categories Start -->
+        <section class="traning-categories black-bg">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="section-tittle text-center mb-55">
+                            <h2>Your courses</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="single-topic text-center mb-30">
+                            <div class="topic-img">
+                                <img src="assets/img/gallery/gallery5.png" alt="">
+                                <div class="topic-content-box">
+                                    <div class="topic-content">
+                                        <h3>Weight Loss</h3>
+                                        <p>Shed pounds, burn fat, and adopt healthy habits with our targeted
+                                            program.
+                                            Achieve your weight loss goals through a combination of balanced
+                                            diets and
+                                            effective exercises.</p>
+                                        <a href="weight_loss.html" class="btn">View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="single-topic text-center mb-30">
+                            <div class="topic-img">
+                                <img src="assets/img/gallery/gallery4.png" alt="">
+                                <div class="topic-content-box">
+                                    <div class="topic-content">
+                                        <h3>Muscle gain</h3>
+                                        <p>Build strength and size with our tailored workouts and proper
+                                            nutrition
+                                            guidance. Transform your physique, increase muscle mass, and enhance
+                                            definition.</p>
+                                        <a href="muscle_gain.html" class="btn">View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="single-topic text-center mb-30">
+                            <div class="topic-img">
+                                <img src="assets/img/gallery/gallery6.png" alt="">
+                                <div class="topic-content-box">
+                                    <div class="topic-content">
+                                        <h3>Body building</h3>
+                                        <p>Sculpt your body to perfection with our intensive program. Develop
+                                            symmetrical muscles, achieve low body fat levels, and maximize
+                                            muscle
+                                            definition.</p>
+                                        <a href="body_building.html" class="btn">View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="single-topic text-center mb-30">
+                            <div class="topic-img">
+                                <img src="assets/img/gallery/relaxing.jpg" alt="">
+                                <div class="topic-content-box">
+                                    <div class="topic-content">
+                                        <h3>Relaxing</h3>
+                                        <p>Unwind and reduce stress with our calming program. Improve
+                                            flexibility, find
+                                            inner peace, and restore balance in body and mind.</p>
+                                        <a href="relaxing.html" class="btn">View More</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- <?php
-            include ("connect.php");
-
-            // Chuẩn bị truy vấn với tham số
-            $sql = "SELECT * FROM courses WHERE Ccate = ?";
-            $stmt = $conn->prepare($sql);
-            $stmt->bind_param("s", $category);
-            // Thiết lập giá trị tham số và thực thi truy vấn
-            $category = "Weight loss";
-            $stmt->execute();
-            $result = $stmt->get_result();
-
-            // Kiểm tra kết quả và hiển thị dữ liệu
-            if ($result->num_rows > 0) {
-                // Duyệt qua các hàng kết quả
-                while ($row = $result->fetch_assoc()) {
-                    echo "Course ID: " . $row["Cid"] . " - Course Name: " . $row["Cname"] . "<br>";
-                }
-            } else {
-                echo "No result";
-            }
-
-            // Đóng kết nối
-            $stmt->close();
-            ?> -->
-            <!-- Hero End -->
-            <!--? Team -->
-            <section class="team-area fix section-padding30">
-                <div class="container">
-                    <div class="row">
-                        <div class="wrapper">
-                            <div class="search_box">
-                                <div class="dropdown">
-                                    <div class="default_option">Select</div>
-                                    <ul>
-                                        <li><button type="submit" name="catelogy" value="Weight loss">Weight
-                                                loss</button></li>
-                                        <li><button type="submit" name="catelogy" value="Body building">Body
-                                                building</button></li>
-                                        <li><button type="submit" name="catelogy" value="Muscle gain">Muscle
-                                                gain</button></li>
-                                        <li><button type="submit" name="catelogy" value="Relaxing">Relaxing</button>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="search_field">
-                                    <input type="text" class="input2" placeholder="Search">
-                                    <i class="fas fa-search"></i>
-                                </div>
+        </section>
+        <!-- Traning categories End-->
+        <!-- ? services-area -->
+        <section class="services-area">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
+                        <div class="single-services mb-40">
+                            <div class="features-icon">
+                                <img src="assets/img/icon/icon1.svg" alt="">
+                            </div>
+                            <div class="features-caption">
+                                <h3>Location</h3>
+                                <p> 20/22/23 Dragon Hill, Nguyen Huu Tho St., Phuoc Kien Ward, Nha Be District.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="single-services mb-40">
+                            <div class="features-icon">
+                                <img src="assets/img/icon/icon2.svg" alt="">
+                            </div>
+                            <div class="features-caption">
+                                <h3>Phone</h3>
+                                <p>(90) 277 278 2566</p>
+                                <p>(78) 267 256 2578</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="single-services mb-40">
+                            <div class="features-icon">
+                                <img src="assets/img/icon/icon3.svg" alt="">
+                            </div>
+                            <div class="features-caption">
+                                <h3>Email</h3>
+                                <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=canopyFit@gmail.com"
+                                        target="_blank">canopyfit@gmail.com</a></p>
+                                <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=canopycarepro@gmail.com"
+                                        target="_blank">canopycarepro@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- Services End -->
-            <!-- Traning categories Start -->
-            <section class="traning-categories black-bg">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="section-tittle text-center mb-55">
-                                <h2>Your courses</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6">
-                            <div class="single-topic text-center mb-30">
-                                <div class="topic-img">
-                                    <img src="assets/img/gallery/gallery5.png" alt="">
-                                    <div class="topic-content-box">
-                                        <div class="topic-content">
-                                            <h3>Weight Loss</h3>
-                                            <p>Shed pounds, burn fat, and adopt healthy habits with our targeted
-                                                program.
-                                                Achieve your weight loss goals through a combination of balanced
-                                                diets and
-                                                effective exercises.</p>
-                                            <a href="weight_loss.html" class="btn">View More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6">
-                            <div class="single-topic text-center mb-30">
-                                <div class="topic-img">
-                                    <img src="assets/img/gallery/gallery4.png" alt="">
-                                    <div class="topic-content-box">
-                                        <div class="topic-content">
-                                            <h3>Muscle gain</h3>
-                                            <p>Build strength and size with our tailored workouts and proper
-                                                nutrition
-                                                guidance. Transform your physique, increase muscle mass, and enhance
-                                                definition.</p>
-                                            <a href="muscle_gain.html" class="btn">View More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6">
-                            <div class="single-topic text-center mb-30">
-                                <div class="topic-img">
-                                    <img src="assets/img/gallery/gallery6.png" alt="">
-                                    <div class="topic-content-box">
-                                        <div class="topic-content">
-                                            <h3>Body building</h3>
-                                            <p>Sculpt your body to perfection with our intensive program. Develop
-                                                symmetrical muscles, achieve low body fat levels, and maximize
-                                                muscle
-                                                definition.</p>
-                                            <a href="body_building.html" class="btn">View More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6">
-                            <div class="single-topic text-center mb-30">
-                                <div class="topic-img">
-                                    <img src="assets/img/gallery/relaxing.jpg" alt="">
-                                    <div class="topic-content-box">
-                                        <div class="topic-content">
-                                            <h3>Relaxing</h3>
-                                            <p>Unwind and reduce stress with our calming program. Improve
-                                                flexibility, find
-                                                inner peace, and restore balance in body and mind.</p>
-                                            <a href="relaxing.html" class="btn">View More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Traning categories End-->
-            <!-- ? services-area -->
-            <section class="services-area">
-                <div class="container">
-                    <div class="row justify-content-between">
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
-                            <div class="single-services mb-40">
-                                <div class="features-icon">
-                                    <img src="assets/img/icon/icon1.svg" alt="">
-                                </div>
-                                <div class="features-caption">
-                                    <h3>Location</h3>
-                                    <p> 20/22/23 Dragon Hill, Nguyen Huu Tho St., Phuoc Kien Ward, Nha Be District.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                            <div class="single-services mb-40">
-                                <div class="features-icon">
-                                    <img src="assets/img/icon/icon2.svg" alt="">
-                                </div>
-                                <div class="features-caption">
-                                    <h3>Phone</h3>
-                                    <p>(90) 277 278 2566</p>
-                                    <p>(78) 267 256 2578</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                            <div class="single-services mb-40">
-                                <div class="features-icon">
-                                    <img src="assets/img/icon/icon3.svg" alt="">
-                                </div>
-                                <div class="features-caption">
-                                    <h3>Email</h3>
-                                    <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=canopyFit@gmail.com"
-                                            target="_blank">canopyfit@gmail.com</a></p>
-                                    <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=canopycarepro@gmail.com"
-                                            target="_blank">canopycarepro@gmail.com</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            </div>
+        </section>
     </main>
     <footer>
         <!--? Footer Start-->

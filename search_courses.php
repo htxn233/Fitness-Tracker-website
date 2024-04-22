@@ -2,7 +2,7 @@
 include("connect.php");
 
 // Check if the search data has been submitted
-if(isset($_POST['submit-search'])) {
+if(isset($_POST['submit'])) {
     // Get the search keyword
     if(isset($_POST['keyword'])) {
         // Sanitize and escape the search keyword to prevent SQL injection
@@ -14,7 +14,7 @@ if(isset($_POST['submit-search'])) {
         // Check if the keyword is empty
         if(empty($keyword)) {
             // Redirect user back to courses_b.php
-            header("Location: courses_b.php");
+            header("Location: courses.php");
             exit(); // Make sure to exit the script after redirection
         }
 
@@ -32,7 +32,7 @@ if(isset($_POST['submit-search'])) {
             header("Location: $courseLink");
             exit(); // Make sure to exit the script after redirection
         } else {
-            header("Location: courses_b.php?error=invalid");
+            header("Location: courses.php?error=invalid");
             exit();
         }
     }
