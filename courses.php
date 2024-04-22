@@ -215,18 +215,6 @@ $conn->close();
                                 </div>
                             </div>
                         </div>
-                </section>
-                <!-- Services End -->
-                <!-- Traning categories Start -->
-                <section class="traning-categories black-bg">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="section-tittle text-center mb-55">
-                                    <h2>Your courses</h2>
-                                </div>
-                            </div>
-                        </div>
                         <div class="row">
                             <div class="col-xl-6 col-lg-6">
                                 <div class="single-topic text-center mb-30">

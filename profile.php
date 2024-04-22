@@ -111,7 +111,7 @@ if (!isset($_SESSION['user_id'])) {
                 <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                     <!-- img -->
                     <div>
-                        <img style="border-radius: 100%;" src="assets/img/gallery/profile.jpg" alt="">
+                        <img style="border-radius: 50%;" src="assets/img/gallery/profile.jpg" alt="">
                     </div>
                 </div>
                 <div class="left-content2">
