@@ -57,7 +57,7 @@
 }
 
 .wrapper .search_box .dropdown ul.active{
-  display: block;
+  display: flex;
 }
 
 .wrapper .search_box .dropdown ul li{
@@ -123,4 +123,8 @@
 
 .input2::placeholder {
   color: #000000; /* Đen */
+}
+
+.container {
+  display: inline-block; /* Thêm dòng này để div trở thành một phần của nội dung */
 }

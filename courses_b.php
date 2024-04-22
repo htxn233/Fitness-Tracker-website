@@ -91,14 +91,14 @@
     <!-- Hero End -->
     <!--? Team -->
     <section class="team-area fix section-padding30">
-        <div class="container">
+        <!-- <div class="container">
             <form action="search_courses.php" method="POST">
                 <input type="text" name="search" placeholder="Search...">
                 <div class="search">
                     <button name ="submit-search"type="submit"></button>
                 </div>
             </form>
-        </div>
+        </div> -->
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
