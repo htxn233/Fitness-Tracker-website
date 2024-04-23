@@ -61,13 +61,15 @@
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="courses_b.php">Courses</a></li>
                                     <li><a href="discover_b.php">Discover</a>
-                                    <li><a href="about _b.html">About</a></li>
+                                    <li><a href="about_b.html">About</a></li>
+                                    <li><a href="contact_b.php">Contact</a>
+
                                 </ul>
                             </nav>
                         </div>
                         <!-- Header-btn -->
                         <div class="header-btns d-none d-lg-block f-right">
-                            <a href="loginform.php" class="btn">log in</a>
+                            <a href="loginform.php" class="btn">login</a>
                         </div>
                         <!-- Mobile Menu -->
                         <div class="col-12">
@@ -454,6 +456,8 @@
                                                         <li><a href="index.html">Home</a></li>
                                                         <li><a href="courses_b.php">Courses</a></li>
                                                         <li><a href="about_b.html">About</a></li>
+                                                        <li><a href="contact_b.php">Contact</a></li>
+                                                        
                                                     </ul>
                                                 </nav>
                                             </div>

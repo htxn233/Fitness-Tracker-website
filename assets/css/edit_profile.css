@@ -105,3 +105,11 @@
  input[type="file"] {
      display: none;
  }
+/* btn in feedback */
+.btn-read {
+    /* Your CSS styles for the read button go here */
+    /* For example: */
+    background-color: green;
+    color: white;
+    /* Add more styles as needed */
+}

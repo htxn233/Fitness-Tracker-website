@@ -68,12 +68,13 @@
                                     </li>
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="profile.php">Profile</a></li>
+                                    <li><a href="contact.php">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
                         <!-- Header-btn -->
                         <div class="header-btns d-none d-lg-block f-right">
-                            <a href="loginform.php" class="btn">sign out</a>
+                            <a href="index.html" class="btn">sign out</a>
                         </div>
                         <!-- Mobile Menu -->
                         <div class="col-12">
@@ -459,6 +460,7 @@
                                                         <li><a href="personal.php">Peronal</a></li>
                                                         <li><a href="courses.php">Courses</a></li>
                                                         <li><a href="about.html">About</a></li>
+                                                        <li><a href="contact.php">Contact</a></li>
                                                     </ul>
                                                 </nav>
                                             </div>

@@ -1,3 +1,7 @@
+<?php
+session_start();
+ob_start();
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -55,23 +59,19 @@
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu f-right d-none d-lg-block">
-                            <nav>
+                        <nav>
                                 <ul id="navigation">
-                                    <li><a href="personal.php">Personal</a></li>
-                                    <li><a href="courses.php">Courses</a></li>
-                                    <li><a href="discover.php">Discover</a>
-                                        <ul class="submenu">
-                                            <li><a href="fittube.html">FitTube</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="profile.php">Profile</a></li>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="courses_b.php">Courses</a></li>
+                                    <li><a href="discover_b.php">Discover</a></li>
+                                    <li><a href="about_b.html">About</a></li>
+                                    <li><a href="contact_b.php">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
                         <!-- Header-btn -->
                         <div class="header-btns d-none d-lg-block f-right">
-                            <a href="loginform.php" class="btn">Sign out</a>
+                            <a href="loginform.php" class="btn">Login</a>
                         </div>
                         <!-- Mobile Menu -->
                         <div class="col-12">
@@ -104,39 +104,42 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-10">
-                <div class="section-tittle text-center mb-55 wow fadeInUp" data-wow-duration="1s"
-                    data-wow-delay=".1s">
+                <div class="section-tittle text-center mb-55 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
                     <h2 class="wow fadeIn" data-wow-duration="6s" data-wow-delay=".8s">Get in touch !</h2>
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="inputbox">
-                <input type="text" required="required">
-                <span>Username</span>
-                <i></i>
+        <!-- Form -->
+        <form action="process.php" method="POST">
+            <div class="row justify-content-center">
+                <div class="inputbox">
+                    <input type="text" name="username" required="required">
+                    <span>Username</span>
+                    <i></i>
+                </div>
             </div>
-        </div>
             <br><br>
-        <div class="row justify-content-center">
-            <div class="inputbox">
-                <input type="text" required="required">
-                <span>Email</span>
-                <i></i>
+            <div class="row justify-content-center">
+                <div class="inputbox">
+                    <input type="text" name="email" required="required">
+                    <span>Email</span>
+                    <i></i>
+                </div>
             </div>
-        </div>
             <br><br>
-        <div class="row justify-content-center">
-            <div class="inputbox">
-                <input type="text" required="required">
-                <span>Message</span>
-                <i></i>
+            <div class="row justify-content-center">
+                <div class="inputbox">
+                    <input type="text" name="message" required="required">
+                    <span>Message</span>
+                    <i></i>
+                </div>
             </div>
-        </div>
             <br><br>
-        <div class="row justify-content-center">
-            <button class="button"></button>
-        </div>
+            <div class="row justify-content-center">
+                <button class="button" name="send">Send Feedback</button>
+            </div>
+        </form>
+
         <!-- ? services-area -->
         <section class="services-area">
             <div class="container">
@@ -205,9 +208,10 @@
                                             <div class="main-menu main-menu2 text-center">
                                                 <nav>
                                                     <ul>
-                                                        <li><a href="personal.php">Personal</a></li>
-                                                        <li><a href="courses.php">Courses</a></li>
-                                                        <li><a href="about.html">About</a></li>
+                                                        <li><a href="index.html">Home</a></li>
+                                                        <li><a href="courses_b.php">Courses</a></li>
+                                                        <li><a href="about_b.html">About</a></li>
+                                                        <li><a href="contact_b.php">Contact</a>
                                                     </ul>
                                                 </nav>
                                             </div>

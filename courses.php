@@ -65,12 +65,13 @@
                                     </li>
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="profile.php">Profile</a></li>
+                                    <li><a href="contact.php">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
                         <!-- Header-btn -->
                         <div class="header-btns d-none d-lg-block f-right">
-                            <a href="index.html" class="btn">Sign Out</a>
+                            <a href="loginform.php" class="btn">Sign Out</a>
                         </div>
                         <!-- Mobile Menu -->
                         <div class="col-12">

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/add_course.css">
     <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/add_course.css">
     <link rel="stylesheet" href="Asset/ckeditor5_col/styles.css">
     <title>Add new course</title>
 </head>
@@ -23,6 +24,10 @@
                             <ul class="sub-menu">
                                 <div class="sub-menu-item">
                                     <li><a href="list.php"><i class="ri-arrow-right-s-fill"></i>User List</a></li>
+                                    <li><a href="edit_profile.php"><i class="ri-arrow-right-s-fill"></i>Edit User
+                                            Profile</a></li>
+                                    <li><a href="feedback.php"><i class="ri-arrow-right-s-fill"></i>Feedback
+                                            Management</a></li>
                                 </div>
                             </ul>
                         </li>
@@ -30,16 +35,10 @@
                                     class="ri-add-box-line"></i></a>
                             <ul class="sub-menu">
                                 <div class="sub-menu-item">
+                                    <li><a href="courses_list.php"><i class="ri-arrow-right-s-fill"></i>Course List</a>
+                                    </li>
                                     <li><a href="add_courses.php"><i class="ri-arrow-right-s-fill"></i>Add new
                                             course</a></li>
-                                </div>
-                            </ul>
-                        </li>
-                        <li><a href=""><i class="ri-file-list-line"></i>Manage User<i class="ri-add-box-line"></i></a>
-                            <ul class="sub-menu">
-                                <div class="sub-menu-item">
-                                    <li><a href="edit_profile.php"><i class="ri-arrow-right-s-fill"></i>Edit User
-                                            Profile</a></li>
                                 </div>
                             </ul>
                         </li>
@@ -49,15 +48,22 @@
             <div class="admin-content">
                 <div class="admin-content-main">
                     <div class="admin-content-main-title">
-                        <H1>Add new course</H1>
+                        <H1>ADD NEW COURSE</H1>
                     </div>
                     <div class="admin-content-main-content">
                         <!--  Nội dung nằm ở đây -->
                         <div class="admin-content-main-content-product-add">
                             <div class="admin-content-main-content-left">
-                                <form method="post" enctype="multipart/form-data">
+                                <form method="POST" enctype="multipart/form-data">
                                     <div class="admin-content-main-content-two-input">
                                         <input type="text" name="cname" placeholder="Course name">
+                                    </div>
+
+                                    <div class="admin-content-main-content-two-input">
+                                        <input type="text" name="cexcercise" placeholder="Number of exercises">
+                                    </div>
+                                    <div class="admin-content-main-content-two-input">
+                                        <input type="text" name="ctime" placeholder="Exercise Duration">
                                     </div>
                                     <div class="admin-content-main-content-two-input">
                                         <select name="ccate" style="width:auto;margin-bottom: 8px; ">
@@ -69,17 +75,12 @@
                                         </select>
                                     </div>
                                     <div class="admin-content-main-content-two-input">
-                                        <input type="text" name="cexcercise" placeholder="Number of exercises">
-                                    </div>
-                                    <div class="admin-content-main-content-two-input">
-                                        <input type="text" name="ctime" placeholder="Time">
-                                    </div>
-                                    <div class="admin-content-main-content-two-input">
                                         <textarea class="editor_content" name="cdes" id="">description</textarea>
                                     </div>
-                                    <div class="admin-content-main-content-two-input" style="margin-top:10px">
+                                    <div class="admin-content-main-content-two-input">
                                         <input type="file" id="file" name="file">
                                     </div>
+
                                     <br>
                                     <button class="main-btn" type="submit" name="add_course">Add course</button>
                                 </form>
@@ -171,7 +172,7 @@
                             </div>
                             <div class="admin-content-main-content-right-image">
                                 <img src="assets/img/logo/logo3.png" alt="">
-                                
+
                             </div>
                         </div>
                     </div>
