@@ -61,18 +61,21 @@ session_start();
                                     <li><a href="personal.php">Personal</a></li>
                                     <li><a href="courses.php">Courses</a></li>
                                     <li><a href="discover.php">Discover</a>
+
                                         <ul class="submenu">
                                             <li><a href="fittube.html">FitTube</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="profile.php">Profile</a></li>
+                                    <li><a href="contact.php">Contact</a>
+
                                 </ul>
                             </nav>
                         </div>
                         <!-- Header-btn -->
                         <div class="header-btns d-none d-lg-block f-right">
-                            <a href="loginform.php" class="btn">Sign out</a>
+                            <a href="index.html" class="btn">Sign out</a>
                         </div>
                         <!-- Mobile Menu -->
                         <div class="col-12">
@@ -301,60 +304,16 @@ session_start();
                                                                             </div>
                                                                             <button class="primary-button"
                                                                                 style="margin: 30px;">FINISH</button>
-                                                                                <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    <!-- Nút "DONE" -->
-    <button class="btn-17" type="submit" name="done">
-        <span class="text-container">
-            <span class="text">DONE</span>
-        </span>
-    </button>
-</form>
-
-<?php
- // Start session at the beginning of the file
-
-// Check if the form is submitted and the 'done' button is clicked
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['done'])) {
-    include 'connect.php'; // Include database connection
-
-    // Check if user_id is set in the session
-    if (isset($_SESSION['user_id'])) {
-        // Retrieve user_id from the session
-        $userId = $_SESSION['user_id'];
-
-        // Prepare the SQL query to update the Pstatus in the progress table
-        $query = "UPDATE progress SET Pstatus = 'complete' WHERE USid = ?";
-
-        // Create a prepared statement
-        $stmt = mysqli_prepare($conn, $query);
-
-        // Check for errors in prepared statement creation
-        if ($stmt === false) {
-            echo "ERROR: Could not prepare statement. " . mysqli_error($conn);
-            exit;
-        }
-
-        // Bind user_id parameter to the prepared statement
-        mysqli_stmt_bind_param($stmt, "s", $userId);
-
-        // Execute the prepared statement
-        if (mysqli_stmt_execute($stmt)) {
-            echo "Update successful"; // Display success message
-        } else {
-            echo "ERROR: Could not execute $query. " . mysqli_error($conn); // Display error message
-        }
-
-        // Close the prepared statement
-        mysqli_stmt_close($stmt);
-    } else {
-        echo "Session variable user_id is not set."; // Display error if user_id is not set in the session
-    }
-
-    // Close the database connection
-    mysqli_close($conn);
-}
-?>
-
+                                                                            <form method="POST"
+                                                                                action="done_course.php">
+                                                                                <!-- Nút "DONE" -->
+                                                                                <button class="btn-17" type="submit"
+                                                                                    name="done">
+                                                                                    <span class="text-container">
+                                                                                        <span class="text">DONE</span>
+                                                                                    </span>
+                                                                                </button>
+                                                                            </form>
 
                                                                         </div>
         </section>
@@ -430,6 +389,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['done'])) {
                                                         <li><a href="personal.php">Personal</a></li>
                                                         <li><a href="courses.php">Courses</a></li>
                                                         <li><a href="about.html">About</a></li>
+                                                        <li><a href="contact.php">Contact</a></li>
 
                                                     </ul>
                                                 </nav>

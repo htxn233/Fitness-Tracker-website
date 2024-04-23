@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/edit_profile.css">
     <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/edit_profile.css"> <!-- Chỉnh sửa link CSS -->
     <link rel="stylesheet" href="Asset/ckeditor5_col/styles.css">
 
-    <title>Edit User Profile</title>
+    <title>Edit Course</title>
 </head>
 
 <body>
@@ -49,42 +49,68 @@
             <div class="admin-content">
                 <div class="admin-content-main">
                     <div class="admin-content-main-title">
-                        <h1>EDIT USER PROFILE</h1>
+                        <h1>EDIT COURSE</h1>
                     </div>
                     <div class="admin-content-main-content">
                         <div class="admin-content-main-content-product-add">
                             <div class="admin-content-main-content-left">
-                                <form method="POST">
+                                <form method="post">
                                     <?php
                                     // Lấy tên khóa học từ URL nếu có
-                                    $username = isset($_GET['username']) ? $_GET['username'] : '';
+                                    $cname = isset($_GET['cname']) ? $_GET['cname'] : '';
+
                                     // Hiển thị trường nhập với giá trị tên khóa học
                                     echo '<div class="admin-content-main-content-two-input">
-                                        <input type="text" name="username" placeholder="User name" value="' . $username . '">
+                                        <input type="text" name="cname" placeholder="Course Name" value="' . $cname . '">
                                     </div>';
                                     ?>
                                     <div class="admin-content-main-content-two-input">
-                                        <input type="text" name="phone" placeholder="Change phone numbers">
+                                        <input type="text" name="excercise" placeholder="Number of Exercises">
+                                        <!-- Thêm trường nhập số bài tập -->
                                     </div>
                                     <div class="admin-content-main-content-two-input">
-                                        <input type="text" name="email" placeholder="Change email">
+                                        <input type="text" name="time" placeholder="Exercise Duration">
+                                        <!-- Thêm trường nhập thời gian bài tập -->
                                     </div>
                                     <div class="admin-content-main-content-two-input">
-                                        <input type="text" name="password" placeholder="Change password">
+                                        <select name="cate" style="width:auto;margin-bottom: 8px; ">
+                                            <option value="" disabled selected>Select Category</option>
+                                            <option value="Weight loss">Weight loss</option>
+                                            <option value="Muscle gain">Muscle gain</option>
+                                            <option value="Body building">Body building</option>
+                                            <option value="Relaxing">Relaxing</option>
+                                        </select>
                                     </div>
-                                    <button type="submit" class="main-btn" name="save" style="background-color: black;">Update</button>
+                                    <button type="submit" class="main-btn" name="save">Update</button>
                                     <?php
                                     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['save'])) {
                                         include 'connect.php'; // Kết nối đến cơ sở dữ liệu
                                     
                                         // Lấy dữ liệu từ form
-                                        $username = $_POST['username'];
-                                        $phone = $_POST['phone'];
-                                        $email = $_POST['email'];
-                                        $password = $_POST['password'];
+                                        $cname = $_POST['cname'];
+                                        $excercise = $_POST['excercise'];
+                                        $time = $_POST['time'];
+                                        $cate = isset($_POST['cate']) ? $_POST['cate'] : ''; // Check if 'cate' key is set
+                                    
+                                        switch ($cate) {
+                                            case "Weight loss":
+                                                $clink = "weight_loss_b.html";
+                                                break;
+                                            case "Muscle gain":
+                                                $clink = "muscle_gain_b.html";
+                                                break;
+                                            case "Body building":
+                                                $clink = "body_building_b.html";
+                                                break;
+                                            case "Relaxing":
+                                                $clink = "relaxing_b.html";
+                                                break;
+                                            default:
+                                                $clink = "";
+                                        }
 
                                         // Tạo truy vấn SQL để cập nhật dữ liệu
-                                        $query = "UPDATE users SET USphone='$phone', USemail='$email', USpassword='$password' WHERE LOWER(USname) = LOWER('$username')";
+                                        $query = "UPDATE courses SET Cexcercise='$excercise', Ctime='$time', Ccate='$cate' WHERE Cname = '$cname'";
 
                                         // Thực thi truy vấn
                                         if (mysqli_query($conn, $query)) {
@@ -101,7 +127,6 @@
                             </div>
                             <div class="admin-content-main-content-right-image">
                                 <img src="assets/img/logo/logo3.png" alt="">
-
                             </div>
                         </div>
                     </div>

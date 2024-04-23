@@ -30,13 +30,7 @@ li{
     display: grid;
     justify-content: space-between;
 }
-.main-btn{
-    padding: 6px 12px;
-    background-color: black;
-    color: whitesmoke ;
-    border: none;
-    cursor: pointer;
-}
+
 .delete-class,.not-confirm-order{
     padding: 3px;
     background-color: red;

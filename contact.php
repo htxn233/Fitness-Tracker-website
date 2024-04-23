@@ -30,7 +30,7 @@ ob_start();
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/personal.css">
-    <link rel="stylesheet" href="assets/css/course_element.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
 </head>
 
 <body class="black-bg">
@@ -70,7 +70,8 @@ ob_start();
                                     </li>
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="profile.php">Profile</a></li>
-                                    <li><a href="contact.php">Contact</a></li>
+                                    <li><a href="contact.php">Contact</a>
+
                                 </ul>
                             </nav>
                         </div>
@@ -99,8 +100,7 @@ ob_start();
                         <div class="row">
                             <div class="col-xl-9 col-lg-9 col-md-10">
                                 <div class="hero__caption">
-                                    <span data-animation="fadeInLeft" data-delay="0.1s">Welcome back</span>
-                                    <h1 data-animation="fadeInLeft" data-delay="1s">Ready for new challenge?</h1>
+                                    <h1 data-animation="fadeInLeft" data-delay="1s">CONTACT US</h1>
                                 </div>
                             </div>
                         </div>
@@ -108,73 +108,37 @@ ob_start();
                 </div>
             </div>
         </div>
-        <!-- slider Area End-->
-        <section class="current-course-area">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10">
-                        <div class="section-tittle text-center mb-55 wow fadeInUp" data-wow-duration="1s"
-                            data-wow-delay=".1s">
-                            <h2 class="wow fadeIn" data-wow-duration="6s" data-wow-delay=".8s">Your course</h2>
-                        </div>
-                    </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="section-tittle text-center mb-55 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                    <h2 class="wow fadeIn" data-wow-duration="6s" data-wow-delay=".8s">Get in touch !</h2>
                 </div>
-                <div class="display-date" style="font-size: 20px;">
-                    <span id="day">day</span>,
-                    <span id="daynum">00</span>
-                    <span id="month">month</span>
-                    <span id="year">0000</span>
-                    <span class="display-time"></span>
-                </div>
-                <div class="course-list">
-                    <?php
-                    // Bắt đầu session 
-                    if (isset($_SESSION['user_id'])) {
-                        $user_id = $_SESSION['user_id']; // Gán giá trị từ session vào biến $user_id
-                    }
-
-                    // Kiểm tra xem biến $user_id đã được xác định chưa
-                    if (isset($user_id)) {
-                        include ("connect.php");
-
-                        // Kiểm tra xem người dùng đã đăng nhập chưa
-                        if (isset($_SESSION['user_id'])) {
-                            $user_id = $_SESSION['user_id'];
-
-                            // Truy vấn dữ liệu từ các bảng courses, progress và users
-                            $query = "SELECT courses.Cname, courses.Ctime, progress.Pstatus
-                            FROM courses
-                            INNER JOIN progress ON courses.Cid = progress.Cid
-                            INNER JOIN users ON progress.USid = users.USid
-                            WHERE users.USid = $user_id";
-                            $result = mysqli_query($conn, $query);
-
-                            // Kiểm tra và hiển thị dữ liệu
-                            if (mysqli_num_rows($result) > 0) {
-                                while ($row = mysqli_fetch_assoc($result)) {
-                                    echo '<div class="course-item" style="background: black; margin-bottom: 20px; width: 100%">';
-                                    echo '<h3 style="color: white; font-size: 30px; text-align: center">' . $row['Cname'] . '</h3>';
-                                    echo '<p style="color: white; font-size: 20px; margin-left: 3%;">Time: ' . $row['Ctime'] . '</p>';
-                                    echo '<p style="color: white; font-size: 20px; margin-left: 3%;">Status: ' . $row['Pstatus'] . '</p>';
-                                    echo '</div>';
-                                }
-                            } else {
-                                echo 'You are not enrolled in any courses. Please click here to find a course.';
-                            }
-                        }
-                        $conn->close();
-
-                    }
-
-
-                    ?>
-
-                </div>
-                <a href="courses.php" class="border-btn hero-btn" data-animation="fadeInLeft" data-delay="0.8s">My
-                    Courses</a>
             </div>
-        </section>
-        <!-- ? Feedback-area -->
+        </div>
+        <!-- Form -->
+        <form action="process.php" method="POST">
+            <br><br>
+            <div class="row justify-content-center">
+                <div class="inputbox">
+                    <input type="text" name="email" required="required">
+                    <span>Email</span>
+                    <i></i>
+                </div>
+            </div>
+            <br><br>
+            <div class="row justify-content-center">
+                <div class="inputbox">
+                    <input type="text" name="message" required="required">
+                    <span>Message</span>
+                    <i></i>
+                </div>
+            </div>
+            <br><br>
+            <div class="row justify-content-center">
+                <button class="button" name="send-fb">Send Feedback</button>
+            </div>
+        </form>
+
         <!-- ? services-area -->
         <section class="services-area">
             <div class="container">
@@ -246,7 +210,7 @@ ob_start();
                                                         <li><a href="personal.php">Personal</a></li>
                                                         <li><a href="courses.php">Courses</a></li>
                                                         <li><a href="about.html">About</a></li>
-                                                        <li><a href="contact.php">Contact</a></li>
+                                                        <li><a href="contact.php">Contact</a>
                                                     </ul>
                                                 </nav>
                                             </div>
