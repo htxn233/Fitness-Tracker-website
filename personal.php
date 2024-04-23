@@ -118,7 +118,7 @@ ob_start();
                         </div>
                     </div>
                 </div>
-                <div class="display-date">
+                <div class="display-date" style="font-size: 20px;">
                     <span id="day">day</span>,
                     <span id="daynum">00</span>
                     <span id="month">month</span>
@@ -151,10 +151,10 @@ ob_start();
                             // Kiểm tra và hiển thị dữ liệu
                             if (mysqli_num_rows($result) > 0) {
                                 while ($row = mysqli_fetch_assoc($result)) {
-                                    echo '<div class="course-item">';
-                                    echo '<h3 style="color: yellow">' . $row['Cname'] . '</h3>';
-                                    echo '<p>Time: ' . $row['Ctime'] . '</p>';
-                                    echo '<p>Status: ' . $row['Pstatus'] . '</p>';
+                                    echo '<div class="course-item" style="background: black; margin-bottom: 20px; width: 100%">';
+                                    echo '<h3 style="color: white; font-size: 30px; text-align: center">' . $row['Cname'] . '</h3>';
+                                    echo '<p style="color: white; font-size: 20px; margin-left: 3%;">Time: ' . $row['Ctime'] . '</p>';
+                                    echo '<p style="color: white; font-size: 20px; margin-left: 3%;">Status: ' . $row['Pstatus'] . '</p>';
                                     echo '</div>';
                                 }
                             } else {
@@ -174,30 +174,6 @@ ob_start();
             </div>
         </section>
         <!-- ? Feedback-area -->
-        <section>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10">
-                        <div class="section-tittle text-center mb-55 wow fadeInUp" data-wow-duration="1s"
-                            data-wow-delay=".1s">
-                            <h2 class="wow fadeIn" data-wow-duration="6s" data-wow-delay=".8s">Contact Us</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container" style="border: 1px solid lightgrey;">
-                <div class="row justify-content-center">
-                    <h1 style="color: white;">Username</h1>
-                    <input type="text" id="username" style="border: 1px solid white;">
-                </div>
-                <div class="row justify-content-center">
-                    <h1 style="color: white;">Message</h1>
-                    <input type="text" id="message" style="border: 1px solid white; border-radius: 200px;">
-                </div>
-                <button class="primary-button finish-btn" style="border: 1px solid red; width: 50px; height: 20px; margin-bottom: 10px; background: black; color: red; margin-right: 10px;">Send</button>
-                <button class="primary-button finish-btn" style="border: 1px solid red; width: 50px; height: 20px; margin-bottom: 10px; background: black; color: red">Cancel</button>
-            </div>
-        </section>
         <!-- ? services-area -->
         <section class="services-area">
             <div class="container">
