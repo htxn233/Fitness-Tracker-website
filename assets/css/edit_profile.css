@@ -59,20 +59,22 @@
  }
 
  .main-btn {
-     padding: 10px 20px;
-     text-decoration: none;
-     color: #fff;
-     background-color: #28a745;
-     /* Màu xanh da trời */
-     border: none;
-     border-radius: 5px;
-     transition: background-color 0.3s;
-     cursor: pointer;
- }
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #000000; /* Màu xanh lá cây */
+    border: none;
+    border-radius: 8px; /* Đường viền cong */
+    transition: background-color 0.3s;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
 
- .main-btn:hover {
-     background-color: #218838;
- }
+.main-btn:hover {
+    background-color: #218838; /* Màu xanh lá cây tối hơn */
+}
 
  /* CSS cho phần Change Avatar */
  .avatar-wrapper {

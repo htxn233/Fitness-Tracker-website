@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/admin.css">
     <link rel="stylesheet" href="assets/css/edit_profile.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
     <link rel="stylesheet" href="Asset/ckeditor5_col/styles.css">
 
     <title>Edit User Profile</title>
@@ -69,7 +69,7 @@
                                     <div class="admin-content-main-content-two-input">
                                         <input type="text" name="password" placeholder="Change password">
                                     </div>
-                                    <button type="submit" class="main-btn" name="save">Update</button>
+                                    <button type="submit" class="main-btn" name="save" style="background-color: black;">Update</button>
                                     <?php
                                     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['save'])) {
                                         include 'connect.php'; // Kết nối đến cơ sở dữ liệu
