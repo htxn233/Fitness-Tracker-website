@@ -136,7 +136,7 @@ ob_start();
             </div>
             <br><br>
             <div class="row justify-content-center">
-                <button class="button" name="send">Send Feedback</button>
+                <button class="btn" name="send">Send Feedback</button>
             </div>
         </form>
 

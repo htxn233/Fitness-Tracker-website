@@ -135,8 +135,9 @@ ob_start();
             </div>
             <br><br>
             <div class="row justify-content-center">
-                <button class="button" name="send-fb">Send Feedback</button>
+                <button class="btn" name="send-fb">Send Feedback</button>
             </div>
+            <br><br>
         </form>
 
         <!-- ? services-area -->
