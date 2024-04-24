@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -28,6 +26,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/searchbar.css">
 </head>
+<style>
+    @media only screen and (max-width:1024px){
+        .wrapper .search_box{
+            width:400px;
+        }
+    }
+</style>
 
 <body class="black-bg">
     <!-- ? Preloader Start -->
@@ -98,39 +103,6 @@
                 </div>
             </div>
         </div>
-        <!-- Hero End -->
-        <!--? Team -->
-        <!-- Hero End -->
-        <!--? Team -->
-        <section class="team-area fix section-padding30 d-flex">
-            <<div class="container">
-                <div class="row">
-                    <div class="wrapper">
-                        <form method="POST" action="search_courses.php">
-                            <div class="search_box">
-                                <div class="dropdown">
-                                    <div class="default_option">Select</div>
-                                    <ul>
-                                        <!-- Loại bỏ các thẻ li và thay thế bằng các input -->
-                                        <li><input type="submit" name="submit" value="Weight loss">Weight loss</li>
-                                        <li><input type="submit" name="submit" value="Body building">Body building</li>
-                                        <li><input type="submit" name="submit" value="Muscle gain">Muscle gain</li>
-                                        <li><input type="submit" name="submit" value="Relaxing">Relaxing</li>
-                                    </ul>
-                                </div>
-                                <div class="search_field">
-                                    <input type="text" class="input2" name="submit" placeholder="Search">
-                                    <button name="submit" type="submit"><i class="fas fa-search"></i></button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                </div>
-
-        </section>
-        <!-- Services End -->
-        <!-- Traning categories Start -->
         <section class="traning-categories black-bg">
             <div class="container-fluid">
                 <!-- <div class="row">
@@ -370,7 +342,7 @@
     <!-- Search and Select bar -->
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./assets/js/ssbar.js"></script>
+    <script> src="./assets/js/ssbar.js"></script>
 
 
 </body>
