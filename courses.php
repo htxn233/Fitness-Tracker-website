@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -28,6 +26,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/searchbar.css">
 </head>
+<style>
+    @media only screen and (max-width:1024px){
+        .wrapper .search_box{
+            width:400px;
+        }
+    }
+</style>
 
 <body style="background-color: black;">
     <!--? Preloader Start -->
@@ -98,6 +103,7 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
         <!-- Hero End -->
         <!--? Team -->
         <!-- Hero End -->
@@ -106,6 +112,8 @@
         </section>
         <!-- Services End -->
         <!-- Traning categories Start -->
+=======
+>>>>>>> 7a9811f4572c7a25ac0f0727cbb119275508b5a3
         <section class="traning-categories black-bg">
             <div class="container-fluid">
                 <!-- <div class="row">
@@ -345,7 +353,7 @@
     <!-- Search and Select bar -->
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./assets/js/ssbar.js"></script>
+    <script> src="./assets/js/ssbar.js"></script>
 
 
 </body>
