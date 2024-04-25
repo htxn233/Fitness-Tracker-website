@@ -1,7 +1,7 @@
 <?php
 session_start();
-ob_start();
 ?>
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -117,6 +117,13 @@ ob_start();
         </div>
         <!-- Form -->
         <form action="process.php" method="POST">
+            <div class="row justify-content-center">
+                <div class="inputbox">
+                    <input type="text" name="username" required="required">
+                    <span>Username</span>
+                    <i></i>
+                </div>
+            </div>
             <br><br>
             <div class="row justify-content-center">
                 <div class="inputbox">
@@ -135,10 +142,10 @@ ob_start();
             </div>
             <br><br>
             <div class="row justify-content-center">
-                <button class="btn" name="send-fb">Send Feedback</button>
+                <button class="btn" name="send">Send Feedback</button>
             </div>
-            <br><br>
         </form>
+
 
         <!-- ? services-area -->
         <section class="services-area">

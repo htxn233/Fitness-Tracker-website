@@ -74,7 +74,7 @@
                         </div>
                         <!-- Header-btn -->
                         <div class="header-btns d-none d-lg-block f-right">
-                            <a href="index.html" class="btn">sign out</a>
+                            <a href="index." class="btn">sign out</a>
                         </div>
                         <!-- Mobile Menu -->
                         <div class="col-12">

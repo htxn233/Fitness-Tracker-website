@@ -14,6 +14,7 @@ include("connect.php");
         if ($row = mysqli_fetch_assoc($result)) {
             // Lưu USid của người dùng vào phiên
             $_SESSION['user_id'] = $row['USid'];
+            $_SESSION['username'] = $row['USname'];
 
             if ($email == 'admin@gmail.com' && $password == 'admin') {
                 // Đăng nhập thành công với vai trò admin

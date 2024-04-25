@@ -29,14 +29,14 @@
     <link rel="stylesheet" href="assets/css/searchbar.css">
 </head>
 
-<body class="black-bg">
-    <!-- ? Preloader Start -->
+<body style="background-color: black;">
+    <!--? Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo2.png">
+                    <img src="assets/img/logo/logo2.png" alt="">
                 </div>
             </div>
         </div>
@@ -103,31 +103,6 @@
         <!-- Hero End -->
         <!--? Team -->
         <section class="team-area fix section-padding30 d-flex">
-            <<div class="container">
-                <div class="row">
-                    <div class="wrapper">
-                        <form method="POST" action="search_courses.php">
-                            <div class="search_box">
-                                <div class="dropdown">
-                                    <div class="default_option">Select</div>
-                                    <ul>
-                                        <!-- Loại bỏ các thẻ li và thay thế bằng các input -->
-                                        <li><input type="submit" name="submit" value="Weight loss">Weight loss</li>
-                                        <li><input type="submit" name="submit" value="Body building">Body building</li>
-                                        <li><input type="submit" name="submit" value="Muscle gain">Muscle gain</li>
-                                        <li><input type="submit" name="submit" value="Relaxing">Relaxing</li>
-                                    </ul>
-                                </div>
-                                <div class="search_field">
-                                    <input type="text" class="input2" name="submit" placeholder="Search">
-                                    <button name="submit" type="submit"><i class="fas fa-search"></i></button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                </div>
-
         </section>
         <!-- Services End -->
         <!-- Traning categories Start -->
