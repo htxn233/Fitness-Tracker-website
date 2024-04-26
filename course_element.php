@@ -1,6 +1,8 @@
 <?php
 session_start();
+ob_start();
 ?>
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -29,7 +31,12 @@ session_start();
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/course_element.css">
     <link rel="stylesheet" href="assets/css/finished_course_button.css">
-</head>
+    <link rel="stylesheet" href="assets/css/personal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 
 <body class="black-bg">
     <!-- ? Preloader Start -->
@@ -95,7 +102,14 @@ session_start();
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap hero-cap2 pt-70">
-                                <h2>BASICS OF WEIGHT LOSS AND NUTRITION</h2>
+                                <?php
+                                include("connect.php");
+                                if (isset($_GET['course_name'])) {
+                                    $_SESSION['course_name'] = htmlspecialchars($_GET['course_name']);
+                                    // Lưu giá trị vào biến session
+                                    echo '<h2>' . $_SESSION['course_name'] . '</h2>';
+                                }                            
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -106,216 +120,141 @@ session_start();
         <!--? Team -->
         <section class="team-area fix section-padding30">
             <div class="container">
-                <div class="wrapper">
-                    <div class="animated-border"></div>
-                    <div class="content">Exercise 1: Walking 30 mins everyday</div>
-                </div>
-                <div class="exercise" style="padding-top: 50px;">
-                    <div class="exercise">Find a suitable location, such as a park, neighborhood, or treadmill.</div>
-                    <div class="exercise">Wear comfortable, supportive shoes.</div>
-                    <div class="exercise">Start with a warm-up by walking at a comfortable pace for a few minutes.</div>
-                    <div class="exercise">Increase your pace to a brisk walk that elevates your heart rate.</div>
-                    <div class="exercise">Maintain good posture with your head up, shoulders back, and arms swinging
-                        naturally.</div>
-                    <div class="exercise">Aim for at least 30 minutes of brisk walking per day.</div>
-                </div>
-                <button class="primary-button finish-btn" style="margin: 30px;" name="finish-btn">FINISH</button>
+            <?php
+                if (isset($_SESSION['course_name'])) {
+                    $course_name = $_SESSION['course_name']; // từ session
+                }
+                $course_name = strtoupper($course_name);
 
-            </div>
-            <div class="container">
-                <div class="wrapper">
-                    <div class="animated-border"></div>
-                    <div class="content">Exercise 2: Jogging/Running 1km everyday</div>
-                </div>
-                <div class="exercise" style="padding-top: 50px;">
-                    <div class="exercise">Find a safe and suitable running area, such as a track, trail, or treadmill.
-                    </div>
-                    <div class="exercise">Begin with a warm-up by walking or jogging slowly for a few minutes.</div>
-                    <div class="exercise">Gradually increase your speed to a jogging or running pace.</div>
-                    <div class="exercise">Maintain a relaxed upper body, with your head up, shoulders relaxed, and arms
-                        bent at approximately 90 degrees.</div>
-                    <div class="exercise">Breathe deeply and rhythmically.</div>
-                    <div class="exercise">Start with shorter distances or durations and gradually increase them as your
-                        fitness level improves.</div>
-                </div>
-                <button class="primary-button finish-btn" style="margin: 30px;" name="finish-btn">FINISH</button>
+                if (isset($_SESSION['user_id'])) {
+                    $user_id = $_SESSION['user_id']; // từ session
+                }
 
-            </div>
-            <div class="container">
-                <div class="wrapper">
-                    <div class="animated-border"></div>
-                    <div class="content">Exercise 3: Strength training</div>
-                </div>
-                <div class="exercise" style="padding-top: 50px;">
-                    <div class="exercise">Start with a warm-up to prepare your muscles, such as light cardio or dynamic
-                        stretches.</div>
-                    <div class="exercise">Push up 15 times</div>
-                    <div class="exercise">Squat 30 times</div>
-                    <div class="exercise">Plank 30 times</div>
-                    <div class="exercise">Aim for 2-3 sets of 8-12 repetitions for each exercise, resting for 1-2
-                        minutes between sets.</div>
-                </div>
-                <button class="primary-button finish-btn" style="margin: 30px;">FINISH</button>
+                if (isset($user_id)) {
+                    include("connect.php");
+                    
+                    $check_progress_sql = " SELECT * 
+                                            FROM progress P 
+                                            WHERE P.USid = $user_id
+                                            AND P.Cid = (
+                                                SELECT C.Cid
+                                                FROM courses C
+                                                WHERE C.Cname LIKE '%$course_name%')";
+                    $check_result = mysqli_query($conn, $check_progress_sql);
+                    $numRows = mysqli_num_rows($check_result);
 
-            </div>
-            <div class="container">
-                <div class="wrapper">
-                    <div class="animated-border"></div>
-                    <div class="content">Exercise 4: High-Intensity Interval Training (HIIT)</div>
-                </div>
-                <div class="exercise" style="padding-top: 50px;">
-                    <div class="exercise">Start with a warm-up to prepare your body for the intense exercise.</div>
-                    <div class="exercise">Choose one or more: jumping jacks, burpees, mountain climbers, or cycling
-                        sprints.</div>
-                    <div class="exercise">Perform each exercise at maximum effort for a short duration, typically 20-30
-                        seconds.</div>
-                    <div class="exercise">Follow each intense exercise with a short recovery period of 10-15 seconds.
-                    </div>
-                    <div class="exercise">Repeat the cycle of intense exercise and recovery for a total of 10-20
-                        minutes.</div>
-                    <div class="exercise">Finish with a cooldown to bring your heart rate down gradually.</div>
-                </div>
-                <button class="primary-button finish-btn" style="margin: 30px;">FINISH</button>
+                    if ($check_result->num_rows > 0) {
+                        $row = $check_result->fetch_assoc();
+                        $status = $row['Pstatus']; 
+                    }
+                    if ($numRows == 0) { // ch co du lieu
+                        $course_id_sql = "SELECT Cid
+                                            FROM courses
+                                            WHERE Cname LIKE '%$course_name%'";
+                        $course_id_result = $conn->query($course_id_sql);
 
-            </div>
-            <div class="container">
-                <div class="wrapper">
-                    <div class="animated-border"></div>
-                    <div class="content">Exercise 5: Cycling 5km everyday</div>
-                </div>
-                <div class="exercise" style="padding-top: 50px;">
-                    <div class="exercise">Start with a warm-up by cycling at a moderate pace for a few minutes.</div>
-                    <div class="exercise">Increase your speed and resistance to a level that challenges you.</div>
-                    <div class="exercise">Maintain proper form with your back straight, shoulders relaxed, and core
-                        engaged.</div>
-                    <div class="exercise">Pedal with a smooth and controlled motion, focusing on both pushing and
-                        pulling the pedals.</div>
-                    <div class="exercise">Aim for at least 30 minutes of moderate to vigorous cycling, adjusting the
-                        resistance and speed as needed.</div>
-                </div>
-                <button class="primary-button" style="margin: 30px;">FINISH</button>
-            </div>
-            <div class="container">
-                <div class="wrapper">
-                    <div class="animated-border"></div>
-                    <div class="content">Exercise 6: Swimming 45 mins</div>
-                </div>
-                <div class="exercise" style="padding-top: 50px;">
-                    <div class="exercise">Find a swimming pool or open water area that is suitable for swimming.</div>
-                    <div class="exercise">Start with a warm-up by swimming at a relaxed pace for a few minutes.</div>
-                    <div class="exercise">Choose a swimming stroke that you are comfortable with, such as freestyle,
-                        breaststroke, or backstroke.</div>
-                    <div class="exercise">Focus on maintaining a continuous and rhythmic motion, using proper technique
-                        for your chosen stroke.</div>
-                    <div class="exercise">Aim to swim laps continuously for at least 30 minutes, taking short rests if
-                        needed.</div>
-                    <div class="exercise">Gradually increase the intensity and duration of your swimming sessions as
-                        your fitness improves.</div>
-                </div>
-                <button class="primary-button" style="margin: 30px;">FINISH</button>
-            </div>
-            <div class="container">
-                <div class="wrapper">
-                    <div class="animated-border"></div>
-                    <div class="content">Exercise 7: Yoga 50 mins</div>
-                </div>
-                <div class="exercise" style="padding-top: 50px;">
-                    <div class="exercise">Find a quiet and comfortable space for your yoga practice.</div>
-                    <div class="exercise">Follow along with a yoga class or tutorial that suits your skill level.</div>
-                    <div class="exercise">Start with a warm-up to gently stretch your muscles and prepare your body.
-                    </div>
-                    <div class="exercise">Move through a series of yoga poses, focusing on proper alignment and
-                        breathing.</div>
-                    <div class="exercise">Hold each pose for a few breaths or as directed by the instructor.</div>
-                    <div class="exercise">Pay attention to your body and modify poses as needed to accommodate your
-                        flexibility and strength.</div>
-                    <div class="exercise">Finish with a relaxation or meditation exercise.</div>
-                </div>
-                <button class="primary-button" style="margin: 30px;">FINISH</button>
-            </div>
-            <div class="container">
-                <div class="wrapper">
-                    <div class="animated-border"></div>
-                    <div class="content">Exercise 8: Jumping Rope 100 times</div>
-                </div>
-                <div class="exercise" style="padding-top: 50px;">
-                    <div class="exercise">Choose a suitable jump rope with comfortable handles.</div>
-                    <div class="exercise">Begin with a warm-up to prepare your body for the exercise.</div>
-                    <div class="exercise">Hold the jump rope handles with your hands at your sides and the rope behind
-                        you.</div>
-                    <div class="exercise">Start jumping with a two-footed jump, keeping a light bounce on the balls of
-                        your feet.</div>
-                    <div class="exercise">Swing the rope over your head and jump over it as it approaches your feet.
-                    </div>
-                    <div class="exercise">Maintain a steady rhythm and gradually increase your speed and complexity of
-                        jumps.</div>
-                    <div class="exercise">Start with short intervals, such as 30 seconds, and gradually increase the
-                        duration as your fitness improves.</div>
-                </div>
-                <button class="primary-button" style="margin: 30px;">FINISH</button>
-            </div>
-            <div class="container">
-                <div class="wrapper">
-                    <div class="animated-border"></div>
-                    <div class="content">Exercise 9: Pilates 60 mins</div>
-                </div>
-                <div class="exercise" style="padding-top: 50px;">
-                    <div class="exercise">Find a quiet and comfortable space for your Pilates practice.
-                        <div class="exercise">Follow along with a Pilates class or tutorial that suits your skill level.
-                            <div class="exercise">Start with a warm-up to gently stretch your muscles and prepare your
-                                body.
-                                <div class="exercise">Focus on controlled and precise movements, emphasizing core
-                                    strength and stability.
-                                    <div class="exercise">Perform a series of exercises that target different muscle
-                                        groups, such as the abdominals, back, and glutes.
-                                        <div class="exercise">Pay attention to your breathing, inhaling deeply through
-                                            the nose and exhaling fully through the mouth.
-                                            <div class="exercise">Finish with a cooldown and stretch to release tension
-                                                and promote flexibility.
-                                            </div>
-                                            <button class="primary-button" style="margin: 30px;">FINISH</button>
-                                        </div>
-                                        <div class="container">
-                                            <div class="wrapper">
-                                                <div class="animated-border"></div>
-                                                <div class="content">Exercise 10: Rowing 60min</div>
-                                            </div>
-                                            <div class="exercise" style="padding-top: 50px;">
-                                                <div class="exercise">Set up a rowing machine at an appropriate
-                                                    resistance level.
-                                                    <div class="exercise">Begin with a warm-up by rowing at a
-                                                        comfortable pace for a few minutes.
-                                                        <div class="exercise">Sit on the rowing machine with your feet
-                                                            securely strapped in, knees slightly bent, and hands
-                                                            gripping the handlebar.
-                                                            <div class="exercise">Push off with your legs while
-                                                                simultaneously pulling the handlebar towards your chest.
-                                                                <div class="exercise">Lean back slightly, engaging your
-                                                                    core and squeezing your shoulder blades together.
-                                                                    <div class="exercise">Extend your arms forward, then
-                                                                        repeat the motion by pushing with your legs and
-                                                                        pulling the handlebar.
-                                                                        <div class="exercise">Aim for a smooth and
-                                                                            controlled rowing motion, focusing on a
-                                                                            strong leg drive and using your entire body.
-                                                                            <div class="exercise">Start with shorter
-                                                                                rowing sessions and gradually increase
-                                                                                the duration as your fitness improves.
-                                                                            </div>
-                                                                            <button class="primary-button"
-                                                                                style="margin: 30px;">FINISH</button>
-                                                                            <form method="POST"
-                                                                                action="done_course.php">
-                                                                                <!-- Nút "DONE" -->
-                                                                                <button class="btn-17" type="submit"
-                                                                                    name="done">
-                                                                                    <span class="text-container">
-                                                                                        <span class="text">DONE</span>
-                                                                                    </span>
-                                                                                </button>
-                                                                            </form>
+                        if ($course_id_result->num_rows > 0) {
+                            $row = $course_id_result->fetch_assoc();
+                            $course_id = $row['Cid'];                        
+                            $insert_progress_sql = "INSERT INTO progress (USid, Cid, Pstatus, Pexercise) VALUES ($user_id, $course_id, 1, 1)";
+                            if ($conn->query($insert_progress_sql) === TRUE) {
+                                echo '<script>';
+                                echo 'setTimeout(function() {';
+                                echo '    var notification = document.createElement("div");';
+                                echo '    notification.innerHTML = "<div class=\'notification-box\' style=\'text-align: center; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); position: fixed; top: 50%; left: 50%;\'><p>Congratulations! You have successfully enrolled in the course.</p><span class=\'close-button\'>&times;</span></div>";';
+                                echo '    document.body.appendChild(notification);';
+                                echo '    var closeButton = notification.querySelector(".close-button");';
+                                echo '    closeButton.addEventListener("click", function() {';
+                                echo '        notification.remove();'; // Xóa thbao khi nhấn nút
+                                echo '    });';
+                                echo '}, 1000);'; 
+                                echo '</script>';
+                            } else {
+                                echo "Error: " . $insert_progress_sql . "<br>" . $conn->error;
+                            }
+                        }
+                    }
+                    if ($numRows != 0 && $status == 'Completed') {
+                        echo '<script>';
+                        echo 'setTimeout(function() {';
+                        echo '    var notification = document.createElement("div");';
+                        echo '    notification.innerHTML = "<div class=\'notification-box\' style=\'text-align: center; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); position: fixed; top: 50%; left: 50%;\'><p style=\'font-size: 20px;\'>You have completed this course.</p><button class=\'turn-back-button\' style=\'background-color: #FF4B2B; border-radius: 5px; /* Green */ border: none; color: white; padding: 15px 30px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin-top: 10px; cursor: pointer;\'>Turn Back</button><span class=\'close-button\'>&times;</span></div>";';
+                        echo '    document.body.appendChild(notification);';
+                        echo '    var closeButton = notification.querySelector(".close-button");';
+                        echo '    var turnBackButton = notification.querySelector(".turn-back-button");';
+                        echo '    closeButton.addEventListener("click", function() {';
+                        echo '        notification.remove();'; // Xóa thông báo khi nhấn nút
+                        echo '    });';
+                        echo '    turnBackButton.addEventListener("click", function() {';
+                        echo '        window.location.href = "courses.php";'; // Chuyển hướng người dùng trở lại trang courses.php khi nhấp vào nút "Turn Back"
+                        echo '    });';
+                        echo '}, 2000);'; 
+                        echo '</script>';
 
-                                                                        </div>
+                    }
+                    else {
+                        // Tiếp tục truy vấn dữ liệu về khóa học
+                        $sql = "SELECT D.Dinstruct, D.Dtime, D.Dexercise
+                        FROM detail_courses D
+                        WHERE D.Cid IN (
+                            SELECT P.Cid
+                            FROM progress P
+                            WHERE P.USid = $user_id
+                            AND P.Pstatus = 1
+                            AND P.Pexercise <= (
+                                SELECT C.Cexercise
+                                FROM courses C
+                                WHERE C.Cid = P.Cid
+                                AND C.Cname LIKE '%$course_name%'
+                            )
+                            AND D.Dexercise = P.Pexercise)";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                            echo '<div class="wrapper">';
+                            while ($row = $result->fetch_assoc()) {
+                                echo '<div class="wrapper">';
+                                echo '<div class="animated-border"></div>';
+                                echo '<div class="content" style="color: white; text-align: center;"> Exercise ' . $row['Dexercise'] . '</div>';
+                                echo '</div>';
+                                echo '<div class="exercise" style="padding-top: 50px; color: white; text-align: center;">';
+                                echo '<p class="time" style="font-size: 40px; margin-bottom: 20px; color: white" >Time: ' . $row['Dtime'] . '</p>';
+                                echo '<h3 style= "font-size: 40px; margin-bottom: 10px; color: white;">Instruction</h3>';
+                                $instructions = explode("\r\n", $row['Dinstruct']);
+                                foreach ($instructions as $instruction) {
+                                    echo '<div class="exercise" style="margin-bottom: 10px;">' . $instruction . '</div>';
+                                }
+                                echo '</div>';
+                                echo '
+                                    <form id="finish-form" action="update.php" method="post">
+                                        <button class="primary-button finish-btn" name="finish-btn">FINISH</button>
+                                    </form>
+                                ';
+                            }
+                        } else {
+                            // Hiển thị thông báo nếu không có bất kỳ khóa học nào
+                            echo '<script>';
+                            echo 'setTimeout(function() {';
+                            echo '    var notification = document.createElement("div");';
+                            echo '    notification.innerHTML = "<div class=\'notification-box\'><p>You are not enrolled in any courses. Please click <a href=\'courses.php\'>here</a> to find a course.</p><span class=\'close-button\'>&times;</span></div>";';
+                            echo '    document.body.appendChild(notification);';
+                            echo '    var closeButton = notification.querySelector(".close-button");';
+                            echo '    closeButton.addEventListener("click", function() {';
+                            echo '        notification.remove();'; // Xóa thbao khi nhấn nút
+                            echo '    });';
+                        
+                            echo '}, 1000);'; // Hiển thị trong 5 giây
+                            echo '</script>';
+                        } 
+                    }
+                } else {
+                    echo '<div class="error-msg">';
+                    echo 'Progress is not setup.';
+                    echo '</div>';
+                }
+                mysqli_close($conn);
+            ?>
+            </div>
         </section>
         <!-- Services End -->
         <!-- ? services-area -->

@@ -31,6 +31,11 @@ ob_start();
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/personal.css">
     <link rel="stylesheet" href="assets/css/course_element.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
 
 <body class="black-bg">
@@ -152,26 +157,36 @@ ob_start();
                             // Kiểm tra và hiển thị dữ liệu
                             if (mysqli_num_rows($result) > 0) {
                                 while ($row = mysqli_fetch_assoc($result)) {
-                                    echo '<div class="course-item" style="background: black; margin-bottom: 20px; width: 100%">';
-                                    echo '<h3 style="color: white; font-size: 30px; text-align: center">' . $row['Cname'] . '</h3>';
-                                    echo '<p style="color: white; font-size: 20px; margin-left: 3%;">Time: ' . $row['Ctime'] . '</p>';
-                                    echo '<p style="color: white; font-size: 20px; margin-left: 3%;">Status: ' . $row['Pstatus'] . '</p>';
-                                    echo '</div>';
+                                    if ($row['Pstatus'] == 'In Process') {
+                                        echo '<div class="course-item" style="background: black; margin-bottom: 20px; width: 100%; text-align: center;">';
+                                        echo '<h3 style="color: white; font-size: 30px;">' . $row['Cname'] . '</h3>';
+                                        echo '<p style="color: white; font-size: 20px;">Time: ' . $row['Ctime'] . '</p>';
+                                        echo '<p style="color: white; font-size: 20px;">Status: ' . $row['Pstatus'] . '</p><br>';
+                                        echo '<a href="course_element.php?course_name=' . urlencode($row['Cname']) . '" class="continue-btn" style="background-color: #FF4B2B; border: none; border-radius: 5px; color: white; padding: 10px 20px; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer; margin: 0 auto;">Continue</a>';
+                                        echo '</div>';
+                                    }                                    
                                 }
-                            } else {
-                                echo 'You are not enrolled in any courses. Please click here to find a course.';
                             }
+                            else {
+                                echo '<script>';
+                                echo 'setTimeout(function() {';
+                                echo '    var notification = document.createElement("div");';
+                                echo '    notification.innerHTML = "<div class=\'notification-box\'><p>You are not enrolled in any courses. Please click <a href=\'courses.php\'>here</a> to find a course.</p><span class=\'close-button\'>&times;</span></div>";';
+                                echo '    document.body.appendChild(notification);';
+                                echo '    var closeButton = notification.querySelector(".close-button");';
+                                echo '    closeButton.addEventListener("click", function() {';
+                                echo '        notification.remove();'; // Xóa thbao khi nhấn nút
+                                echo '    });';
+                            
+                                echo '}, 5000);'; // Hiển thị trong 5 giây
+                                echo '</script>';
+                            }                                                                                                                
                         }
                         $conn->close();
-
                     }
-
-
                     ?>
-
+                    <a href="discover.php" class="border-btn hero-btn" data-animation="fadeInLeft" data-delay="0.8s">Health news<br><i class="fas fa-long-arrow-alt-right" style="font-size: 1.2em;"></i></a>
                 </div>
-                <a href="courses.php" class="border-btn hero-btn" data-animation="fadeInLeft" data-delay="0.8s">My
-                    Courses</a>
             </div>
         </section>
         <!-- ? Feedback-area -->

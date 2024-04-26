@@ -50,9 +50,10 @@
     border-radius: 4px;
     transition: 0.5s;
     pointer-events: none;
-    z-index: 9;
+    z-index: 1;
   }
-  
+
+
   .inputbox input:valid ~i,
   .inputbox input:focus ~i {
     height: 44px;

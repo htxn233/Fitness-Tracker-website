@@ -1,11 +1,19 @@
 <?php
 session_start();
 ob_start();
-if (!isset($_SESSION['user_id'])) {
-    // Nếu chưa đăng nhập, chuyển hướng đến trang đăng nhập
-    header("Location: login.php");
-    exit(); // Dừng kịch bản để ngăn truy cập tiếp tục vào trang hiện tại
-}
+echo '<script>';
+echo 'setTimeout(function() {';
+echo '    var notification = document.createElement("div");';
+echo '    notification.innerHTML = "<div class=\'notification-box\' style=\'text-align: center; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); position: fixed; top: 50%; left: 50%;\'><p>Welcome back. Check your information here.</p><span class=\'close-button\'>&times;</span></div>";';
+echo '    document.body.appendChild(notification);';
+echo '    var closeButton = notification.querySelector(".close-button");';
+echo '    closeButton.addEventListener("click", function() {';
+echo '        notification.remove();'; // Xóa thbao khi nhấn nút
+echo '    });';
+echo '}, 3000);'; 
+echo '</script>';
+
+                                      
 ?>
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -34,6 +42,12 @@ if (!isset($_SESSION['user_id'])) {
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/profile.css">
+    <link rel="stylesheet" href="assets/css/personal.css">
+    <link rel="stylesheet" href="assets/css/course_element.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 </head>
 
@@ -189,7 +203,7 @@ if (!isset($_SESSION['user_id'])) {
                                     SELECT Cid
                                     FROM progress
                                     WHERE USid = '$user_id'
-                                    AND Pstatus = 'complete'
+                                    AND Pstatus = 2  -- Completed
                                 )";
                                 // Thực thi truy vấn
                                 $result = $conn->query($sql);
@@ -205,10 +219,11 @@ if (!isset($_SESSION['user_id'])) {
                                     while ($row = $result->fetch_assoc()) {
                                         echo "<div class='finished-course'>";
                                         echo "<div class='front-text'>";
-                                        echo "<div class='features-icon'><h2><img src='assets/img/icon/check.svg'>" . $row["Cname"] . "</h2></div>";
+                                        echo "<div class='features-icon'><h2 style='color: #ff69b4; font-size: 20px; padding-top: 20px; padding-bottom: 20px;'><img src='assets/img/icon/check.svg'>" . $row["Cname"] . "</h2></div>"; // Sử dụng inline CSS
                                         echo "</div>";
                                         echo "</div>";
                                     }
+                                    
                                 } else {
                                     echo "No completed courses found for this user.";
                                 }

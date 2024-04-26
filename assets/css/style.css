@@ -2448,7 +2448,6 @@ hr {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 735, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
   .testimonial-padding {
     padding-top: 60px;
     padding-bottom: 40px;
@@ -2456,21 +2455,18 @@ hr {
 }
 
 @media (max-width: 575px) {
-  /* line 735, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
   .testimonial-padding {
     padding-top: 60px;
     padding-bottom: 40px;
   }
 }
 
-/* line 755, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
 .w-padding {
   padding-top: 100px;
   padding-bottom: 95px;
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 755, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
   .w-padding {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -2478,14 +2474,12 @@ hr {
 }
 
 @media (max-width: 575px) {
-  /* line 755, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
   .w-padding {
     padding-top: 70px;
     padding-bottom: 70px;
   }
 }
 
-/* line 767, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
 .section-padding30 {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -2934,12 +2928,10 @@ h2.wow {
   }
 }
 
-/* line 36, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_headerMenu.scss */
 .header-area .main-header.main-header2 {
   padding: 0;
 }
 
-/* line 40, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_headerMenu.scss */
 .header-area .menu-wrapper {
   display: flex;
   align-content: center;
@@ -2948,13 +2940,11 @@ h2.wow {
   align-items: center;
 }
 
-/* line 46, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_headerMenu.scss */
 .header-area .menu-wrapper.menu-wrapper2 {
   justify-content: center;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
-  /* line 50, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_headerMenu.scss */
   .header-area .menu-wrapper .main-menu {
     margin-right: 30px;
   }
@@ -3449,7 +3439,6 @@ h2.wow {
   text-transform: uppercase;
   line-height: 1;
 }
-
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .slider-area2 .hero-cap h2 {

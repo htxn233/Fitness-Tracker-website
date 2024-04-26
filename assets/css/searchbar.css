@@ -1,130 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  list-style: none;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.row {
-  padding-bottom: 150px;
-}
-
-.wrapper{
-  position: absolute;
-  top: 72%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-
-.wrapper .search_box{
-  width: 500px;
-  background: #7f0000;
-  border-radius: 5px;
-  height: 65px;
+.wrapper .search_box .dropdown ul.active {
   display: flex;
-  padding: 10px;
-  box-shadow: 0 8px 6px -10px #ffffff;
+  flex-direction: column;
+}
+.services-area .container, .footer-area .container{
+display: block;
 }
 
-.wrapper .search_box .dropdown{
-  width: 150px;
-  border-right: 2px solid #fff; /* Trắng */
-  color: #fff; /* Trắng */
-  position: relative;
-  cursor: pointer;
+@media screen and (max-width:1024px) {
+.row{
+  padding-bottom: 0px;
 }
-
-.wrapper .search_box .dropdown .default_option{
-  text-transform: uppercase;
-  padding: 13px 15px;
-  font-size: 14px;
-}
-
-.wrapper .search_box .dropdown ul{
-  position: absolute; 
-  top: 70px;
-  left: -10px;
-  background: #7f0000;
-  width: 150px;
-  border-radius: 5px;
-  padding: 20px;
-  display: none;
-  box-shadow: 8px 8px 6px -10px #7f0000;;
-}
-
-.wrapper .search_box .dropdown ul.active{
-  display: flex;
-}
-
-.wrapper .search_box .dropdown ul li{
-  padding-bottom: 20px;
-  text-transform: uppercase;
-}
-
-.wrapper .search_box .dropdown ul li:last-child{
-  padding-bottom: 0;
-}
-
-.wrapper .search_box .dropdown ul li:hover{
-  color: #ffffff;
-}
-
-.wrapper .search_box .dropdown:before{
-  content: "";
+.row .wrapper{
   position: absolute;
-  top: 18px;
-  right: 20px;
-  border: 8px solid;
-  border-color: #ffffff transparent transparent transparent;
+  top: 35%;
+}
+.row .wrapper .search_box{
+  width: 430px;
+}
 }
 
-.wrapper .search_box .search_field{
-  width: 350px;
-  height: 100%;
-  position: relative;
-}
-
-.wrapper .search_box .search_field .input2{
-  width: 80%;
-  height: 100%;
-  border: 0px;
-  font-size: 16px;
-  padding-left: 20px;
-  padding-right: 38px;
-  margin-right: 50px;
-  color: black;
-  background-color: rgb(255, 255, 255);
-  text-shadow: none;
-}
-
-.wrapper .search_box .search_field .fas{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 22px;
-  color: #ffffff;
-  cursor: pointer;
-}
-
-/* Placeholder */
-::-webkit-input2-placeholder {
-  color: #ffffff; /* Trắng */
-}
-::-moz-placeholder {
-  color: #ffffff; /* Trắng */
-}
-:-ms-input2-placeholder {
-  color: #ffffff; /* Trắng */
-}
-
-.input2::placeholder {
-  color: #000000; /* Đen */
-}
-
-.container {
-  display: inline-block; /* Thêm dòng này để div trở thành một phần của nội dung */
-}

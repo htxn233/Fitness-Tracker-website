@@ -31,6 +31,11 @@ session_start();
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/personal.css">
     <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
 
 <body class="black-bg">
@@ -116,7 +121,7 @@ session_start();
             </div>
         </div>
         <!-- Form -->
-        <form action="process.php" method="POST">
+        <form action="process.php" method="POST" style="margin:50px;">
             <div class="row justify-content-center">
                 <div class="inputbox">
                     <input type="text" name="username" required="required">

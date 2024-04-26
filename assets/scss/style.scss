@@ -63,3 +63,23 @@
 	@import 'bradcam';
 	@import 'extend';
 	@import 'elements';
+
+	.traning-categories {
+		padding-bottom: 200px;
+		padding-top: 100px;//(Bổ sung)
+	}
+	
+	@media screen and (max-width: 1024px) {
+	  .logo img{
+		width: 200px;
+	  }
+	
+	  .mobile_menu .slicknav_menu .slicknav_btn {
+		top: -50px;
+	  }
+	
+	  .hero-cap .hero-cap2, .hero__caption h1{
+		margin-left: 30px;
+	  }
+	}
+	

@@ -1,3 +1,7 @@
+<?php
+session_start();
+ob_start();
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -23,6 +27,11 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
 <body class="black-bg">
     <!-- ? Preloader Start -->
@@ -100,28 +109,30 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="section-tittle text-center mb-55">
-                        <h2>weight loss</h2>
+                        <h2>Muscle gain</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
+                <!-- Course begin -->
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="properties mb-30">
                         <div class="properties__card">
                             <div class="about-icon">
                                 <div class="about-icon__img-wrapper">
-                                    <img src="assets/img/courses/weight_loss/w01.png" alt="">
+                                    <img src="assets/img/courses/muscle_gain/m01.png" alt="">
                                 </div>
                             </div>
                             <div class="properties__caption">
-                                <span class="month">Basics of weight loss and nutrition</span><br><br>
+                                <span class="month">Overview of muscle gain and nutrition
+                                </span><br><br>
                                 <p class="mb-25">$12</p>
                                 <div class="single-features">
                                     <div class="features-icon">
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>Introduction to the weight loss process and the benefits of maintaining a healthy weight. </p>
+                                        <p>Introduction to the process of gaining muscle and the benefits of having strong, toned muscles. </p>
                                     </div>
                                 </div>
                                 <div class="single-features">
@@ -129,7 +140,7 @@
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>Provides knowledge about basic nutritional principles for weight loss.</p>
+                                        <p>Provides knowledge about basic nutritional principles to gain muscle.</p>
                                     </div>
                                 </div>
                                 <div class="single-features">
@@ -137,7 +148,7 @@
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>Instructions on how to measure body indexes, such as BMI (Body Mass Index) and body fat index.</p>
+                                        <p>Instructions on how to measure body indexes, such as BMI (Body Mass Index) and muscle mass index.</p>
                                     </div>
                                 </div>
                                 <div class="single-features">
@@ -145,14 +156,13 @@
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>Introduction to tools and applications that help track calories and weight loss progress.
-                                        </p>
+                                        <p>Introduction to tools and applications that help track muscle growth progress.</p>
                                     </div>
                                 </div>
-                                <a href="course_element.php" class="border-btn border-btn2">Start</a>
+                                <a href="course_element.php?course_name=Overview%20of%20muscle%20gain%20and%20nutrition" class="border-btn border-btn2">Start</href=>
                                 <br><br><br>
                                 <span style="display: flex; justify-content: center; align-items: center;">
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">weight-loss</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">muscle-gain</button>
                                     <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">21-day</button>
                                     <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">20-excercise</button>
                                 </span>
@@ -160,17 +170,65 @@
                         </div>
                     </div>
                 </div>
-                <!-- Course begin -->
+                <!-- Course end -->
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="properties mb-30">
                         <div class="properties__card">
                             <div class="about-icon">
                                 <div class="about-icon__img-wrapper">
-                                    <img src="assets/img/courses/weight_loss/w02.png" alt="">
+                                    <img src="assets/img/courses/muscle_gain/m02.png" alt="">
                                 </div>
                             </div>
                             <div class="properties__caption">
-                                <span class="month">Cardio workouts for effective weight loss
+                                <span class="month">Effective training program for muscle gain
+                                </span><br><br>
+                                <p class="mb-25">$6</p>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>An introduction to designing an effective muscle-building training program, including fundamentals such as load, volume and frequency.</p>
+                                    </div>
+                                </div>
+                               
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Instructions on correct and safe techniques for performing muscle-building exercises.</p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Recommend a reasonable training schedule that includes muscle building sessions and recovery management.</p>
+                                    </div>
+                                </div>
+                                <a href="course_element.php?course_name=Effective%20Training%20Program%20for%20Muscle%20Gain" class="border-btn border-btn2">Start</a>
+                                <br><br><br>
+                                <span style="display: flex; justify-content: center; align-items: center;">
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">muscle-gain</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">30-day</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">30-excercise</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="properties mb-30">
+                        <div class="properties__card">
+                            <div class="properties__caption">
+                                <div class="about-icon">
+                                    <div class="about-icon__img-wrapper">
+                                        <img src="assets/img/courses/muscle_gain/m03.png" alt="">
+                                    </div>
+                                </div>
+                                <span class="month">Meal planning and daily calorie tracking
                                 </span><br><br>
                                 <p class="mb-25">$3</p>
                                 <div class="single-features">
@@ -178,8 +236,7 @@
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>Introducing the benefits of cardio workouts during weight loss.
-                                        </p>
+                                        <p>Instructions on how to plan daily meals to meet nutritional needs and gain muscle.</p>
                                     </div>
                                 </div>
                                 <div class="single-features">
@@ -187,148 +244,7 @@
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>Offers a variety of popular cardio exercises such as running, cycling, swimming and jumping rope.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Instructions on how to plan and execute effective cardio sessions.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Provide suggestions on the duration and intensity level of cardio sessions corresponding to the student's weight loss goals.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!-- <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Athlete-like physique</p>
-                                    </div>
-                                </div>
-                                <div class="single-features mb-20">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Build perfect-looking legs and glutes</p>
-                                    </div>
-                                </div> -->
-                                <a href="course_element.php" class="border-btn border-btn2">Start</a>
-                                <br><br><br>
-                                <span style="display: flex; justify-content: center; align-items: center;">
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">weight-loss</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">21-day</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">25-excercise</button>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- course end -->
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="properties mb-30">
-                        <div class="properties__card">
-                            <div class="properties__caption">
-                                <div class="about-icon">
-                                    <div class="about-icon__img-wrapper">
-                                        <img src="assets/img/courses/weight_loss/w03.png" alt="">
-                                    </div>
-                                </div>
-                                <span class="month">Yoga and Pilates for weight loss</span><br><br>
-                                <p class="mb-25">$8</p>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Introduction to yoga and Pilates and their impact on weight loss.</p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Offers a variety of yoga and Pilates moves focused on burning calories, toning muscles, and increasing flexibility.</p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Instructions on how to perform correct technique and breathing in yoga and Pilates movements.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Recommend a reasonable exercise schedule including yoga and Pilates to help lose weight and improve health.</p>
-                                    </div>
-                                </div>
-                                <!-- <div class="single-features mb-20">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Month to mouth</p>
-                                    </div>
-                                </div> -->
-                                <a href="course_element.php" class="border-btn border-btn2">Start</a>
-                                <br><br><br>
-                                <span style="display: flex; justify-content: center; align-items: center;">
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">weight-loss</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">30-day</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">25-excercise</button>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Course begin -->
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="properties mb-30">
-                        <div class="properties__card">
-                            <div class="about-icon">
-                                <div class="about-icon__img-wrapper">
-                                    <img src="assets/img/courses/weight_loss/w04.png" alt="">
-                                </div>
-                            </div>
-                            <div class="properties__caption">
-                                <span class="month">Meal planning and daily calorie tracking
-                                </span><br><br>
-                                <p class="mb-25">$9</p>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Instructions on how to plan daily meals to meet nutritional needs and lose weight.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Provides information about essential food groups and how to balance them in the diet.
-                                        </p>
+                                        <p>Provides information about essential food groups and how to balance them in the diet.</p>
                                     </div>
                                 </div>
                                 <div class="single-features">
@@ -345,100 +261,56 @@
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>Provides tips and strategies to overcome difficulties and maintain a healthy diet during weight loss.
+                                        <p>Provides tips and strategies to overcome difficulties and maintain a healthy diet while gaining muscle.
                                         </p>
                                     </div>
                                 </div>
-                                <a href="course_element.php" class="border-btn border-btn2">Start</a>
+                                <a href="course_element.php?course_name=Meal%20Planning%20and%20Daily%20Calorie%20Tracking" class="border-btn border-btn2">Start</a>
                                 <br><br><br>
                                 <span style="display: flex; justify-content: center; align-items: center;">
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">weight-loss</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">30-day</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">24-excercise</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">muscle-gain</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">35-day</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">35-excercise</button>
                                 </span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- course end -->
                 <!-- Course begin -->
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="properties mb-30">
                         <div class="properties__card">
                             <div class="about-icon">
                                 <div class="about-icon__img-wrapper">
-                                    <img src="assets/img/courses/weight_loss/w05.png" alt="">
+                                    <img src="assets/img/courses/muscle_gain/m04.png" alt="">
                                 </div>
                             </div>
                             <div class="properties__caption">
-                                <span class="month">Weight management and measuring progress</span><br><br>
-                                <p class="mb-25">$5</p>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Instructions on how to manage weight and track weight loss progress.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Provides progressive measurement methods such as weight measurement, waist measurement and body size measurement.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>An introduction to what it means to track progress and how to deal with unexpected fluctuations.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Provides tips and strategies to stay motivated and achieve weight loss goals effectively.</p>
-                                    </div>
-                                </div>
-                                <a href="course_element.php" class="border-btn border-btn2">Start</a>
-                                <br><br><br>
-                                <span style="display: flex; justify-content: center; align-items: center;">
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">weight-loss</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">60-day</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">50-excercise</button>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- course end -->
-                <!-- Course begin -->
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="properties mb-30">
-                        <div class="properties__card">
-                            <div class="about-icon">
-                                <div class="about-icon__img-wrapper">
-                                    <img src="assets/img/courses/weight_loss/w06.png" alt="">
-                                </div>
-                            </div>
-                            <div class="properties__caption">
-                                <span class="month">Daily meal menu and recipes for weight loss dishes
+                                <span class="month">Exercise techniques to strengthen muscles
                                 </span><br><br>
-                                <p class="mb-25">$7</p>
+                                <p class="mb-25">$8</p>
                                 <div class="single-features">
                                     <div class="features-icon">
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>Provide daily menu including main meals and snacks.
+                                        <p>Instructions on exercise techniques to strengthen muscles such as thigh muscles, chest muscles, back muscles, shoulder muscles and arm muscles. </p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Provides exercises that focus on intensity, range of motion, and execution technique to stimulate muscle growth.</p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Instructions on how to choose the right load and how to make adjustments over time to maintain progress.
                                         </p>
                                     </div>
                                 </div>
@@ -447,32 +319,13 @@
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>Recommend recipes for weight loss dishes that are delicious and easy to make.
-                                        </p>
+                                        <p>Provides tips and strategies to overcome difficulties and achieve muscle gain goals effectively.</p>
                                     </div>
                                 </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Instructions on how to get creative and vary your menu to avoid boredom and maintain motivation.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Provides tips and strategies to overcome difficulties and maintain a healthy diet during weight loss.
-                                        </p>
-                                    </div>
-                                </div>
-                                <a href="course_element.php" class="border-btn border-btn2">Start</a>
+                                <a  href="course_element.php?course_name=Exercise%20Techniques%20to%20Strengthen%20Muscles" class="border-btn border-btn2">Start</a>
                                 <br><br><br>
                                 <span style="display: flex; justify-content: center; align-items: center;">
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">weight-loss</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">muscle-gain</button>
                                     <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">60-day</button>
                                     <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">54-excercise</button>
                                 </span>
@@ -480,7 +333,124 @@
                         </div>
                     </div>
                 </div>
-                <!-- course end -->
+                <!-- Course end -->
+                <!-- Course begin -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="properties mb-30">
+                        <div class="properties__card">
+                            <div class="about-icon">
+                                <div class="about-icon__img-wrapper">
+                                    <img src="assets/img/courses/muscle_gain/m05.png" alt="">
+                                </div>
+                            </div>
+                            <div class="properties__caption">
+                                <span class="month">Diet development and nutritional supplements for muscle gain</span><br><br>
+                                <p class="mb-25">$5</p>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Provides detailed instructions on diet and nutritional supplements to increase muscle mass.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Introduction to the role of protein, carbohydrates and fats in muscle gain.</p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Provides guidance on calorie intake and nutrient percentages needed for muscle gain.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Recommend protein-rich foods such as meat, fish, eggs, beans, nuts and dairy products.
+                                        </p>
+                                    </div>
+                                </div>
+                                <a href="course_element.php?course_name=Diet%20Development%20and%20Nutritional%20Supplements%20for%20Muscle%20Gain" class="border-btn border-btn2">Start</a>
+                                <br><br><br>
+                                <span style="display: flex; justify-content: center; align-items: center;">
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">muscle-gain</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">60-day</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">55-excercise</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course end -->
+                <!-- Course begin -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="properties mb-30">
+                        <div class="properties__card">
+                            <div class="about-icon">
+                                <div class="about-icon__img-wrapper">
+                                    <img src="assets/img/courses/muscle_gain/m06.png" alt="">
+                                </div>
+                            </div>
+                            <div class="properties__caption">
+                                <span class="month">Muscle management and measuring progress
+                                </span><br><br>
+                                <p class="mb-25">$7</p>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Instructions on how to manage muscle growth and track muscle gain progress.</p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Provides progressive measurement methods such as measuring muscle size, measuring muscle index and assessing strength.</p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>An introduction to what it means to track progress and how to deal with difficulties and obstacles.</p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Provides tips and strategies to stay motivated and achieve your muscle gain goals effectively.
+                                        </p>
+                                    </div>
+                                </div>
+                                <a href="course_element.php?course_name=Muscle%20Management%20and%20Measuring%20Progress" class="border-btn border-btn2">Start</a>
+                                <br><br><br>
+                                <span style="display: flex; justify-content: center; align-items: center;">
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">muscle-gain</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">60-day</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">55-excercise</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course end -->
             </div>
         </div>
     </section>

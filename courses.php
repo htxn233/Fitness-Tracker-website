@@ -25,6 +25,13 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/searchbar.css">
+    <link rel="stylesheet" href="assets/css/personal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    
 </head>
 <style>
     @media only screen and (max-width:1024px){
@@ -103,17 +110,121 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
+
         <!-- Hero End -->
         <!--? Team -->
         <!-- Hero End -->
         <!--? Team -->
         <section class="team-area fix section-padding30 d-flex">
+            <<div class="container">
+                <div class="row">
+                    <div class="wrapper">
+                        <form method="POST" action="">
+                            <div class="search_box">
+                                <div class="dropdown">
+                                    <div class="default_option">Select</div>
+                                    <ul>
+                                        <!-- Loại bỏ các thẻ li và thay thế bằng các input -->
+                                        <li><input type="submit" name="submit" value="Weight loss">Weight loss</li>
+                                        <li><input type="submit" name="submit" value="Body building">Body building</li>
+                                        <li><input type="submit" name="submit" value="Muscle gain">Muscle gain</li>
+                                        <li><input type="submit" name="submit" value="Relaxing">Relaxing</li>
+                                    </ul>
+                                </div>
+                                <div class="search_field">
+                                    <input type="text" class="input2" name="search" placeholder="Search">
+                                    <button name="submit" type="submit" style="display: none;"></button>
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <?php
+                                include("connect.php");
+                                
+                                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                                    if (isset($_POST['submit'])) {
+                                        $keyword = trim(mysqli_real_escape_string($conn, $_POST['search']));
+                                
+                                        if (empty($keyword)) {
+                                            header("Location: courses.php");
+                                            exit();
+                                        }
+                                
+                                        $keyword = strtolower($keyword);
+                                
+                                        // Thực hiện truy vấn tìm kiếm
+                                        $query = "SELECT * FROM courses WHERE Cname LIKE '%$keyword%' OR Ccate LIKE '%$keyword%'";
+                                        $result = mysqli_query($conn, $query);
+                                        $flag = 0;
+
+                                        if (mysqli_num_rows($result) > 0) {
+                                            echo '<script>';
+                                            echo 'var notifications = [];'; // Mảng lưu trữ các thông báo
+                                            echo 'var currentPosition = 0;'; // Biến lưu trữ vị trí hiện tại
+
+                                            while ($row = mysqli_fetch_assoc($result)) {
+                                                echo 'notifications.push({';
+                                                echo '    content: "<div id=\'notification\' style=\'text-align: center;\' class=\'notification-box\'><p style=\'font-size: 20px;\'>Result: <span style=\'display: inline-block;\'>'.$row['Cname'].'</span></p><button style=\'background-color: #FF0000; /* Red */ border: none; color: white; padding: 15px 30px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 10px 4px 2px; cursor: pointer;\' class=\'start-button\'>Start</button><button id=\'nextBtn\' style=\'background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 30px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;\' class=\'next-button\'>Next result</button><span class=\'close-button\'>&times;</span></div>",';
+                                                echo '    closeButton: null,';
+                                                echo '    nextButton: null,';
+                                                echo '    courseName: "'.$row['Cname'].'"'; // Lưu trữ tên khóa học
+                                                echo '});';
+                                            }
+
+                                            // Hàm để hiển thị thông báo tại vị trí xác định trong mảng notifications
+                                            echo 'function displayNotification(position) {';
+                                            echo '    var notification = notifications[position];';
+                                            echo '    var div = document.createElement("div");';
+                                            echo '    div.innerHTML = notification.content;';
+                                            echo '    document.body.appendChild(div);';
+                                            echo '    notification.closeButton = div.querySelector(".close-button");';
+                                            echo '    notification.nextButton = div.querySelector(".next-button");';
+                                            echo '    notification.startButton = div.querySelector(".start-button");'; // Lấy thẻ button "Start"
+                                            echo '    notification.closeButton.addEventListener("click", function() {';
+                                            echo '        div.remove();';
+                                            echo '    });';
+                                            echo '    notification.nextButton.addEventListener("click", function() {';
+                                            echo '        div.remove();';
+                                            echo '        currentPosition++;';
+                                            echo '        if (currentPosition < notifications.length) {';
+                                            echo '            displayNotification(currentPosition);';
+                                            echo '        }';
+                                            echo '    });';
+                                            echo '    notification.startButton.addEventListener("click", function() {';
+                                            echo '        window.location.href = "course_element.php?course_name=" + encodeURIComponent(notification.courseName);'; // Chuyển đến trang course_element.php với tham số course_name
+                                            echo '    });';
+                                            echo '}';
+                                            echo '</script>';
+
+                                            // Hiển thị thông báo đầu tiên khi trang được tải
+                                            echo '<script>';
+                                            echo 'displayNotification(0);';
+                                            echo '</script>';
+                                        }
+                                        else {
+                                            echo '<script>';
+                                            echo 'setTimeout(function() {';
+                                            echo '    var notification = document.createElement("div");';
+                                            echo '    notification.innerHTML = "<div style=\'text-align: center;\' class=\'notification-box\'><p style=\'font-size: 30px;\'>No result. Please check again.</p><span class=\'close-button\'>&times;</span></div>";';
+                                            echo '    document.body.appendChild(notification);';
+                                            echo '    var closeButton = notification.querySelector(".close-button");';
+                                            echo '    closeButton.addEventListener("click", function() {';
+                                            echo '        notification.remove();'; // Xóa thbao khi nhấn nút
+                                            echo '    });';
+                                        
+                                            echo '}, 2000);'; // Hiển thị trong 5 giây
+                                            echo '</script>';
+                                        }
+                                    }
+                                }
+                                ?>
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- Services End -->
         <!-- Traning categories Start -->
-=======
->>>>>>> 7a9811f4572c7a25ac0f0727cbb119275508b5a3
         <section class="traning-categories black-bg">
             <div class="container-fluid">
                 <!-- <div class="row">
@@ -136,7 +247,7 @@
                                             Achieve your weight loss goals through a combination of balanced
                                             diets and
                                             effective exercises.</p>
-                                        <a href="weight_loss.html" class="btn">View More</a>
+                                        <a href="weight_loss.php" class="btn">View More</a>
                                     </div>
                                 </div>
                             </div>
@@ -153,7 +264,7 @@
                                             nutrition
                                             guidance. Transform your physique, increase muscle mass, and enhance
                                             definition.</p>
-                                        <a href="muscle_gain.html" class="btn">View More</a>
+                                        <a href="muscle_gain.php" class="btn">View More</a>
                                     </div>
                                 </div>
                             </div>
@@ -170,7 +281,7 @@
                                             symmetrical muscles, achieve low body fat levels, and maximize
                                             muscle
                                             definition.</p>
-                                        <a href="body_building.html" class="btn">View More</a>
+                                        <a href="body_building.php" class="btn">View More</a>
                                     </div>
                                 </div>
                             </div>
@@ -186,7 +297,7 @@
                                         <p>Unwind and reduce stress with our calming program. Improve
                                             flexibility, find
                                             inner peace, and restore balance in body and mind.</p>
-                                        <a href="relaxing.html" class="btn">View More</a>
+                                        <a href="relaxing.php" class="btn">View More</a>
                                     </div>
                                 </div>
                             </div>
@@ -353,7 +464,7 @@
     <!-- Search and Select bar -->
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script> src="./assets/js/ssbar.js"></script>
+    <script src="./assets/js/ssbar.js"></script>
 
 
 </body>

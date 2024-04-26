@@ -512,3 +512,9 @@ footer {
 		font-size: 1.5em;
 	}
 }
+
+@media screen and (max-width: 768px) {
+    .editor-container--with-sidebar > .ck.ck-editor {
+        width: 100%; /* Chiếm toàn bộ chiều rộng trên màn hình nhỏ hơn 768px */
+    }
+}

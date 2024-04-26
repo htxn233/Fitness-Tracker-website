@@ -23,6 +23,11 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
 <body class="black-bg">
     <!-- ? Preloader Start -->
@@ -100,7 +105,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="section-tittle text-center mb-55">
-                        <h2>Muscle gain</h2>
+                        <h2>Relaxing</h2>
                     </div>
                 </div>
             </div>
@@ -111,19 +116,18 @@
                         <div class="properties__card">
                             <div class="about-icon">
                                 <div class="about-icon__img-wrapper">
-                                    <img src="assets/img/courses/muscle_gain/m01.png" alt="">
+                                    <img src="assets/img/courses/relaxing/r01.png" alt="">
                                 </div>
                             </div>
                             <div class="properties__caption">
-                                <span class="month">Overview of muscle gain and nutrition
-                                </span><br><br>
-                                <p class="mb-25">$12</p>
+                                <span class="month">Stress management skills</span><br><br>
+                                <p class="mb-25">$5</p>
                                 <div class="single-features">
                                     <div class="features-icon">
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>Introduction to the process of gaining muscle and the benefits of having strong, toned muscles. </p>
+                                        <p>Introduction to stress and its negative impact on health and mind.</p>
                                     </div>
                                 </div>
                                 <div class="single-features">
@@ -131,7 +135,8 @@
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>Provides knowledge about basic nutritional principles to gain muscle.</p>
+                                        <p>Instruction on stress management techniques such as breathing practices, physical relaxation techniques, and focusing on stress reduction.
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="single-features">
@@ -139,7 +144,7 @@
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>Instructions on how to measure body indexes, such as BMI (Body Mass Index) and muscle mass index.</p>
+                                        <p>Provide stress reduction methods such as yoga, tai chi, and stress reduction techniques through music or herbal scents.</p>
                                     </div>
                                 </div>
                                 <div class="single-features">
@@ -147,15 +152,15 @@
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>Introduction to tools and applications that help track muscle growth progress.</p>
+                                        <p>Recommended daily practice exercises to help maintain a relaxed mood and reduce stress in daily life.</p>
                                     </div>
                                 </div>
-                                <a href="course_element.php" class="border-btn border-btn2">Start</a>
+                                <a href="course4.php?course_name=Basics%20of%20weight%20loss%20and%20nutrition" class="border-btn border-btn2">Start</a>
                                 <br><br><br>
                                 <span style="display: flex; justify-content: center; align-items: center;">
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">muscle-gain</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">21-day</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">20-excercise</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">relaxing</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">30-day</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">24-excercise</button>
                                 </span>
                             </div>
                         </div>
@@ -167,28 +172,18 @@
                         <div class="properties__card">
                             <div class="about-icon">
                                 <div class="about-icon__img-wrapper">
-                                    <img src="assets/img/courses/muscle_gain/m02.png" alt="">
+                                    <img src="assets/img/courses/relaxing/r02.png" alt="">
                                 </div>
                             </div>
                             <div class="properties__caption">
-                                <span class="month">Effective training program for muscle gain
-                                </span><br><br>
-                                <p class="mb-25">$6</p>
+                                <span class="month">Time management skills and work-life balance</span><br><br>
+                                <p class="mb-25">$9</p>
                                 <div class="single-features">
                                     <div class="features-icon">
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>An introduction to designing an effective muscle-building training program, including fundamentals such as load, volume and frequency.</p>
-                                    </div>
-                                </div>
-                               
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Instructions on correct and safe techniques for performing muscle-building exercises.</p>
+                                        <p>Guidance on how to understand and prioritize important goals and tasks in life.</p>
                                     </div>
                                 </div>
                                 <div class="single-features">
@@ -196,14 +191,30 @@
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>Recommend a reasonable training schedule that includes muscle building sessions and recovery management.</p>
+                                        <p>Provides effective time management techniques such as scheduling, prioritizing work, and allocating time for leisure activities.</p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Instructions on how to establish a flexible schedule and balance between work and personal life.</p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Provides methods to reduce stress and maintain balance in daily life.</p>
                                     </div>
                                 </div>
                                 <a href="course_element.php" class="border-btn border-btn2">Start</a>
                                 <br><br><br>
                                 <span style="display: flex; justify-content: center; align-items: center;">
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">muscle-gain</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">30-day</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">relaxing</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">45-day</button>
                                     <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">30-excercise</button>
                                 </span>
                             </div>
@@ -216,185 +227,10 @@
                             <div class="properties__caption">
                                 <div class="about-icon">
                                     <div class="about-icon__img-wrapper">
-                                        <img src="assets/img/courses/muscle_gain/m03.png" alt="">
+                                        <img src="assets/img/courses/relaxing/r03.png" alt="">
                                     </div>
                                 </div>
-                                <span class="month">Meal planning and daily calorie tracking
-                                </span><br><br>
-                                <p class="mb-25">$3</p>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Instructions on how to plan daily meals to meet nutritional needs and gain muscle.</p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Provides information about essential food groups and how to balance them in the diet.</p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Recommend tools and apps to help track daily calories and nutritional quality.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Provides tips and strategies to overcome difficulties and maintain a healthy diet while gaining muscle.
-                                        </p>
-                                    </div>
-                                </div>
-                                <a href="course_element.php" class="border-btn border-btn2">Start</a>
-                                <br><br><br>
-                                <span style="display: flex; justify-content: center; align-items: center;">
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">muscle-gain</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">35-day</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">35-excercise</button>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Course begin -->
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="properties mb-30">
-                        <div class="properties__card">
-                            <div class="about-icon">
-                                <div class="about-icon__img-wrapper">
-                                    <img src="assets/img/courses/muscle_gain/m04.png" alt="">
-                                </div>
-                            </div>
-                            <div class="properties__caption">
-                                <span class="month">Exercise techniques to strengthen muscles
-                                </span><br><br>
-                                <p class="mb-25">$8</p>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Instructions on exercise techniques to strengthen muscles such as thigh muscles, chest muscles, back muscles, shoulder muscles and arm muscles. </p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Provides exercises that focus on intensity, range of motion, and execution technique to stimulate muscle growth.</p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Instructions on how to choose the right load and how to make adjustments over time to maintain progress.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Provides tips and strategies to overcome difficulties and achieve muscle gain goals effectively.</p>
-                                    </div>
-                                </div>
-                                <a href="course_element.php" class="border-btn border-btn2">Start</a>
-                                <br><br><br>
-                                <span style="display: flex; justify-content: center; align-items: center;">
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">muscle-gain</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">60-day</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">54-excercise</button>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Course end -->
-                <!-- Course begin -->
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="properties mb-30">
-                        <div class="properties__card">
-                            <div class="about-icon">
-                                <div class="about-icon__img-wrapper">
-                                    <img src="assets/img/courses/muscle_gain/m05.png" alt="">
-                                </div>
-                            </div>
-                            <div class="properties__caption">
-                                <span class="month">Diet development and nutritional supplements for muscle gain</span><br><br>
-                                <p class="mb-25">$5</p>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Provides detailed instructions on diet and nutritional supplements to increase muscle mass.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Introduction to the role of protein, carbohydrates and fats in muscle gain.</p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Provides guidance on calorie intake and nutrient percentages needed for muscle gain.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="single-features">
-                                    <div class="features-icon">
-                                        <img src="assets/img/icon/check.svg" alt="">
-                                    </div>
-                                    <div class="features-caption">
-                                        <p>Recommend protein-rich foods such as meat, fish, eggs, beans, nuts and dairy products.
-                                        </p>
-                                    </div>
-                                </div>
-                                <a href="course_element.php" class="border-btn border-btn2">Start</a>
-                                <br><br><br>
-                                <span style="display: flex; justify-content: center; align-items: center;">
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">muscle-gain</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">60-day</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">55-excercise</button>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Course end -->
-                <!-- Course begin -->
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="properties mb-30">
-                        <div class="properties__card">
-                            <div class="about-icon">
-                                <div class="about-icon__img-wrapper">
-                                    <img src="assets/img/courses/muscle_gain/m06.png" alt="">
-                                </div>
-                            </div>
-                            <div class="properties__caption">
-                                <span class="month">Muscle management and measuring progress
+                                <span class="month">Skills to build self-love and self-care
                                 </span><br><br>
                                 <p class="mb-25">$7</p>
                                 <div class="single-features">
@@ -402,7 +238,7 @@
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>Instructions on how to manage muscle growth and track muscle gain progress.</p>
+                                        <p>Introduces the importance of loving and taking care of yourself in maintaining health and happiness.</p>
                                     </div>
                                 </div>
                                 <div class="single-features">
@@ -410,7 +246,7 @@
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>Provides progressive measurement methods such as measuring muscle size, measuring muscle index and assessing strength.</p>
+                                        <p>Provides techniques and methods to build self-esteem and confidence.</p>
                                     </div>
                                 </div>
                                 <div class="single-features">
@@ -418,7 +254,7 @@
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>An introduction to what it means to track progress and how to deal with difficulties and obstacles.</p>
+                                        <p>Instructions on how to apply self-care methods such as practicing meditation, writing in a journal, creating a relaxing space, and practicing favorite activities.</p>
                                     </div>
                                 </div>
                                 <div class="single-features">
@@ -426,16 +262,242 @@
                                         <img src="assets/img/icon/check.svg" alt="">
                                     </div>
                                     <div class="features-caption">
-                                        <p>Provides tips and strategies to stay motivated and achieve your muscle gain goals effectively.
+                                        <p>Suggested daily practice exercises to nurture self-love and care.
                                         </p>
                                     </div>
                                 </div>
                                 <a href="course_element.php" class="border-btn border-btn2">Start</a>
                                 <br><br><br>
                                 <span style="display: flex; justify-content: center; align-items: center;">
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">muscle-gain</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">60-day</button>
-                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">55-excercise</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">relaxing</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">21-month</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">21-excercise</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course begin -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="properties mb-30">
+                        <div class="properties__card">
+                            <div class="about-icon">
+                                <div class="about-icon__img-wrapper">
+                                    <img src="assets/img/courses/relaxing/r04.png" alt="">
+                                </div>
+                            </div>
+                            <div class="properties__caption">
+                                <span class="month">Thinking and creativity training skills</span><br><br>
+                                <p class="mb-25">$6</p>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Instructions on how to develop creative thinking and explore methods to stimulate creativity.</p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Provide techniques to harness creativity such as free writing, drawing, dancing or other creative activities.</p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Instructions on how to overcome obstacles and enhance creativity.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Recommended daily practice exercises to develop creative thinking and explore the world around you in a new and relaxing way.</p>
+                                    </div>
+                                </div>
+                                <a href="course_element.php" class="border-btn border-btn2">Start</a>
+                                <br><br><br>
+                                <span style="display: flex; justify-content: center; align-items: center;">
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">relaxing</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">30-day</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">28-excercise</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course end -->
+                <!-- Course begin -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="properties mb-30">
+                        <div class="properties__card">
+                            <div class="about-icon">
+                                <div class="about-icon__img-wrapper">
+                                    <img src="assets/img/courses/relaxing/r05.png" alt="">
+                                </div>
+                            </div>
+                            <div class="properties__caption">
+                                <span class="month">Emotional and psychological management skills</span><br><br>
+                                <p class="mb-25">$5</p>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Introduction to emotions and the importance of managing emotions to achieve relaxation and psychological balance.</p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Instruction on emotion management methods such as journaling, practicing meditation, and using stress management techniques.</p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Provides self-help skills in overcoming negative emotions and creating a state of relaxation and peace.</p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Recommend daily practice exercises to improve emotional and psychological management ability.</p>
+                                    </div>
+                                </div>
+                                <a href="course_element.php" class="border-btn border-btn2">Start</a>
+                                <br><br><br>
+                                <span style="display: flex; justify-content: center; align-items: center;">
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">relaxing</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">30-day</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">22-excercise</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course end -->
+                <!-- Course begin -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="properties mb-30">
+                        <div class="properties__card">
+                            <div class="about-icon">
+                                <div class="about-icon__img-wrapper">
+                                    <img src="assets/img/courses/relaxing/r06.png" alt="">
+                                </div>
+                            </div>
+                            <div class="properties__caption">
+                                <span class="month">Skills to create a relaxing living environment</span><br><br>
+                                <p class="mb-25">$8</p>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Instructions on how to create a relaxing and calm living environment in everyday life.</p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Provide noise reduction techniques and build quiet and relaxing spaces in the home.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Instructions on how to enjoy nature and create a living environment close to nature.</p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Recommended daily practice exercises to create a relaxing and peaceful living environment.</p>
+                                    </div>
+                                </div>
+                                <a href="course_element.php" class="border-btn border-btn2">Start</a>
+                                <br><br><br>
+                                <span style="display: flex; justify-content: center; align-items: center;">
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">relaxing</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">21-day</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">24-excercise</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course end -->
+                <!-- Course begin -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="properties mb-30">
+                        <div class="properties__card">
+                            <div class="about-icon">
+                                <div class="about-icon__img-wrapper">
+                                    <img src="assets/img/courses/relaxing/r07.png" alt="">
+                                </div>
+                            </div>
+                            <div class="properties__caption">
+                                <span class="month">Skills to create a balanced life</span><br><br>
+                                <p class="mb-25">$12</p>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Introduction to the importance of balance in life and its positive impact on health and psychological state.</p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Guidance on how to identify important areas in life and create balance between them.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Provides work and life management techniques to maintain balance and avoid excessive stress.</p>
+                                    </div>
+                                </div>
+                                <div class="single-features">
+                                    <div class="features-icon">
+                                        <img src="assets/img/icon/check.svg" alt="">
+                                    </div>
+                                    <div class="features-caption">
+                                        <p>Recommended daily practice exercises to maintain a balanced and relaxing life.</p>
+                                    </div>
+                                </div>
+                                <a href="course_element.php" class="border-btn border-btn2">Start</a>
+                                <br><br><br>
+                                <span style="display: flex; justify-content: center; align-items: center;">
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-right: 5px; padding: 5px 10px;">relaxing</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; margin-right: 5px; padding: 5px 10px;">30-day</button>
+                                    <button style="border: 1px solid lightgray; background-color: black; color: red; font-size: 17px; margin-left: 10px; padding: 5px 10px;">24-excercise</button>
                                 </span>
                             </div>
                         </div>

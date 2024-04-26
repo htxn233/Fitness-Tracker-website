@@ -19,7 +19,7 @@ body {
 
 .display-date {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
   font-size: 1.6rem;
   font-weight: 600;
 }
@@ -39,27 +39,45 @@ body {
 
 .course-list {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Hiển thị các phần tử con dọc theo cột */
+  align-items: center; /* Căn giữa các phần tử con theo chiều ngang */
 }
 
+.course-list p {
+  text-align: center; /* Căn giữa nội dung */
+  margin-bottom: 30px; /* Khoảng cách giữa các phần tử */
+  font-weight: bold; /* Đậm */
+  color: #f04e3c; /* Màu chữ đỏ */
+}
+.course-list a {
+  text-align: center; /* Căn giữa nội dung */
+  margin-bottom: 30px; /* Khoảng cách giữa các phần tử */
+  margin-top: 50px;
+}
+
+
+
 .course-item {
-  width: calc(30% - 10px); 
-  padding: 10px;
+  width: calc(30% - 20px); /* Giảm kích thước để hiển thị đúng 3 phần tử trên mỗi hàng */
+  padding: 20px;
   border: 2px solid #f04e3c;
   border-radius: 5px;
   background-color: #f7f7f7;
+  text-align: center; /* Căn giữa nội dung trong mỗi phần tử */
 }
 
 .course-item h3 {
-  font-size: 1.6rem;
+  font-size: 1.8rem; /* Phóng to chữ */
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .course-item p {
-  font-size: 1.4rem;
+  font-size: 1.6rem; /* Phóng to chữ */
   color: #666;
+  margin-bottom: 5px;
 }
+
 
 input {
   width: 210px;
@@ -89,4 +107,83 @@ input:valid {
   75% {
     translate: -8px 0;
   }
+}
+
+
+
+@media (max-width: 991px) {
+    .header-area .main-menu {
+        display: block; /* Hiển thị menu chính khi màn hình nhỏ hơn 991px */
+    }
+
+    .header-area .header-btns {
+        margin-right: 10px; /* Khoảng cách giữa nút Sign Out và các phần tử khác */
+    }
+}
+
+@media (max-width: 767px) {
+    .header-btns .btn {
+        display: block; /* Hiển thị nút Sign Out dạng block */
+        margin: 10px auto; /* Căn giữa nút Sign Out */
+    }
+    
+    .main-menu ul {
+        display: none; /* Ẩn submenu khi màn hình nhỏ hơn 767px */
+    }
+
+    .main-menu li:hover > ul {
+        display: block; /* Hiển thị submenu khi hover */
+    }
+
+    .main-menu li {
+        position: relative; /* Đặt vị trí tương đối để submenu hiển thị đúng vị trí */
+    }
+
+    .main-menu ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #f7f7f7; /* Màu nền cho submenu */
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho submenu */
+    }
+}
+
+.notification-box {
+  position: fixed;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7); /* Màu nền xám mờ */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  max-width: 600px;
+  width: 90%;
+  animation: fadeIn 0.5s ease; /* Hiệu ứng hiển thị */
+}
+
+
+.notification-box p {
+  margin: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.notification-box a {
+  color: #f04e3c;
+  text-decoration: underline;
+}
+
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  color: #666;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
 }

@@ -1,3 +1,7 @@
+<?php
+session_start();
+ob_start();
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -24,6 +28,11 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
 
 <body class="black-bg">
@@ -158,7 +167,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <a href="course_element.php" class="border-btn border-btn2">Start</a>
+                                    <a href="course_element.php?course_name=Overview%20of%20Body%20Building" class="border-btn border-btn2">Start</a>
                                     <br><br><br>
                                     <span style="display: flex; justify-content: center; align-items: center;">
                                         <button
@@ -223,7 +232,7 @@
                                                 effectively.</p>
                                         </div>
                                     </div>
-                                    <a href="course_element.php" class="border-btn border-btn2">Start</a>
+                                    <a  href="course_element.php?course_name=Muscle%20Training%20Techniques" class="border-btn border-btn2">Start</a>
                                     <br><br><br>
                                     <span style="display: flex; justify-content: center; align-items: center;">
                                         <button
@@ -287,7 +296,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <a href="course_element.php" class="border-btn border-btn2">Start</a>
+                                    <a href="course_element.php?course_name=Muscle%20Training%20Planning" class="border-btn border-btn2">Start</a>
                                     <br><br><br>
                                     <span style="display: flex; justify-content: center; align-items: center;">
                                         <button
@@ -351,7 +360,7 @@
                                                 creatine and bcaa.</p>
                                         </div>
                                     </div>
-                                    <a href="course_element.php" class="border-btn border-btn2">Start</a>
+                                    <a href="course_element.php?course_name=Nutrition%20and%20Muscle%20Building" class="border-btn border-btn2">Start</a>
                                     <br><br><br>
                                     <span style="display: flex; justify-content: center; align-items: center;">
                                         <button
@@ -408,7 +417,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <a href="course_element.php" class="border-btn border-btn2">Start</a>
+                                    <a href="course_element.php?course_name=Measuring%20Progress%20and%20Tracking%20Body%20Index" class="border-btn border-btn2">Start</a>
                                     <br><br><br>
                                     <span style="display: flex; justify-content: center; align-items: center;">
                                         <button
@@ -465,7 +474,7 @@
                                                 progress in the muscle building process.</p>
                                         </div>
                                     </div>
-                                    <a href="course_element.php" class="border-btn border-btn2">Start</a>
+                                    <a href="course_element.php?course_name=Tailoring%20Your%20Training%20and%20Nutrition%20Regimen%20to%20Your%20Specific%20Muscle%20Building%20Goals" class="border-btn border-btn2">Start</a>
                                     <br><br><br>
                                     <span style="display: flex; justify-content: center; align-items: center;">
                                         <button
